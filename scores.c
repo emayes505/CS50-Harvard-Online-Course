@@ -7,5 +7,5 @@ int main(void)
     int score3 = 33;
 
     //print adverage
-    printf("Average %f\n", (score1 + score2 + score 3));
+    printf("Average %f\n", (score1 + score2 + score3));
 }
