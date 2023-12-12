@@ -1,12 +1,15 @@
+#include <cs50.h>
 #include <stdio.h>
 
 int main(void)
 {
-    int scores[3];
-    int score[0] = 72;
-    int score[1] = 73;
-    int score[2]= 33;
+    //getscores
+    int score[3];
+    for (int i = 0, i < 3, i++);
+    {
+        scores[i] = get_int("scores: ");
+    }
+    //print out the scores
+    printf("Average %f\n, (scores[0], scores[1], scores[2]) / 3.0));
 
-    //print adverage
-    printf("Average %f\n", (score[0] + score[1] + score[2] / 3.0));
 }
