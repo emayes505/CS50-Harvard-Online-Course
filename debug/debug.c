@@ -2,7 +2,7 @@
 // Learn to debug buggy code
 
 #include <cs50.h>
-
+#include <stdio.h>
 int main(void)
 {
     // Ask for your name and where live
@@ -10,5 +10,5 @@ int main(void)
     string location = get_string("Where do you live? ");
 
     // Say hello
-    print("Hello, %i, from %i!", name, location)
+    printf("Hello, %s, from %s!\n", name, location);
 }
