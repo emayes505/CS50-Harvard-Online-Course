@@ -22,6 +22,6 @@ int main(void)
     float total_withTax = bill + tax_amount;
     float tip_amount = total_withTax * (tip / 100);
     float total_withTip = total_withTax + tip_amount;
-
-
+    float half = total_withTip / 2;
+    return half;
 }
