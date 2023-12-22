@@ -6,7 +6,7 @@ int main(void)
     //Get starting population
     int populationStart = get_int ("What is the starting  popuilation size of the llamas? ");
     {
-        if get_int < 9
+        if userinput < 9
     return
     }
     //Get ending population
