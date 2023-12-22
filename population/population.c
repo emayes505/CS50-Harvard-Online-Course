@@ -37,6 +37,6 @@ int main(void)  {
 
 
         //tell user how long it will take for start population to reach the end population.
-       printf("It will take %d years for the llama population to reach %d llamas.\n", years, end);
+       printf("Years: %d.\n", years);
 
 }
