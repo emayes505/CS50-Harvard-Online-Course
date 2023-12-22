@@ -7,7 +7,6 @@ int main(void)
 
     int populationEnd = get_int ("The ending population for Llamas is? ");
 
-    for (int i)
 
     // TODO: Print number of years
 }
