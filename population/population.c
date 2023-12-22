@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 int main(void)  {
+
     int populationStart;
     int populationEnd;
 
@@ -15,18 +16,15 @@ int main(void)  {
         }
         //if starting population is greater than 9 we can continue and get ending population.
 
-        else  {
-             populationEnd = get_int("What is the ending population? ");
-        }
 
+     } while (populationStart < 9);
 
-    } while (populationStart < 9 && populationStart > populationEnd);
-
+     populationEnd = get_int("What is the ending population? ");
 
     return 0;
 
-
 }
+
 
 
     // TODO: Calculate number of years until we reach threshold
