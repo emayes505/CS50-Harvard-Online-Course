@@ -23,11 +23,13 @@ int main(void)  {
     } while (end < start);
 
        {
-       if (start < end){
+        do
+        {
+            start = start + start / 3 - start / 4;
+            years++;
 
-       start = start + start / 3 - start / 4;
-       years++;
-       }
+        }while (start < end);
+       
 
        printf("It will take %d years for the llama population to reach %d llamas.\n", years, end);
        }
