@@ -23,7 +23,7 @@ int main(void)  {
 
         else if (start == end)
 
-        return printf("It will take 0 years for the llama population to reach the same population llamas.\n");
+        return printf("Years: 0.\n");
 
     //calculate num of years until starting population will reach ending population.
 
