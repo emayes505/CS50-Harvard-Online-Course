@@ -30,9 +30,11 @@ int main(void)  {
     } while (end < start);
 
     do {
-        start = start + start / 3 - start / 4;
+       start  = start + start / 3 - start / 4;
         years++;
+
         } while (start < end);
+
 
         //tell user how long it will take for start population to reach the end population.
        printf("It will take %d years for the llama population to reach %d llamas.\n", years, end);
