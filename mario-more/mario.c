@@ -3,10 +3,7 @@
 
 int main(void)
 {
-    int height;
-    int row;
-    int column;
-    int space;
+    int height, row, column, space;
 
     do
     {
