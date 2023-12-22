@@ -4,6 +4,9 @@
 int main(void)
 {
     int height = 0;
+    int row;
+    int column;
+
     do
     {
     height = get_int("Height? ");
@@ -14,11 +17,8 @@ int main(void)
 
     for (row = 0; row < height; row++)
     {
+        for(column = 0; column < row; column++)
         printf("\n");
     }
-
-
-
-
 
 }
