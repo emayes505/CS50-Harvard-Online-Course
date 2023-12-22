@@ -22,12 +22,10 @@ int main(void)  {
 
     } while (end < start);
 
-    for (int n = years; start >= end; n++)
-
-    start + start/3 - start/4;
-
-    printf("years");
-
+    {
+        start + start - start/4 + start/3;
+        years++;
+    }
 
 }
 
