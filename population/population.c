@@ -26,15 +26,18 @@ int main(void)
 
         }
         // calculate num of years until starting population will reach ending population.
-    
+
     while (end < start);
     do
     {
         start = start + start / 3 - start / 4;
         years++;
     }
-    while (start < end);
+    while (start < end || start != end);
 
+        if (start == end){
+            printf("Years: 0");
+        }
     // tell user how long it will take for start population to reach the end population.
     printf("Years: %d.\n", years);
 }
