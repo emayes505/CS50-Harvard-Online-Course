@@ -15,11 +15,12 @@ int main(void)  {
         }
         //if starting population is greater than 9 we can continue and get ending population.
 
-        else if (populationStart < populationEnd) {
+        else  {
              populationEnd = get_int("What is the ending population? ");
         }
 
-    } while (populationStart < 9 || populationStart < populationEnd);
+
+    } while (populationStart < 9 || populationStart > populationEnd);
 
 
     return 0;
