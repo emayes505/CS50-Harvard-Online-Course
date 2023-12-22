@@ -13,15 +13,17 @@ int main(void)  {
             printf("Population size must be 9 or greater. Please try again.\n");
         }
 
+        else {
+            int populationEnd = get_int("What is the ending population? ");
+        }
+
     } while (populationStart < 9);
 
-        int populationEnd = get_int("What is the ending population? ");
-
-
-    // Now, populationStart contains a value greater than or equal to 9.
-    // You can continue with the rest of your program.
+    // when population is greater than 9 we can continue.
 
     return 0;
+
+    
 }
 
 
