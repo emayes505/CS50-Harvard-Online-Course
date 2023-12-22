@@ -8,25 +8,20 @@ int main(void)  {
     //Prompt for beginning population
     do
     {
-        printf("Starting population (minimum 9): " );
-        scanf("%d", &start);
+        start = get_int("What is the starting llama Population? ");
 
-    }   while (start < 9);
+        if (start < 9) printf("Starting population must be 9 or greater. Try again.\n");
+
+    } while (start < 9);
 
     do
     {
-        printf("Ending population (minimum %d): ", start);
-        scanf("%d", &end);
-    }
-    while (start < end);
-    {
-        start - start + start / 3 - start / 4;
-        years++;
-    }
+        end = get_int("What is the ending llama population? ");
 
-    printf("Years: %d\n", years);
-    return 0;
+        if (end < start) printf("Ending population must be larger than starting population. Try again.\n");
 
-
+    } while (end < start);
 
 }
+
+
