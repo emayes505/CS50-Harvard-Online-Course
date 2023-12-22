@@ -9,13 +9,19 @@ int main(void)  {
     do
     {
         printf("Starting population: " );
-        scanf("%%d", &start)
+        scanf("%%d", &start);
 
-    }   while (start > 9);
+    }   while (start < 9);
 
-
-
-
+    do
+    {
+        printf("Ending population (minimum %d): ", start);
+        scanf("%d", &end);
+    }
+    while (start < end)
+    {
+        start - start
+    }
 
 
 
