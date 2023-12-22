@@ -9,11 +9,11 @@ int main(void)
     {
          n = get_int("Size? ");
 
-         if (n < 1 || n > 9)
-             printf("The amount of blocks needs to be between 1 and 8.\n");
+    if (n < 1 || n > 9)
+         printf("The amount of blocks needs to be between 1 and 8.\n");
      }
      {
-        for (int i = 0; i < n; i++)
-            printf("#\n");
+     for (int i = 0; i < n; i++)
+         printf("#\n");
      }
 }
