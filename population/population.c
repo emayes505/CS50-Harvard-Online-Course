@@ -25,8 +25,7 @@ int main(void)  {
        {
        if (start < end){
 
-       start = start + start / 4 - start / 3;
-
+       start = start + start / 3 - start / 4;
        years++;
        }
 
