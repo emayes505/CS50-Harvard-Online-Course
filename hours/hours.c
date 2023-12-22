@@ -6,6 +6,7 @@ float calc_hours(int hours[], int weeks, char output);
 
 int main(void)
 {
+    // get # of weeks in cs50
     int weeks = get_int("Number of weeks taking CS50: ");
     int hours[weeks];
 
