@@ -30,9 +30,10 @@ int main(void)
        {
         start = start + start / 3 - start / 4;
         years++;
-        } while (start < end);
+        } while (start < end || start != end);
 
-
+        if (start == end)
+            return 0;
     // tell user how long it will take for start population to reach the end population.
 
     {
