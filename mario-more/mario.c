@@ -20,10 +20,13 @@ int main(void)
         {
         for (space = 0; space < height - row - 1; space ++)
             printf(" ");
-            {
+        }
             for (column = 0; column <= row; column++)
-                printf("#");
-        printf("\n");
-            }
+         {
+            printf("#");
+            printf("\n");
          }
+
+
+
 }
