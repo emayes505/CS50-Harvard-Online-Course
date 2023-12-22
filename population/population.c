@@ -23,6 +23,9 @@ int main(void)
 
         if (end < start)
             printf("Ending population must be larger than starting population. Try again.\n");
+        else {
+            return 0;
+        }
         // calculate num of years until starting population will reach ending population.
     }
     while (end < start);
