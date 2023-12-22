@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 float calc_hours(int hours[], int weeks, char output);
-
+int n = 0;
 int main(void)
 {
     // get # of weeks in cs50
@@ -28,5 +28,8 @@ int main(void)
 // TODO: complete the calc_hours function
 float calc_hours(int hours[], int weeks, char output)
 {
-
+    for (n = 0; n <= weeks; n++)
+        {
+            
+        }
 }
