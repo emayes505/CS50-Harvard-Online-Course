@@ -12,18 +12,18 @@ int main(void)  {
         if (populationStart < 9) {
             printf("Population size must be 9 or greater. Please try again.\n");
         }
-
-        else {
+        //if starting population is greater than 9 we can continue and get ending population.
+        else  {
             int populationEnd = get_int("What is the ending population? ");
         }
 
-    } while (populationStart < 9);
+    } while (populationStart < 9 && populationStart > populationEnd);
 
     // when population is greater than 9 we can continue.
 
     return 0;
 
-    
+
 }
 
 
