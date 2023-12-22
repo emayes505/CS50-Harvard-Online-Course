@@ -20,7 +20,7 @@ int main(void)  {
         }
 
 
-    } while (populationStart < 9 || populationStart > populationEnd);
+    } while (populationStart < 9 && populationStart > populationEnd);
 
 
     return 0;
