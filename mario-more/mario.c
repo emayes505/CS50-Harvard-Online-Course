@@ -17,15 +17,18 @@ int main(void)
     while (height < 1 || height > 8);
 
     for (row = 0; row < height; row++)
-        {
+    {
         for (space = 0; space < height - row - 1; space ++)
+            {
             printf(" ");
-        }
+            }
+
             for (column = 0; column <= row; column++)
-         {
+           {
             printf("#");
-            printf("\n");
          }
+            printf("\n");
+
 
 
 
