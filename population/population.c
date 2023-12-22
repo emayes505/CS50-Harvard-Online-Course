@@ -26,7 +26,10 @@ int main(void)  {
 
         // TODO: Calculate number of years until we reach threshold
 
-        populationStart 
+        {
+            for (int j = 1; j < ; j++)
+
+        }
 
 
 
