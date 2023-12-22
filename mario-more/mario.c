@@ -3,17 +3,15 @@
 
 int main(void)
 {
-    int n = 0;
-
-    while (n > 9 || n < 1)
+    int height
+    do
     {
-         n = get_int("Size? ");
+    height = get_int("Height? ");
+    }while (height < 1 || height > 8);
 
-    if (n < 1 || n > 9)
-         printf("The amount of blocks needs to be between 1 and 8.\n");
-     }
-     {
-     for (int i = 0; i < n; i++)
-         printf("#\n");
-     }
+
+
+
+
+
 }
