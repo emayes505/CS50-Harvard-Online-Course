@@ -27,12 +27,11 @@ int main(void)
     while (start > end);
 
     // Calculate num of years until starting population will reach ending population.
-    do
+    while (start < end)
     {
         start = start + start / 3 - start / 4;
         years++;
     }
-    while (start < end);
 
     // Tell user how long it will take for start population to reach the end population.
 
