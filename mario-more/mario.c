@@ -7,31 +7,28 @@ int main(void)
 
     do
     {
-    height = get_int("Height? ");
-    if (height < 1 || height > 8)
-        printf("Height must be between 1 and 8. Please try again.\n");
+        height = get_int("Height? ");
+        if (height < 1 || height > 8)
+            printf("Height must be between 1 and 8. Please try again.\n");
     }
     while (height < 1 || height > 8);
 
     for (row = 0; row < height; row++)
     {
-        for (space = 0; space < height - row - 1; space ++)
-            {
+        for (space = 0; space < height - row - 1; space++)
+        {
             printf(" ");
-            }
+        }
 
-            for (column = 0; column <= row; column++)
-            {
+        for (column = 0; column <= row; column++)
+        {
             printf("#");
-            }
-            printf("  ");
-            for(column = 0; column <= row; column ++)
-            {
-                printf("#");
-            }
-            printf("\n");
+        }
+        printf("  ");
+        for (column = 0; column <= row; column++)
+        {
+            printf("#");
+        }
+        printf("\n");
     }
-
-
-
 }
