@@ -12,9 +12,10 @@ int main(void)  {
         if (populationStart < 9)
             printf("Population must be 9 or more. Please try again.\n");
 
-        
+
     } while (populationStart > 9);
 
+       int populationEnd = get_int("What is the ending population? ");
 
     return 0;
 
