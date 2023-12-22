@@ -22,10 +22,10 @@ int main(void)  {
 
     } while (end < start);
 
-    {
-        start + start - start/4 + start/3;
-        years++;
-    }
+      {
+          start + start - start / 4 + start / 3;
+          years++;
+      }
 
 }
 
