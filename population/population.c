@@ -3,7 +3,7 @@
 
 int main(void)  {
 
-    int start, end, years = 0
+    int start, end, years = 0;
 
     //Prompt for beginning population
     do
@@ -20,9 +20,12 @@ int main(void)  {
     }
     while (start < end)
     {
-        start - start
+        start - start + start / 3 - start / 4;
+        years++;
     }
 
+    printf("Years: %d\n", years);
+    return 0;
 
 
 
