@@ -7,6 +7,7 @@ int main(void)  {
     //Get starting population
 
     do {
+        
         populationStart = get_int("What is the starting population? ");
 
         if (populationStart < 9)
@@ -15,7 +16,6 @@ int main(void)  {
 
     } while (populationStart > 9);
 
-       int populationEnd = get_int("What is the ending population? ");
 
     return 0;
 
