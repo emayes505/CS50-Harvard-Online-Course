@@ -6,7 +6,7 @@ int main(void)
     int height = 0;
     int row;
     int column;
-    int n;
+    int space;
 
     do
     {
@@ -17,12 +17,13 @@ int main(void)
     while (height < 1 || height > 8);
 
     for (row = 0; row < height; row++)
-    {
-        for(column = 0; column <= row; column++)
-
-        printf("#");
+        {
+        for (space = 0; space < height - row - 1; space ++)
+            printf(" ");
+            {
+            for (column = 0; column <= row; column++)
+                printf("#");
         printf("\n");
-    }
-
+            }
+         }
 }
-
