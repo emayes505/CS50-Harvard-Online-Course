@@ -8,7 +8,7 @@ int main(void)  {
     //Prompt for beginning population
     do
     {
-        printf("Starting population (minimum9): " );
+        printf("Starting population (minimum 9): " );
         scanf("%d", &start);
 
     }   while (start < 9);
