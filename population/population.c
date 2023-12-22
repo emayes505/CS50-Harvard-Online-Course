@@ -32,5 +32,3 @@ int main(void)  {
        printf("It will take %d years for the llama population to reach %d.", years, end);
 
 }
-
-
