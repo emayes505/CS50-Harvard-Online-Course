@@ -4,10 +4,11 @@
 int main(void)
 {
     //Get starting population
+
     int populationStart = get_int ("What is the starting  popuilation size of the llamas? ");
     {
         if (populationStart < 9)
-    return;
+            printf("Starting population must be 9 or greater!\n");
     }
     //Get ending population
     int populationEnd = get_int ("what is the ending population size of the llamas? ");
