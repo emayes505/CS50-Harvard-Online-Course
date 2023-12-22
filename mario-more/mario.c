@@ -3,13 +3,13 @@
 
 int main(void)
 {
-    int hash = 0;
+    int n = 0;
 
-    while (hash > 9 || hash < 1)
+    while (n > 9 || n < 1)
     {
-         hash = get_int("How many blocks? ");
+         n = get_int("How many blocks? ");
 
-         if (hash < 1 || hash > 9)
+         if (n < 1 || n > 9)
              printf("The amount of blocks needs to be between 1 and 8.\n");
      }
 }
