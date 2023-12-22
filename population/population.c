@@ -30,6 +30,6 @@ int main(void)  {
        years++;
        }
 
-       printf("It will take %d years for the llama population to reach %d.", years, end);
+       printf("It will take %d years for the llama population to reach %d llamas.\n", years, end);
        }
 }
