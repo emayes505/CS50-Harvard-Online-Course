@@ -22,6 +22,7 @@ int main(void)  {
     //calculate num of years until starting population will reach ending population.
     } while (end < start);
 
+       {
        if (start < end){
 
        start = start + start / 4 - start / 3;
@@ -30,5 +31,5 @@ int main(void)  {
        }
 
        printf("It will take %d years for the llama population to reach %d.", years, end);
-
+       }
 }
