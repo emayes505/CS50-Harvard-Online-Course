@@ -22,13 +22,12 @@ int main(void)  {
         populationEnd = get_int("What is the ending population? ");
 
 
-    return 0;
 
         // TODO: Calculate number of years until we reach threshold
 
     do {
         populationStart + populationStart/3 - populationStart/4;
-    }
+    } while (populationStart < populationEnd);
 
 
 
