@@ -2,7 +2,7 @@
 #include <ctype.h>
 #include <stdio.h>
 
-float calc_hours(int hours[], int weeks, char output);
+//float calc_hours(int hours[], int weeks, char output);
 
 int main(void)
 {
@@ -26,7 +26,7 @@ int main(void)
 }
 
 // TODO: complete the calc_hours function
-float calc_hours(int hours[], int weeks, char output)
-{
+//float calc_hours(int hours[], int weeks, char output)
+//{
 
-}
+//}
