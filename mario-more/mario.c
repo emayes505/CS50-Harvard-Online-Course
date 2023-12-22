@@ -6,6 +6,7 @@ int main(void)
     int height = 0;
     int row;
     int column;
+    int n;
 
     do
     {
@@ -18,8 +19,14 @@ int main(void)
     for (row = 0; row < height; row++)
     {
         for(column = 0; column <= row; column++)
+        {
+            for(n = height; n < row; n++)
+
+        }
+        printf(" ");
         printf("#");
         printf("\n");
     }
 
 }
+
