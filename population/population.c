@@ -32,8 +32,7 @@ int main(void)
         years++;
         } while (start < end || start != end);
 
-        if (start == end)
-            return 0;
+       
     // tell user how long it will take for start population to reach the end population.
 
     {
