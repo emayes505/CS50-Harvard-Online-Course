@@ -3,11 +3,11 @@
 
 int main(void)
 {
-    // TODO: Prompt for start size
+    int populationStart = get_int ("The starting population for Llamas is? ");
 
-    // TODO: Prompt for end size
+    int populationEnd = get_int ("The ending population for Llamas is? ");
 
-    // TODO: Calculate number of years until we reach threshold
+    for (int i)
 
     // TODO: Print number of years
 }
