@@ -28,7 +28,8 @@ int main(void)
 
         {
             if (end == start)
-                printf("Years: 0");
+                printf("Years: 0\n");
+            return 0;
 
         }
      // calculate num of years until starting population will reach ending population.
