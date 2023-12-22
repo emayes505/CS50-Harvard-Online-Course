@@ -8,8 +8,8 @@ int main(void)  {
     //Prompt for beginning population
     do
     {
-        printf("Starting population: " );
-        scanf("%%d", &start);
+        printf("Starting population (minimum9): " );
+        scanf("%d", &start);
 
     }   while (start < 9);
 
@@ -18,7 +18,7 @@ int main(void)  {
         printf("Ending population (minimum %d): ", start);
         scanf("%d", &end);
     }
-    while (start < end)
+    while (start < end);
     {
         start - start + start / 3 - start / 4;
         years++;
