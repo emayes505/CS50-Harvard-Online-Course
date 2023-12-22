@@ -23,21 +23,20 @@ int main(void)
 
         if (end < start)
             printf("Ending population must be larger than starting population. Try again.\n");
+    }
+    while (start > end);
 
-    } while (start > end);
-
-     // calculate num of years until starting population will reach ending population.
-       do
-       {
+    // calculate num of years until starting population will reach ending population.
+    do
+    {
         start = start + start / 3 - start / 4;
         years++;
-        } while (start < end);
+    }
+    while (start < end);
 
     // tell user how long it will take for start population to reach the end population.
 
     {
-    printf("Years: %d.\n", years);
+        printf("Years: %d.\n", years);
     }
 }
-
-
