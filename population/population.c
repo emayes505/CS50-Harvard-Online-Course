@@ -22,6 +22,10 @@ int main(void)  {
 
     } while (end < start);
 
+    for (int n = start; n >= end; n++)
+        n + n/3 - n/4;
+
+
 }
 
 
