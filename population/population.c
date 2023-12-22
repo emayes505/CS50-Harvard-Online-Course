@@ -21,6 +21,10 @@ int main(void)  {
 
         if (end < start) printf("Ending population must be larger than starting population. Try again.\n");
 
+        else if (start == end)
+
+        return printf("It will take 0 years for the llama population to reach the same population llamas.\n");
+
     //calculate num of years until starting population will reach ending population.
 
     } while (end < start);
