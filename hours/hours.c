@@ -25,12 +25,6 @@ int main(void)
 // TODO: complete the calc_hours function
 float calc_hours(int hours[], int weeks, char output)
     {
-        int main(int argc, string argv[])
-
-        while (argv[i] != '\0')
-        {
-            
-        }
-
+       
 
     }
