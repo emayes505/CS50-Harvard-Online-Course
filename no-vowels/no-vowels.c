@@ -28,7 +28,7 @@ int main(int argc, string argv[])
     for (int i = 0; i < length; i++)
     {
         //input string[i]
-        switch(input_string[i])
+        switch(toupper(input_string[i]))
            {
             case ('A'):
                 input_string[i] = 54;
