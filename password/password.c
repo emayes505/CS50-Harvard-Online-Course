@@ -26,5 +26,6 @@ bool valid(string password)
     	int ispunct(int c);
         int isdigit(int c);
         int isupper(int c);
+        int islower(int c);
     return false;
 }
