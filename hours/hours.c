@@ -3,12 +3,10 @@
 #include <stdio.h>
 
 float calc_hours(int hours[], int weeks, char output);
-int n = 0;
 int main(void)
 {
     int weeks = get_int("Number of weeks taking CS50: ");
     int hours[weeks];
-
     for (int i = 0; i < weeks; i++)
     {
         hours[i] = get_int("Week %i HW Hours: ", i);
@@ -27,6 +25,7 @@ int main(void)
 // TODO: complete the calc_hours function
 float calc_hours(int hours[], int weeks, char output)
 {
+   int n = 0;
    while (hours[n] != '\0')
     {
         n++;
