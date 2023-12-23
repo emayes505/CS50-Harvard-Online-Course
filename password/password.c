@@ -43,7 +43,7 @@ bool valid(string password)
                 {
                     hasDigit = true;
                 }
-            else if (isUppwer(password[i]))
+            else if (isupper(password[i]))
                 {
                     hasUpper = true;
                 }
@@ -51,7 +51,7 @@ bool valid(string password)
                 {
                     hasLower = true;
                 }
-             return hasPunctuation && hasDigit && hasUppercase && hasLowercase;
+             return hasPunc && hasDigit && hasUpper && hasLower;
 
         }
     return false;
