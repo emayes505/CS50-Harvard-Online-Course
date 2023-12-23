@@ -28,10 +28,10 @@ bool valid(string password)
 
         for (int c = 0; c < length; c++)
         {
-    	int ispunct(int password[c]);
-        int isdigit(int password[c]);
-        int isupper(int password[c]);
-        int islower(int password[c]);
+    	bool ispunct(int password[c]);
+        bool isdigit(int password[c]);
+        bool isupper(int password[c]);
+        bool islower(int password[c]);
         }
     return false;
 }
