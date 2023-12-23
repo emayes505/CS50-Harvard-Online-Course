@@ -26,19 +26,20 @@ string replace (string input_string)
     int length = strlen(input_string);
     for (int i = 0; i < length; i++)
     {
+        toupper.input_string;
         //input string[i]
         switch(input_string[i])
            {
-            case ('a'):
+            case ('A'):
                 input_string[i] = 54;
                 break;
-            case 'e':
+            case 'E':
                 input_string[i] = 51;
                 break;
-            case 'i':
+            case 'I':
                 input_string[i] = 49;
                 break;
-             case 'o':
+             case 'O':
                 input_string[i] = 48;
                 break;
            }
