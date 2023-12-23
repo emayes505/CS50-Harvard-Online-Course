@@ -8,8 +8,8 @@
 
 int main(int argc, string argv[])
 {
-    if 
+    
 
 }
 
-int replace (int argc, string argv[])
+//int replace (int argc, string argv[])
