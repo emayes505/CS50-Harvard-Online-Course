@@ -9,7 +9,7 @@ int main(void)
     int hours[weeks];
     for (int i = 0; i < weeks; i++)
     {
-       hours[i] = get_int("Week %i HW Hours: ", i);
+        hours[i] = get_int("Week %i HW Hours: ", i);
     }
 
     char output;
@@ -24,16 +24,16 @@ int main(void)
 
 // TODO: complete the calc_hours function
 float calc_hours(int hours[], int weeks, char output)
-    {
-        int total = 0;
+{
+    int total = 0;
 
-        for (int i = 0; i < weeks; i++)
-            {
-                total += hours[i];
-            }
-        if (output == 'T')
-        {
-            return total;
-        }
-        return total / weeks;
+    for (int i = 0; i < weeks; i++)
+    {
+        total += hours[i];
     }
+    if (output == 'T')
+    {
+        return total;
+    }
+    return total / (float) weeks;
+}
