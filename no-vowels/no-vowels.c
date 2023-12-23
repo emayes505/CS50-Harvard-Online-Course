@@ -17,3 +17,6 @@ int main(int argc, string argv[])
         }
 
 }
+string replace (string input_string)
+
+    for ()
