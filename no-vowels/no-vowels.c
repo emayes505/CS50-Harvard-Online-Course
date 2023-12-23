@@ -16,6 +16,7 @@ int main(int argc, string argv[])
             printf("Use ./no-vowels 'word'. Try again.");
             return 1;
         }
+        printf(%s\n, replace(argv[1]))
 
 }
 string replace (string input_string)
@@ -40,4 +41,5 @@ string replace (string input_string)
                 break;
            }
     }
+    return input_string
 }
