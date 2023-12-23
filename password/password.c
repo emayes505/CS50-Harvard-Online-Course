@@ -3,7 +3,7 @@
 // Practice using the ctype library
 
 #include <cs50.h>
-#include <ctype>
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -20,19 +20,39 @@ int main(void)
     {
         printf("Your password needs at least one uppercase letter, lowercase letter, number and symbol\n");
     }
+    return 0;
 }
 
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
     int length = strlen(password);
+    bool hasPunc = false;
+    bool hasDigit = false;
+    bool hasUpper = false;
+    bool hasLower = false;
 
-        for (int c = 0; c < length; c++)
+
+        for (int i = 0; i < length; i++)
         {
-    	bool ispunct(int password[c]);
-        bool isdigit(int password[c]);
-        bool isupper(int password[c]);
-        bool islower(int password[c]);
+            if (ispunct(password[i]))
+                {
+                    hasPunc = true;
+                }
+            else if (isdigit(password[i]))
+                {
+                    hasDigit = true;
+                }
+            else if (isUppwer(password[i]))
+                {
+                    hasUpper = true;
+                }
+            else if (islower(password[i]))
+                {
+                    hasLower = true;
+                }
+             return hasPunctuation && hasDigit && hasUppercase && hasLowercase;
+
         }
     return false;
 }
