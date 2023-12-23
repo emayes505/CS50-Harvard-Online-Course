@@ -3,6 +3,7 @@
 // Practice using the ctype library
 
 #include <cs50.h>
+#include <ctype>
 #include <stdio.h>
 #include <string.h>
 
