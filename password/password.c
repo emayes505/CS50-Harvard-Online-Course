@@ -51,7 +51,7 @@ bool valid(string password)
                 {
                     hasLower = true;
                 }
-             return hasPunc && hasDigit && hasUpper && hasLower;
+             return true if hasPunc && hasDigit && hasUpper && hasLower;
 
         }
     return false;
