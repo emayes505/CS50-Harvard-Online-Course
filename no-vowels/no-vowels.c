@@ -8,5 +8,7 @@
 
 int main(int argc, string argv[])
 {
-    
+
 }
+
+int replace (int argc, string argv[])
