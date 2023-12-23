@@ -8,6 +8,14 @@
 
 int main(int argc, string argv[])
 {
+    if (argc = 1)
+
+    string word = get_string("Word: ")
+        return 0;
+
+    else
+        return 1;
+
 
 
 }
@@ -16,6 +24,6 @@ int replace (int argc, string argv[])
 
     for (int i = 0, int j = strlen(argc); i < j; i++)
     {
-        if 
+        if
     }
 
