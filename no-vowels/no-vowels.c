@@ -26,7 +26,7 @@ int main(int argc, string argv[])
 string replace (string input_string)
 {
     int length = strlen(input_string);
-    for (int i=0, i < length, i++)
+    for (int i=0; i < length; i++)
         {
             switch (toupper(input_string))
                 {
