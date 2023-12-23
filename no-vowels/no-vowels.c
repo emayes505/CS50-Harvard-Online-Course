@@ -29,7 +29,7 @@ string replace (string input_string)
     strlen(input_string);
     for (int i=0; i < length; i++)
         {
-            switch (toupper(input_string[i]))
+            switch (toupper(input_string[id]))
                 {
                 case 'A':
                     input_string[i] = 54;
