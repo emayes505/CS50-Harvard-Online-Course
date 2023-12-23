@@ -20,7 +20,7 @@ int main(void)
     {
         printf("Your password needs at least one uppercase letter, lowercase letter, number and symbol\n");
     }
-    return 0;
+ 
 }
 
 // TODO: Complete the Boolean function below
@@ -51,8 +51,7 @@ bool valid(string password)
                 {
                     hasLower = true;
                 }
-             return true if hasPunc && hasDigit && hasUpper && hasLower;
-
+             return hasPunc && hasDigit && hasUpper && hasLower;
         }
     return false;
 }
