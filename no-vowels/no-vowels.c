@@ -8,8 +8,14 @@
 
 int main(int argc, string argv[])
 {
-    
+
 
 }
 
-//int replace (int argc, string argv[])
+int replace (int argc, string argv[])
+
+    for (int i = 0, int j = strlen(argc); i < j; i++)
+    {
+        if 
+    }
+
