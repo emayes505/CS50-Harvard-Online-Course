@@ -22,10 +22,10 @@ int replace (int argc, string argv[])
     for (int i = 0, i != '\0'; i++)
     {
         {
-            word[i]
-        }
         if argv[i] == toupper('a');
 
-       return 6;
+        return 6;
+        }
+
     }
 
