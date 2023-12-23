@@ -21,7 +21,7 @@ int main(int argc, string argv[])
         printf("%s\n", replace(argv[1]));
 
 }
-    string replace (string toupper(string toupperinput_string))
+    string replace (string input_string)
 {
 
     int length = strlen(input_string);
