@@ -23,9 +23,16 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
+    int length = getlen(password);
+
+        for (c = 0; c < lenth; c++)
+        {
+
+
     	int ispunct(int c);
         int isdigit(int c);
         int isupper(int c);
         int islower(int c);
+        }
     return false;
 }
