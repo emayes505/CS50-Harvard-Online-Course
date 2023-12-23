@@ -25,8 +25,10 @@ bool valid(string password)
 {
     int length = getlen(password);
 
-        for (c = 0; c < lenth; c++)
+        for (int c = 0; c < length; c++)
         {
+            password[c]
+
 
 
     	int ispunct(int c);
