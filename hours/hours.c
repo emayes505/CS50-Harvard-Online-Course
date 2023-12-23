@@ -35,7 +35,7 @@ float calc_hours(int hours[], int weeks, char output)
     int lengthOfArray = sizeof hours / hours[0];
 
     int avgHours
-        for (i = hours[0]; i != hours[\0]; i++)
+        for (i = 0; hours[i] != '\0'; i++)
 
 
 }
