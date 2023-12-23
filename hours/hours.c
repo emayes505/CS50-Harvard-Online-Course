@@ -5,13 +5,10 @@
 float calc_hours(int hours[], int weeks, char output);
 
 int main(void)
-int sum = 0
 {
-    // get # of weeks in cs50
-    {
     int weeks = get_int("Number of weeks taking CS50: ");
     int hours[weeks];
-    // iterate between each week and ask user for # of hours per week
+
     for (int i = 0; i < weeks; i++)
     {
         hours[i] = get_int("Week %i HW Hours: ", i);
@@ -25,16 +22,10 @@ int sum = 0
     while (output != 'T' && output != 'A');
 
     printf("%.1f hours\n", calc_hours(hours, weeks, output));
-    }
+}
 
 // TODO: complete the calc_hours function
 float calc_hours(int hours[], int weeks, char output)
-    {
-     for (int i = 0; i < weeks; i++)
-            {
-                sum += hours[i]
-            }
-    }
-
+{
 
 }
