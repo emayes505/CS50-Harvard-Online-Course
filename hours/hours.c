@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 float calc_hours(int hours[], int weeks, char output);
-int sum = 0;
+int sum, i = 0, i;
 
 int main(void)
 
@@ -34,6 +34,7 @@ float calc_hours(int hours[], int weeks, char output)
     int lengthOfArray = sizeof hours / hours[0];
 
     int avgHours
-        for (int n = hours[len]; )
+        for (int i = hours[0]; i != hours[\0]; i++)
+
 
 }
