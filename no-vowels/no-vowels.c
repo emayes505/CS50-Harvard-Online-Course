@@ -5,23 +5,27 @@
 
 #include <cs50.h>
 #include <stdio.h>
+string word;
 
 int main(int argc, string argv[])
 {
     if (argc == 1)
 
-    string word = get_string("Word: ")
-        return 0;
+    word = get_string("Word: ");
 
-    else
-        return 1;
+    return 0;
+
 }
 
 int replace (int argc, string argv[])
 
     for (int i = 0, int j = strlen(argc); i < j; i++)
     {
-        if argv[i] == toupper('a')
-            a = 6;
+        {
+            word[i]
+        }
+        if argv[i] == toupper('a');
+
+       return 6;
     }
 
