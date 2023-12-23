@@ -21,9 +21,9 @@ int main(int argc, string argv[])
         printf("%s\n", replace(argv[1]));
 
 }
-string replace (string input_string)
+    string replace (string input_string)
 {
-    string input_string = toupper(input_string);
+
     int length = strlen(input_string);
     for (int i = 0; i < length; i++)
     {
