@@ -4,6 +4,7 @@
 
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 bool valid(string password);
 
@@ -27,9 +28,6 @@ bool valid(string password)
 
         for (int c = 0; c < length; c++)
         {
-            password[c]
-
-
 
     	int ispunct(int c);
         int isdigit(int c);
