@@ -13,10 +13,10 @@ int main(int argc, string argv[])
 {
     if (argc != 2)
         {
-            printf("Use ./no-vowels 'word'. Try again.");
+            printf("Use ./no-vowels 'word'. Try again.\n");
             return 1;
         }
-        printf(%s\n, replace(argv[1]))
+        printf(%s\n, replace(argv[1]));
 
 }
 string replace (string input_string)
