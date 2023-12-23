@@ -22,7 +22,7 @@ int replace (int argc, string argv[])
     for (int i = 0, i != '\0'; i++)
     {
         {
-        if argv[i] == toupper('a');
+        argv[i] == toupper('a');
 
         return 6;
         }
