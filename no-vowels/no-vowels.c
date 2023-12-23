@@ -21,6 +21,6 @@ int replace (int argc, string argv[])
 
     for (int i = 0, int j = strlen(argc); i < j; i++)
     {
-
+        if argv[i] == toupper('a')
     }
 
