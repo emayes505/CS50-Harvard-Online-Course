@@ -3,7 +3,10 @@
 #include <stdio.h>
 
 float calc_hours(int hours[], int weeks, char output);
+int sum = 0;
+
 int main(void)
+
 {
     // get # of weeks in cs50
     int weeks = get_int("Number of weeks taking CS50: ");
@@ -26,7 +29,11 @@ int main(void)
 
 // TODO: complete the calc_hours function
 float calc_hours(int hours[], int weeks, char output)
-{
-    int totalHours =
-       for (int i = hours[0]; i < hours[]; i++)
 
+{
+    int lengthOfArray = sizeof hours / hours[0];
+
+    int avgHours
+        for (int n = hours)
+
+}
