@@ -5,7 +5,7 @@
 
 #include <cs50.h>
 #include <stdio.h>
-#inclue <string.h>
+#include <string.h>
 
 string replace (string input_string);
 
@@ -25,24 +25,19 @@ string replace (string input_string)
     {
         //input string[i]
         switch(input_string[i])
+           {
             case 'a':
-                input_string[i] = 6;
+                input_string[i] = 54;
                 break;
             case 'e':
-                input_string[i] = 3;
+                input_string[i] = 51;
                 break;
             case 'i':
-                input_string[i] = 1;
+                input_string[i] = 49;
                 break;
              case 'o':
-                input_string[i] = 0;
+                input_string[i] = 48;
                 break;
-            case 'u':
-                input_string[i] = 6;
-                break;
-
-
-
-
+           }
     }
 }
