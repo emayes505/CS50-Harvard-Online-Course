@@ -5,27 +5,15 @@
 
 #include <cs50.h>
 #include <stdio.h>
-string word;
+
+string replace (string input_string);
 
 int main(int argc, string argv[])
 {
-    if (argc == 1)
-
-    word = get_string("Word: ");
-
-    return 0;
-
-}
-
-int replace (int argc, string argv[])
-
-    for (int i = 0, i != '\0'; i++)
-    {
+    if (argc != 2)
         {
-        argv[i] == toupper('a');
-
-        return 6;
+            printf("Use ./no-vowels 'word'. Try again.");
+            return 1;
         }
 
-    }
-
+}
