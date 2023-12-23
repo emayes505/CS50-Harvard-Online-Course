@@ -24,7 +24,7 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
-    int length = getlen(password);
+    int length = strlen(password);
 
         for (int c = 0; c < length; c++)
         {
