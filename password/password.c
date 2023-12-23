@@ -23,6 +23,8 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
-    
+    	int ispunct(int c);
+        int isdigit(int c);
+        int isupper(int c);
     return false;
 }
