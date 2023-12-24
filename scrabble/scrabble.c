@@ -40,11 +40,15 @@ int compute_score(string word)
        int ascii = 0;
        for (int i = 0, length = strlen(word); i < length; i++)
             {
-            while (word[i] > 65 || word[i] < 122)
-                {
-                ascii = toupper(word[i]) - 65;
-                totalScore += POINTS[ascii];
-                }
+            if (word[i] < 65 || word[i] > 122)
+            {
+                totalScore += 0;
+            }
+            else
+            {
+            ascii = toupper(word[i]) - 65;
+            totalScore += POINTS[ascii];
+            }
 
             }
             return totalScore;
