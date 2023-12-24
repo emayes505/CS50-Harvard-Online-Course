@@ -36,10 +36,11 @@ int compute_score(string word)
     int asciiValue = 0;
     for (int i = 0; i < length; i++)
         {
-        printf("%c",toupper(word[i]) - 17) ;
+
+        totalScore += ("%c",toupper(word[i] - 17) ;
 
         }
-        return asciiValue;
+        return totalScore;
 
     // TODO: Compute and return score for string
     }
