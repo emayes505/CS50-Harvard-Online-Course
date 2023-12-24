@@ -3,8 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-char a = 1;
-char b = 2;
+string key = VCHPRZGJNTLSKFBDQWAXEUYMOI;
 
-int isalpha(1)
-return int;
+ if isalpha(key[1])
+    printf("It is alpha\n")
