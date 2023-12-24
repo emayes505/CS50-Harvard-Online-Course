@@ -9,24 +9,25 @@ int length = 0;
 
 string key = (argv[1]);
 
+bool isAlpha = false;
+
 length = strlen(key);
 
 if (argv[1] == NULL || length != 26)
+
         {
-        bool isAlpha;
         printf("Invalid, no input. Please enter key.\n");
         return 1;
-
-        for (int i = 0; i < length; i++)
-            {
-            if isalpha(key[i])
-            return !1;
-            isAlpha = false;
-            return 1;
-            }
-         else
-         {
-         isAlpha = true;
-         return 0;
         }
-}
+
+        do
+        {
+        for (int i = 0; i < length; i++)
+        {
+                if (isalpha(key[i]))
+                isAlpha = true;
+                return 0;
+        } while (isAlpha = true);
+        return 1;
+        }
+
