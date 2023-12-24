@@ -17,7 +17,7 @@ int main(int argc, string argv[])
         }
                 for (int i = 0; i < length; i++)
                 {
-                        for (int j = 1; j < length; j++ )
+                        for (int j = i + 1; j < length; j++ )
 
                 {
                         if (toupper(key[i]) == toupper(key[j]))
