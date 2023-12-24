@@ -20,6 +20,7 @@ int main(int argc, string argv[])
                 if (!isalpha(key[i]))
                 {
                         printf("Invalid input, all charcters must be alphabetical.\n");
+                        return 1;
                 }
         }
 }
