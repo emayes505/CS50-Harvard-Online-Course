@@ -6,6 +6,7 @@
 int main(int argc, string argv[])
 {
 int length = 0;
+bool keyIsAlpha = false;
 
 if (argv[1] == NULL)
         {
@@ -24,7 +25,14 @@ if (argv[1] == NULL)
         return 1;
         }
     } while (length != 26);
-    
+
+    for (int i = 0; i < length; i++)
+
+        {
+          if (isalpha(key[i]))
+            keyIsAlpha = true;
+        }
+
 
 }
 
