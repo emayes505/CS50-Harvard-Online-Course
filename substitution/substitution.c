@@ -4,7 +4,7 @@
 #include <string.h>
 
 int main(int argc, string argv[])
-
+string pText
 {
   string key = argv[1];
 
@@ -32,9 +32,14 @@ int main(int argc, string argv[])
                               }
                   }
                   }
-           string pText = get_string("plaintext: ");
+                  do
+                  {
+                        string pText = get_string("plaintext: ");
+                        int lengthOfPText = strlen(pText);
+                  } while (!isalpha(pText));
 
-           int lengthOfPText = strlen(pText);
+
+
 
            for (int i = 0; i < lengthOfPText; i++)
 
