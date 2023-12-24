@@ -5,34 +5,22 @@
 
 int main(int argc, string argv[])
 
+int length = 0;
+
 {
-    int keySize = 0;
+    string key = get_string("%s", argv[1]);
+    length = strlen(key);
     do
     {
-    string key = get_string("argv[1]\n");
+    if (length == 0)
+        printf("Invalid, no input. Please enter key.\n");
 
-    keySize = strlen(key);
-    if (keySize == 0)
-        {
-            printf("No key was entered. Please enter a 26 character key.\n");
+    else (length != 26)
+        printf("Invalid, Key must contain 26 characters. Try again.\n");
+        
+    } (while length != 26)
 
-        }
-        return 1;
-
-    else if (keySize != 26)
-        {
-            printf("Key must contain 26 characters exactly. Try again.\n");
-            return 1;
-         }
-
-     } while (keySize != 26);
-
-
-
-    }
-
-
-
+}
 
 
 
