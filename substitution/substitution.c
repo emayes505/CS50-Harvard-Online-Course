@@ -29,8 +29,15 @@ if (argv[1] == NULL)
     for (int i = 0; i < length; i++)
 
         {
-          if (isalpha(toupper(key[i] && key[i] < 64 && key[i] > 9)))
-            keyIsAlpha = true;
+          if (isalpha(toupper(key[i] = false && key[i] < 64 && key[i] > 90)))
+            {
+                printf("Key must only contain alphabetic characters. Try again.\n");
+                return 1;
+            }
+
+          else
+            
+
         }
 
 
