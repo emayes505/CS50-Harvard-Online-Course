@@ -29,7 +29,7 @@ if (argv[1] == NULL)
     for (int i = 0; i < length; i++)
 
         {
-          if (isalpha(toupper(key[i] && key[i] == 65 90)))
+          if (isalpha(toupper(key[i] && key[i] > 64 &&)))
             keyIsAlpha = true;
         }
 
