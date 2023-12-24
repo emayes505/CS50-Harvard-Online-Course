@@ -10,33 +10,11 @@ bool keyIsAlpha = false;
 
 string key = get_string("%s", argv[1]);
 
+length += strlen(key);
+
 if (argv[1] == NULL || length != 26)
         {
         printf("Invalid, no input. Please enter key.\n");
         }
         return 1;
-
-    length = strlen(key);
-    do
-    {
-   
-    } while (length != 26);
-
-    for (int i = 0; i < length; i++)
-
-        {
-          if (key[i] < 64 || key[i] > 90)
-            {
-                printf("Key must only contain alphabetic characters. Try again.\n");
-                return 1;
-            }
-
-
-
-        }
-
-
 }
-
-
-
