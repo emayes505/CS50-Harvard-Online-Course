@@ -18,6 +18,7 @@ int main(int argc, string argv[])
             printf("Key must contain 26 characters exactly. Try again.\n");
             return 1;
          }
+     else (argv[])
       } while (keySize != 26);
 
 
