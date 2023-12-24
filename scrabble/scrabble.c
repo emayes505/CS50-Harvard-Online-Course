@@ -37,7 +37,7 @@ int compute_score(string word)
        int ascii = 0;
        for (int i = 0, length = strlen(word); i < length; i++)
             {
-                ascii = toupper(word[i])-64;
+                ascii = toupper(word[i])-65;
                 totalScore += POINTS[ascii];
             }
             return totalScore;
