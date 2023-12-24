@@ -6,12 +6,12 @@
 int main(int argc, string argv[])
 {
 int length = 0;
+
 if (argv[1] == NULL)
         {
         printf("Invalid, no input. Please enter key.\n");
         }
         return 1;
-
 {
     string key = get_string("%s", argv[1]);
 
@@ -24,6 +24,7 @@ if (argv[1] == NULL)
         return 1;
         }
     } while (length != 26);
+    
 
 }
 
