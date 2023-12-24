@@ -9,13 +9,13 @@ int main(int argc, string argv[])
     int keySize = 0;
     do
     {
-    string key = get_string("Enter Key Here: \n");
+    string key = get_string("argv[1]\n");
 
     keySize = strlen(key);
     if (keySize == 0)
         {
             printf("No key was entered. Please enter a 26 character key.\n");
-            
+
         }
         return 1;
 
