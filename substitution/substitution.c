@@ -35,7 +35,6 @@ if (argv[1] == NULL)
                 return 1;
             }
 
-          else
 
 
         }
