@@ -5,13 +5,6 @@
 
 int main(int argc, string argv[])
 {
-int length = 0;
-
-char key[] = ( argv[1]);
-
-bool isAlpha = false;
-
-length = strlen(key);
 
 if (argv[1] == NULL || length != 26 || argc != 2)
 
@@ -19,10 +12,13 @@ if (argv[1] == NULL || length != 26 || argc != 2)
         printf("Invalid, no input. Please enter key.\n");
         return 1;
         }
-        for (int i = 0; i < length; i++)
+
+        string key = argv[1];
+        for (int i = 0, length=strlen(key); i < length; i++)
         {
-        int isaplha(char key[i]);
-
-
+                if (!isalpha(key[i]))
+                {
+                        printf("Invalid input, all charcters must be alphabetical.\n");
+                }
         }
 }
