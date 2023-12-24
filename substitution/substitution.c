@@ -50,7 +50,12 @@ int main(int argc, string argv[])
                for (int i = 0; i < lengthOfPText; i++)
                if (isupper(pText[i]))
                {
-                pText [i] = pText[i] - 65;
+                pText[i] = pText[i] - 65;
+                printf(%c,key[letter])
+               }
+               else if (islower(pText[i]))
+               {
+                pText[i] = pText[i] - 97;
                }
 
            }
