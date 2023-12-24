@@ -31,14 +31,5 @@ int main(void)
 }
 int compute_score(string word)
     {
-    int totalScore = 0;
-    int length = strlen(word);
-    int indexValue = 0;
-
-    for (int i = 0; i < length; i++)
-        {
-        indexValue = get_char("%c", toupper(word[i] - 17));
-        totalScore += POINTS[indexValue];
-        }
-        return totalScore;
+   
     }
