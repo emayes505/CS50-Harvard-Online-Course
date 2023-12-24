@@ -13,7 +13,12 @@ length = strlen(key);
 
 if (argv[1] == NULL || length != 26)
         {
+        bool isAlpha = false;
         printf("Invalid, no input. Please enter key.\n");
         return 1;
+
+        for (int i = 0; i < length; i++)
+        if (isaplha(key[i]) == 0)
+                isAlpha = true;
         }
 }
