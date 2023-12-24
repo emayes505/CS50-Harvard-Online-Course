@@ -7,7 +7,7 @@ int main(int argc, string argv[])
 {
 int length = 0;
 
-string key = (argv[1]);
+char key[] = ( argv[1]);
 
 bool isAlpha = false;
 
