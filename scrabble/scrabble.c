@@ -38,7 +38,7 @@ int compute_score(string word)
 
        for (int i = 0; i < length; i++)
             {
-                totalScore += word[i]-65;
+                totalScore += toupper(word[i])-65;
             }
             return totalScore;
     }
