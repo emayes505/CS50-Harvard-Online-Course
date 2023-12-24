@@ -34,7 +34,7 @@ int compute_score(string word)
     int length = strlen(word);
     for (int i = 0; i < length; i++)
         {
-             ascii word[i];
+         int asciiValue = word[i];
         }
     // TODO: Compute and return score for string
     }
