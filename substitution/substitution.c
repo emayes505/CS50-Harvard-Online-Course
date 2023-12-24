@@ -39,7 +39,7 @@ int main(int argc, string argv[])
 
            for (int i = 0; i < lengthOfPText; i++)
            {
-           char cipherText = key[toupper(pText[i]) - 65];
+           string cipherText = key[toupper(pText[i]) - 65];
                 {
                 printf("ciphertext:%c", cipherText);
                 }
