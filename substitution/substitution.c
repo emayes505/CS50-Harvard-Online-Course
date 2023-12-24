@@ -13,7 +13,7 @@ bool isAlpha = false;
 
 length = strlen(key);
 
-if (argv[1] == NULL || length != 26)
+if (argv[1] == NULL || length != 26 || argc != 2)
 
         {
         printf("Invalid, no input. Please enter key.\n");
