@@ -27,6 +27,7 @@ int main(int argc, string argv[])
                 }
 
                 if (toupper(key[i]) == toupper(key[j]))
+                        printf("Duplicates found. Try again.\n");
                 return 1;
 
                 }
