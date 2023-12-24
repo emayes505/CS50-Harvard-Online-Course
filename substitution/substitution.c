@@ -38,6 +38,7 @@ int main(int argc, string argv[])
            int lengthOfPText = strlen(pText);
 
            for (int i = 0; i < lengthOfPText; i++)
-                pText[i]
+           
+                key[pText[i] - 65]
 
 }
