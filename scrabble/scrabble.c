@@ -37,7 +37,6 @@ int compute_score(string word)
     for (int i = 0; i < length; i++)
         {
         asciiValue = toupper(word[i]) - 17;
-        totalScore += POINTS[asciiValue];
         }
         return asciiValue;
 
