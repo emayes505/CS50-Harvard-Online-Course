@@ -31,10 +31,8 @@ int main(void)
         }
     else if (score1 == score2)
         {
-            printf("It's a Tie!");
-
+            printf("It's a Tie!\n");
         }
-
 }
 int compute_score(string word)
     {
@@ -42,8 +40,12 @@ int compute_score(string word)
        int ascii = 0;
        for (int i = 0, length = strlen(word); i < length; i++)
             {
-                ascii = toupper(word[i])-65;
+            if (word[i] > 65 || word[i] < 122)
+                {
+                ascii = toupper(word[i]) - 65;
                 totalScore += POINTS[ascii];
+                }
+
             }
             return totalScore;
     }
