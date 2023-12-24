@@ -32,6 +32,7 @@ int main(void)
     else if (score1 == score2)
         {
             printf("It's a Tie!\n");
+            printf("%i, %i", score1, score2);
         }
 }
 int compute_score(string word)
