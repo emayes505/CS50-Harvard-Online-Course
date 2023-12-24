@@ -21,6 +21,14 @@ int main(int argc, string argv[])
                 {
                         printf("Invalid input, all charcters must be alphabetical.\n");
                         return 1;
+                for (int i = 0; i < length; i++)
+                {
+                        for (int j = 1; j < length; j++ )
+                }
+
+                if (toupper(key[i]) == toupper(key[j]))
+                return 1;
+
                 }
         }
 }
