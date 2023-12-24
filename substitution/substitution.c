@@ -12,11 +12,7 @@ int main(int argc, string argv[])
     string key = get_string("Enter Key Here: \n");
 
     keySize = strlen(key);
-    if(argc != 1)
-         {
-            printf("Input is invalid. Only enter 26 character Key after ./substitution.\n");
-            return 1;
-         }
+    
 
     else if (keySize != 26)
         {
