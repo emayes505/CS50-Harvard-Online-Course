@@ -1,8 +1,7 @@
-#include <ctype.h>
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
-
 // Points assigned to each letter of the alphabet
 int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
@@ -20,37 +19,36 @@ int main(void)
 
     // TODO: Print the winner
     if (score1 > score2)
-        {
-            printf("Player 1 Wins!\n");
-            printf("%i\n", score1);
-        }
+    {
+        printf("Player 1 Wins!\n");
+        printf("%i\n", score1);
+    }
     else if (score2 > score1)
-        {
-            printf("Player 2 Wins!\n");
-            printf("%i\n", score2);
-        }
+    {
+        printf("Player 2 Wins!\n");
+        printf("%i\n", score2);
+    }
     else if (score1 == score2)
-        {
-            printf("It's a Tie!\n");
-            printf("%i, %i", score1, score2);
-        }
+    {
+        printf("It's a Tie!\n");
+        printf("%i, %i", score1, score2);
+    }
 }
 int compute_score(string word)
+{
+    int totalScore = 0;
+    int ascii = 0;
+    for (int i = 0, length = strlen(word); i < length; i++)
     {
-       int totalScore = 0;
-       int ascii = 0;
-       for (int i = 0, length = strlen(word); i < length; i++)
-            {
-            if (word[i] < 65 || word[i] > 122)
-            {
-                totalScore += 0;
-            }
-            else
-            {
+        if (word[i] < 65 || word[i] > 122)
+        {
+            totalScore += 0;
+        }
+        else
+        {
             ascii = toupper(word[i]) - 65;
             totalScore += POINTS[ascii];
-            }
-
-            }
-            return totalScore;
+        }
     }
+    return totalScore;
+}
