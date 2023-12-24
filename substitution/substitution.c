@@ -9,7 +9,7 @@ int main(int argc, string argv[])
   string key = argv[1];
   string pText;
   int length = strlen(key);
-  int lengthOfPText = 0;
+
 
         if (argv[1] == NULL || length != 26 || argc != 2)
         {
