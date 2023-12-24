@@ -4,17 +4,18 @@
 #include <string.h>
 
 int main(int argc, string argv[])
+
 {
+  string key = argv[1];
 
-if (argv[1] == NULL || length != 26 || argc != 2)
+  int length = strlen(key);
 
+        if (argv[1] == NULL || length != 26 || argc != 2)
         {
         printf("Invalid, no input. Please enter key.\n");
         return 1;
         }
-
-        string key = argv[1];
-        for (int i = 0, length=strlen(key); i < length; i++)
+        for (int i = 0; i < length; i++)
         {
                 if (!isalpha(key[i]))
                 {
