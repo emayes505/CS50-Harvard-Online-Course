@@ -29,7 +29,7 @@ if (argv[1] == NULL)
     for (int i = 0; i < length; i++)
 
         {
-          if (key[i] < 64 && key[i] > 90)
+          if (key[i] < 64 || key[i] > 90)
             {
                 printf("Key must only contain alphabetic characters. Try again.\n");
                 return 1;
