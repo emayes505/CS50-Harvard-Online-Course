@@ -33,4 +33,11 @@ int main(int argc, string argv[])
 
                   }
                   }
+           string pText = get_string("Plain Text: ");
+
+           int lengthOfPText = strlen(pText);
+
+           for (int i = 0; i < lengthOfPText; i++)
+                pText[i]
+
 }
