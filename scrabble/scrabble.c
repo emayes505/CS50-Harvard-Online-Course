@@ -34,10 +34,11 @@ int compute_score(string word)
     int totalScore = 0;
     int length = strlen(word);
     int asciiValue = 0;
+
     for (int i = 0; i < length; i++)
         {
 
-        totalScore += ("%c",toupper(word[i] - 17) ;
+        totalScore += get_char("%c",toupper(word[i] - 17)) ;
 
         }
         return totalScore;
