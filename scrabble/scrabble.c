@@ -32,9 +32,11 @@ int main(void)
 int compute_score(string word)
     {
     int length = strlen(word);
+    int asciiValue = 0;
     for (int i = 0; i < length; i++)
         {
-         int asciiValue = word[i];
+            for (int )
         }
+
     // TODO: Compute and return score for string
     }
