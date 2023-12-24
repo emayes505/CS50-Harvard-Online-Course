@@ -37,6 +37,8 @@ int main(int argc, string argv[])
            int lengthOfPText = strlen(pText);
 
            for (int i = 0; i < lengthOfPText; i++)
+
+           if pText[i] 
            {
            char cipherText = key[toupper(pText[i]) - 65];
                 {
