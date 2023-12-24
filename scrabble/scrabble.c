@@ -31,11 +31,13 @@ int main(void)
 
 int compute_score(string word)
     {
+    int totalScore = 0;
     int length = strlen(word);
     int asciiValue = 0;
     for (int i = 0; i < length; i++)
         {
         asciiValue = toupper(word[i]) - 17;
+        totalScore += POINTS[asciiValue];
         }
         return asciiValue;
 
