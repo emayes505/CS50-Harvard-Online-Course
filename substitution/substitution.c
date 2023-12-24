@@ -45,9 +45,13 @@ int main(int argc, string argv[])
                 {
                         key[i] = key[i] - 32;
                 }
-                else if (isupper(key[i]))
-                {
-                        key[i] = key[i]
-                }
+               printf("ciphertext: ");
+
+               for (int i = 0; i < lengthOfPText; i++)
+               if (isupper(pText[i]))
+               {
+                pText [i] = pText[i] - 65;
+               }
+
            }
 }
