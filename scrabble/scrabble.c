@@ -27,21 +27,21 @@ int main(void)
         {
             printf("Player 2 Wins!");
         }
-}
 
+}
 int compute_score(string word)
     {
     int totalScore = 0;
     int length = strlen(word);
-    int asciiValue = 0;
     int indexValue = 0;
 
     for (int i = 0; i < length; i++)
         {
-        indexValue = get_char("%c",toupper(word[i]) - 17);
+        indexValue = get_char("%c",toupper(word[i] - 17));
         totalScore += POINTS[indexValue];
         }
         return totalScore;
 
-    // TODO: Compute and return score for string
+
     }
+
