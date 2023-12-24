@@ -19,7 +19,7 @@ int main(int argc, string argv[])
                 {
                         for (int j = 1; j < length; j++ )
 
-                {
+                {debug
                         if (toupper(key[i]) == toupper(key[j]))
                        {
                         printf("Duplicates found. Try again.\n");
