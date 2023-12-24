@@ -35,7 +35,7 @@ int compute_score(string word)
     int length = strleg(word)
     for (int i = 0; i < length; i++)
         {
-            word[i]
+            askii word[i]
         }
     // TODO: Compute and return score for string
 }
