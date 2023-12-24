@@ -30,7 +30,6 @@ int main(int argc, string argv[])
                               printf("Invalid input, all charcters must be alphabetical.\n");
                               return 1;
                               }
-
                   }
                   }
            string pText = get_string("plaintext: ");
@@ -39,7 +38,7 @@ int main(int argc, string argv[])
 
            for (int i = 0; i < lengthOfPText; i++)
            {
-           string cipherText = key[toupper(pText[i]) - 65];
+           char cipherText = key[toupper(pText[i]) - 65];
                 {
                 printf("ciphertext:%c", cipherText);
                 }
