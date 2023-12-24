@@ -19,15 +19,10 @@ if (argv[1] == NULL || length != 26)
         printf("Invalid, no input. Please enter key.\n");
         return 1;
         }
-
-        do
-        {
         for (int i = 0; i < length; i++)
         {
-                if (isalpha(key[i]))
-                isAlpha = true;
-                return 0;
-        } while (isAlpha = true);
-        return 1;
+               int isaplha(key[i]);
         }
+
+}
 
