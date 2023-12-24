@@ -36,8 +36,8 @@ int compute_score(string word)
     int asciiValue = 0;
     for (int i = 0; i < length; i++)
         {
-        asciiValue = toupper(word[i]) - 17;
-        printf("%i", asciiValue);
+        printf("%c",toupper(word[i]) - 17) ;
+
         }
         return asciiValue;
 
