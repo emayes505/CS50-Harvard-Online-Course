@@ -24,10 +24,15 @@ int main(void)
             printf("Player 1 Wins!\n");
             printf("%i\n", score1);
         }
-    else
+    else if (score2 > score1)
         {
             printf("Player 2 Wins!\n");
             printf("%i\n", score2);
+        }
+    else if (score1 == score2)
+        {
+            printf("It's a Tie!");
+
         }
 
 }
