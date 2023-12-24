@@ -18,12 +18,15 @@ if (argv[1] == NULL || length != 26)
         return 1;
 
         for (int i = 0; i < length; i++)
-        if (!isaplha(key[i]))
-              {
-                isAlpha = false;
-                return 1;
-              }
-         else isAlpha = true;
+            {
+            if isalpha(key[i])
+            return !1;
+            isAlpha = false;
+            return 1;
+            }
+         else
+         {
+         isAlpha = true;
          return 0;
         }
 }
