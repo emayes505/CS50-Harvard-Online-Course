@@ -6,9 +6,8 @@
 int main(int argc, string argv[])
 {
 int length = 0;
-bool keyIsAlpha = false;
 
-string key[] = get_string("%s", argv[1]);
+string key = (argv[1]);
 
 length = strlen(key);
 
