@@ -21,6 +21,6 @@ if (argv[1] == NULL || length != 26)
         }
         for (int i = 0; i < length; i++)
         {
-        int isaplha(char* key[i]);
+        int isaplha('c', char* key[i]);
         }
 }
