@@ -24,7 +24,7 @@ if (argv[1] == NULL || length != 26)
         {
         for (int i = 0; i < length; i++)
         {
-                if (isalpha(key[i]))
+                if (isalpha("%c", key[i]))
                 isAlpha = true;
                 return 0;
         } while (isAlpha = true);
