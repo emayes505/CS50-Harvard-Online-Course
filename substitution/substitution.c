@@ -4,11 +4,12 @@
 #include <string.h>
 
 int main(int argc, string argv[])
-string pText
+
 {
   string key = argv[1];
-
+  string pText;
   int length = strlen(key);
+  int lengthOfPText = 0;
 
         if (argv[1] == NULL || length != 26 || argc != 2)
         {
@@ -34,19 +35,19 @@ string pText
                   }
                   do
                   {
-                        string pText = get_string("plaintext: ");
+                        pText = get_string("plaintext: ");
                         int lengthOfPText = strlen(pText);
                   } while (!isalpha(pText));
 
-
-
-
-           for (int i = 0; i < lengthOfPText; i++)
-
+           for (int i = 0; i < length; i++)
            {
-           char cipherText = key[toupper(pText[i]) - 65];
+                if(islower(key[i]))
                 {
-                printf("ciphertext:%c", cipherText);
+                        key[i] = key[i] - 32;
+                }
+                else if (isupper(key[i]))
+                {
+                        key[i] = key[i]
                 }
            }
 }
