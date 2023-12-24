@@ -30,12 +30,11 @@ int main(void)
 }
 
 int compute_score(string word)
-
-{
-    int length = strleg(word)
+    {
+    int length = strlen(word);
     for (int i = 0; i < length; i++)
         {
-            askii word[i]
+             ascii word[i];
         }
     // TODO: Compute and return score for string
-}
+    }
