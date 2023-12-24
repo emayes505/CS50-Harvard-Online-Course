@@ -13,7 +13,7 @@ if (argv[1] == NULL)
         printf("Invalid, no input. Please enter key.\n");
         }
         return 1;
-{
+
     string key = get_string("%s", argv[1]);
 
     length = strlen(key);
@@ -42,5 +42,5 @@ if (argv[1] == NULL)
 
 }
 
-}
+
 
