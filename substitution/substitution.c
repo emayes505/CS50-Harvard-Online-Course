@@ -36,7 +36,6 @@ int main(int argc, string argv[])
                   do
                   {
                         pText = get_string("plaintext: ");
-                        int lengthOfPText = strlen(pText);
                   } while (!isalpha(pText));
 
            for (int i = 0; i < length; i++)
@@ -46,7 +45,7 @@ int main(int argc, string argv[])
                         key[i] = key[i] - 32;
                 }
                printf("ciphertext: ");
-
+                int lengthOfPText = strlen(pText);
                for (int i = 0; i < lengthOfPText; i++)
                if (isupper(pText[i]))
                {
