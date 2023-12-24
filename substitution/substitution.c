@@ -33,12 +33,13 @@ int main(int argc, string argv[])
 
                   }
                   }
-           string pText = get_string("Plain Text: ");
+           string pText = get_string("plaintext: ");
 
            int lengthOfPText = strlen(pText);
 
            for (int i = 0; i < lengthOfPText; i++)
            {
-           char cipher = key[pText[i] - 65]
+           string cipherText = key[pText[i] - 65];
+                printf("ciphertext:%s", cipherText);
            }
 }
