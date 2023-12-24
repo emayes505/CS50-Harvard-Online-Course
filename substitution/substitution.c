@@ -10,7 +10,7 @@ bool keyIsAlpha = false;
 
 string key = get_string("%s", argv[1]);
 
-length = strlen(key);
+length += strlen(key);
 
 if (argv[1] == NULL || length != 26)
         {
