@@ -4,7 +4,7 @@
 #include <string.h>
 
 int main(int argc, string argv[])
-
+{
 int length = 0;
 
 {
@@ -13,14 +13,18 @@ int length = 0;
     do
     {
     if (length == 0)
+        {
         printf("Invalid, no input. Please enter key.\n");
-
-    else (length != 26)
+        }
+        return 1;
+    else if (length != 26)
+        {
         printf("Invalid, Key must contain 26 characters. Try again.\n");
-        
-    } (while length != 26)
+        }
+        return 1;
+    } while (length != 26);
 
 }
 
-
+}
 
