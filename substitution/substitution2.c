@@ -26,11 +26,15 @@ if (length!= 26)
             {
                 key[i] = key[i] - 32;
             }
+     for (int i = 0; i < 26; i++)
+     {
             for (int j = i + 1; j < 26; j++)
+            {
             if ((key[i]) == (key[j]))
                 {
                     printf("Duplicate in key.\n");
                 }
-        }
+            }
+     }
 
 }
