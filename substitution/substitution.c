@@ -6,7 +6,7 @@
 int main(int argc, string argv[])
 
 
-char changeText(string plainText);
+string changeText(string plainText);
 
 
 
@@ -40,4 +40,8 @@ char changeText(string plainText);
                 }
         return 0;
         }
+        
+        string changeText(string plainText)
+
+
 }
