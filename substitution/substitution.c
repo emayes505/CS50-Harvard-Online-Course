@@ -33,9 +33,16 @@ int length = strlen(argv[1]);
                         }
                 }
         }
-        string plaintext = get_string("Plain Text: ");
-
-        for (int i = 0; i < length; i++)
+        string plainText = get_string("Plain Text: ");
+        int plength = strlength(plainText);
+        for (int i = 0; i < plength; i++)
+        {
+                key = toupper(key);
+                if (islower(plainText[i]))
+                {
+                        = plainText[i] - 97
+                }
+        }
 
 
 }
