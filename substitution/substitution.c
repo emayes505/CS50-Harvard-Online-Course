@@ -47,13 +47,16 @@ int main(int argc, string argv[])
 
         }
         string changeText(string plainText, string key);
+        {
+                int len = strlen(plainText);
 
-        for (int i = 0; i < len2; i++)
-        if isupper(plainText[i])
-               {
-                key[i] = plainText[i] - 32;
-               }
-
-
+                for (int i = 0; i < len, i++)
+                {
+                        if (isalpha(plainText[i]))
+                        {
+                                char shift  = isupper(plaintext[i])
+                        }
+                }
+        }
 
 }
