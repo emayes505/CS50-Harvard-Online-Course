@@ -40,15 +40,15 @@ int length = strlen(argv[1]);
         }
         string plainText = get_string("plaintext: ");
 
+        int plength = strlen(plainText);
+
         for (int i = 0; i < strlen(plainText); i++)
         {
                 if (islower(key[i]))
                 {
                         key[i] = key[i] -32;
                 }
-        }
-        int plength = strlen(plainText);
-        {
+      
                 printf("ciphertext: ");
         }
 
