@@ -18,8 +18,6 @@ if (length!= 26)
         printf("Key must contain 26 characters.\n");
         return 1;
     }
-
-
     for (int i = 0; i < 26; i++)
         {
             if (islower(key[i]))
@@ -55,16 +53,14 @@ if (length!= 26)
         {
         int indexKey = plainText[i] - 65;
              printf("%c", key[indexKey]);
+        }
         else
         {
             printf("%c" plainText[i]);
-
         }
     }
-}
-    {
+
+
         prinf("\n");
         return 0;
     }
-
-}
