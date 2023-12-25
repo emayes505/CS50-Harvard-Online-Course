@@ -34,7 +34,8 @@ int length = strlen(argv[1]);
                 }
         }
         string plaintext = get_string("Plain Text: ");
-        
+
+        for (int i = 0; i < length; i++)
 
 
 }
