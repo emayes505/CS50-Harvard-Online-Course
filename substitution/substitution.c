@@ -42,20 +42,10 @@ int main(int argc, string argv[])
                 {
                         key[i] = key[i] - 32;
                 }
-               printf("ciphertext: ");
-                int lengthOfPText = strlen(pText);
-               for (int i = 0; i < lengthOfPText; i++)
-               if (isupper(pText[i]))
-               {
-                int letter = pText[i] - 65;
-                printf("%c",key[letter])
-               }
-               else if (islower(pText[i]))
-               {
-                int letter = pText[i] - 97;
-                printf("%c", key[letter])
-               }
+
 
            }
-           changeText ()
+           string changeText(string pText)
+
+
 }
