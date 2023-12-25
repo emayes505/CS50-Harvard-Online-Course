@@ -8,7 +8,7 @@ int main (int argc, string argv[])
 {
 int length = strlen(argv[1]);
 
-        if (argc != 2, length != 26)
+        if (argc != 2 || length != 26)
         {
                 printf("Usage: ./substitution 'key' .\n");
                 return 1;
@@ -16,16 +16,20 @@ int length = strlen(argv[1]);
         string key = argv[1];
         for (int i = 0; i < length; i++)
         {
-                if (!isalphakey[i])
+                if (!isalpha(key[i]))
                 {
                         printf("Invalid input. All characters must be alphabetic.\n");
                         return 1;
                 }
+        for (int i = 0; i < 25; i++)
+        {
+                for (int j = i + 1; i < 24; i++)
+                {
+                        if (toupper(key[i]) == toupper(key[j]))
+                                printf("Duplicates characters.\n");
+                                
+                }
         }
-
-
-
-
-
+        }
 
 }
