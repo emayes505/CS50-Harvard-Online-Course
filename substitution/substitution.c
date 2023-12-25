@@ -25,9 +25,9 @@ int main(int argc, string argv[])
                                 printf("Duplicates found in key. Try again.\n");
                                 return 1;
                          }
-        for (int k = 0; i < len; i++)
+        for (int k = 0; k < len; k++)
         {
-        if (!isalpha(key[i]))
+        if (!isalpha(key[k]))
         {
                 printf("Key contains invalid characters. Try again.");
                 return 1;
