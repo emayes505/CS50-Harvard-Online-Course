@@ -67,6 +67,8 @@ int length = strlen(argv[1]);
                 }
 
         }
+                printf("\n");
+                
 
 
 }
