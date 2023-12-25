@@ -12,8 +12,12 @@ if (argv[1] != 2)
     int key = get_int("Key: ");
 
 if (!isdigit(key) || key < 0)
+    {
     printf("Usage: ./caesar key.\n");
     return 1;
+    }
+string plainText = get_string("plaintext: ");
+
 
 
 }
