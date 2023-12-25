@@ -3,11 +3,12 @@
 #include <stdio.h>
 #include <string.h>
 
+string changeText(string plainText);
+
 int main(int argc, string argv[])
 
 
 {
-        string changeText(string plainText);
         string plainText;
         string key = argv[1];
         int len = strlen(key);
@@ -40,7 +41,7 @@ int main(int argc, string argv[])
         return 0;
         }
         {
-        plainText = get_string("Plain Text: \n");
+        string plainText = get_string("Plain Text: \n");
                 //printf("Cipher Text: %s", changeText);
 
         }
