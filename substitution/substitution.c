@@ -26,10 +26,13 @@ int length = strlen(argv[1]);
                 for (int j = i + 1; i < 24; i++)
                 {
                         if (toupper(key[i]) == toupper(key[j]))
+                        {
                                 printf("Duplicates characters.\n");
-                                
+                                return 1;
+                        }
                 }
         }
+        string plaintext = get_string("Plain Text: ");
         }
 
 }
