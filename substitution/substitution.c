@@ -16,6 +16,7 @@ int length = strlen(argv[1]);
         if (argv [1] != 26)
         {
                 printf("Key must contain 26 characters.\n");
+                return 1;
         }
         string key = argv[1];
         for (int i = 0; i < length; i++)
@@ -64,7 +65,7 @@ int length = strlen(argv[1]);
                 {
                         printf("%c", plainText[i]);
                 }
-                
+
         }
 
 
