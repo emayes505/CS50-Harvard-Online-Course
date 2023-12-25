@@ -56,11 +56,17 @@ int main(int argc, string argv[])
                         {
                            if (isupper(plainText[i]))
                            {
-                                plainText[i] = 
+                                plainText[i] = plainText[i] - 65;
                            }
-
-
-
+                           else
+                           {
+                                plainText[i] = plainText[i] - 97;
+                           }
+                           {
+                                string plainText = key[plainText];
+                                return plainText;
+                           }
+                        
                         }
                 else
                         printf("All characters entered must be alphabetical. Try again\n");
