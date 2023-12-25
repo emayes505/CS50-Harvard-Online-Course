@@ -34,10 +34,17 @@ int length = strlen(argv[1]);
                 }
         }
         string plainText = get_string("Plain Text: ");
+
+        for (int i = 0; i < strlen(plainText); i++)
+        {
+                if (islower(key[i]))
+                {
+                        key[i] = key[i] -32;
+                }
+        }
         int plength = strlen(plainText);
         for (int i = 0; i < plength; i++)
         {
-                key = toupper(key[i]);
                 if (islower(plainText[i]))
                 {
                         int character = plainText[i] - 97;
@@ -51,7 +58,7 @@ int length = strlen(argv[1]);
                 }
                 else
                 {
-                        printf("%c", plaintext[i]);
+                        printf("%c", plainText[i]);
                 }
                 printf("\n");
                 return 0;
