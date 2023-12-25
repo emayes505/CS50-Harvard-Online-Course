@@ -44,11 +44,12 @@ int length = strlen(argv[1]);
 
         for (int i = 0; i < strlen(plainText); i++)
         {
-                if (islower(key[i]))
                 {
-                key[i] = key[i] -32;
-                }
+                if (!isupper(key[i]))
 
+                key[i] = key[i] + 32;
+
+                }
         }
                 {
                 printf("ciphertext: ");
