@@ -1,74 +1,69 @@
 #include <cs50.h>
 #include <ctype.h>
-#include <stdio.h>
 #include <string.h>
+#include <stdio.h>
 
 int main(int argc, string argv[])
 
 {
-    int length = strlen(argv[1]);
-
-    if (argc != 2 || argv[1] == NULL)
+string key = argv[1];
+int length = strlen(key);
+if (argc != 2)
     {
-        printf("Usage: ./substitution 'key' .\n");
+        printf("Usage: ./solution key\n");
         return 1;
     }
-    if (length != 26)
+if (length!= 26)
     {
         printf("Key must contain 26 characters.\n");
         return 1;
     }
-    string key = argv[1];
-    for (int i = 0; i < length; i++)
-    {
-        if (!isalpha(key[i]))
-        {
-            printf("Invalid input. All characters must be alphabetic.\n");
-            return 1;
-        }
-    }
     for (int i = 0; i < 26; i++)
-    {
-        for (int j = i + 1; j < 26; j++)
         {
-            if (toupper(key[i]) == toupper(key[j]))
+            if (islower(key[i]))
             {
-                printf("Duplicates characters.\n");
+                key[i] = key[i] - 32;
+            }
+            else if (!isalpha(key[i]))
+            {
+                printf("All characters must be alphabetic.\n");
                 return 1;
             }
         }
-    }
-    string plainText = get_string("plaintext: ");
-
+     for (int i = 0; i < 26; i++)
+     {
+            for (int j = i + 1; j < 25; j++)
+            {
+            if ((key[i]) == (key[j]))
+            {
+                printf("Duplicate in key.\n");
+            }
+            }
+     }
+     string plainText = get_string("plaintext: ");
+     {
+        printf("ciphertext: ");
+     }
     int plength = strlen(plainText);
-
-    for (int i = 0; i < 26; i++)
-    {
-        {
-            if (!isupper(key[i]))
-
-                key[i] = key[i] - 32;
-        }
-    }
-    printf("%s", key);
-    printf("ciphertext: ");
-
     for (int i = 0; i < plength; i++)
     {
         if (islower(plainText[i]))
         {
-            int character = plainText[i] - 97;
-            printf("%c", tolower(key[character]));
+        int indexKey = plainText[i] - 97;
+            printf("%c" , tolower(key[indexKey]));
         }
         else if (isupper(plainText[i]))
         {
-            int character = plainText[i] - 65;
-            printf("%c", key[character]);
+        int indexKey = plainText[i] - 65;
+             printf("%c", key[indexKey]);
         }
         else
         {
             printf("%c", plainText[i]);
         }
     }
-    printf("\n");
-}
+        {
+            printf("\n");
+        }
+        return 0;
+    }
