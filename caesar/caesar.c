@@ -18,6 +18,11 @@ if (!isdigit(key) || key < 0)
     }
 string plainText = get_string("plaintext: ");
 
+for (int i = 0, length = strlen(plainText); i < length; i++)
+    {
+        if (isupper(plainText[i]))
+    }
+
 
 
 }
