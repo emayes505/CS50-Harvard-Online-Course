@@ -58,7 +58,7 @@ if (length!= 26)
         else
         {
             printf("%c" plainText[i]);
-        }
+
         }
     }
     return 0;
