@@ -54,11 +54,11 @@ int main(int argc, string argv[])
                         {
                            if (isupper(plainText[i]))
                            {
-                                cipher = plainText[i] - 65;
+                                cipher =  plainText[i] - 65;
                            }
                            else
                            {
-                                cipher = plainText[i] - 97;
+                                cipher =  plainText[i] - 97;
                            }
                            {
 
