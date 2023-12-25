@@ -3,16 +3,17 @@
 #include <string.h>
 #include <stdio.h>
 
-int main(int argc, string argv)
+int main(int argc, string argv[])
 
 {
 string key = argv[1];
+int length = strlen(key);
 if (argc != 2)
     {
         printf("Usage: ./solution key\n");
         return 1;
     }
-if (key != 26)
+if (length!= 26)
     {
         printf("Key must contain 26 characters.\n");
         return 1;
@@ -26,8 +27,11 @@ if (key != 26)
                 key[i] = key[i] - 32;
             }
             for (int j = i + 1; j < 26; j++)
-            if ((key[i]) == (key[i]))
-        
+            if ((key[i]) == (key[j]))
+                {
+                    printf("Duplicate in key.\n");
+                }
+
 
         }
 
