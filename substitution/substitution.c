@@ -42,13 +42,13 @@ int length = strlen(argv[1]);
 
         int plength = strlen(plainText);
 
-        for (int i = 0; i < strlen(plainText); i++)
+        for (int i = 0; i < 26; i++)
         {
                 {
                 if (!isupper(key[i]))
 
                 key[i] = key[i] + 32;
-                printf("%s", key);
+
                 }
         }
 
