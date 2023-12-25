@@ -40,11 +40,11 @@ int main(int argc, string argv[])
 
            for (int i = 0; i < length; i++)
            {
+                printf("ciphertext: ");
                 if(islower(key[i]))
                 {
                         key[i] = key[i] - 32;
                 }
-               printf("ciphertext: ");
                 int lengthOfPText = strlen(pText);
                for (int i = 0; i < lengthOfPText; i++)
                if (isupper(pText[i]))
