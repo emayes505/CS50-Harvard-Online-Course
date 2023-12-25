@@ -8,6 +8,7 @@ string changeText(string plainText);
 int main(int argc, string argv[])
 
 
+
 {
         string key = argv[1];
         int len2;
@@ -41,7 +42,7 @@ int main(int argc, string argv[])
         }
         {
         string plainText = get_string("Plain Text: \n");
-        int len2 = strlen(plainText);
+        len2 = strlen(plainText);
                 //printf("Cipher Text: %s", changeText);
 
         }
