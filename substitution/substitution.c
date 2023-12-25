@@ -15,11 +15,12 @@ int length = strlen(argv[1]);
         }
         string key = argv[1];
         for (int i = 0; i < length; i++)
-        {
-                if (!isalpha(key[i]))
                 {
-                        printf("Invalid input. All characters must be alphabetic.\n");
-                        return 1;
+                if (!isalpha(key[i]))
+                        {
+                                printf("Invalid input. All characters must be alphabetic.\n");
+                                return 1;
+                        }
                 }
         for (int i = 0; i < 25; i++)
         {
@@ -33,6 +34,6 @@ int length = strlen(argv[1]);
                 }
         }
         string plaintext = get_string("Plain Text: ");
-        }
+
 
 }
