@@ -4,21 +4,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char *argv[])
+int main(int argc, string argv[])
 {
 if (argc != 2)
     {
         printf("Invalid input. Usage: ./caesar 'key'.\n");
         return 1;
     }
-    int key = atoi(argv[1]);
-    key = key%26;
-if (!isdigit(key) || key < 0)
+
+for (int i = 0, keyLength = strlen(argv[1]); i < keyLength; i++)
     {
-    printf("Usage: ./caesar key.\n");
-    return 1;
+        if(!isdigit(argv[1] [i]))
+        {
+            prinft("Key must only contain digits.\n")
+            return 1;
+        }
     }
 string plainText = get_string("plaintext: ");
+int key = atoi(key)%26;
+
 
         printf("ciphertext: ");
 
