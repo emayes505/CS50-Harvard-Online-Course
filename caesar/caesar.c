@@ -16,12 +16,12 @@ for (int i = 0, keyLength = strlen(argv[1]); i < keyLength; i++)
     {
         if(!isdigit(argv[1] [i]))
         {
-            prinft("Key must only contain digits.\n")
+            printf("Key must only contain digits.\n");
             return 1;
         }
     }
 string plainText = get_string("plaintext: ");
-int key = atoi(key)%26;
+int key = atoi(argv[1])%26;
 
 
         printf("ciphertext: ");
