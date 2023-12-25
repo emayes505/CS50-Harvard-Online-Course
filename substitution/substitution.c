@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-string changeText(string plainText);
+string changeText(string plainText, string key);
 
 int main(int argc, string argv[])
 
