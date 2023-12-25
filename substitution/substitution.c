@@ -65,11 +65,15 @@ int length = strlen(argv[1]);
                         int character = plainText[i] - 65;
                         printf("%c", key[character]);
                 }
-                else if 
+                else if (isspace(plainText[i]))
+                {
+                        printf(" ");
+                }
+
+                else
                 {
                         printf("%c", plainText[i]);
                 }
-                else
 
         }
                 printf("\n");
