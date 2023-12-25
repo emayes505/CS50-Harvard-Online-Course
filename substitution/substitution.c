@@ -37,6 +37,7 @@ if (length!= 26)
             if ((key[i]) == (key[j]))
             {
                 printf("Duplicate in key.\n");
+                return 1;
             }
             }
      }
