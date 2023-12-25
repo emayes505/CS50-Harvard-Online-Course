@@ -1,10 +1,11 @@
 #include <ctype.h>
 #include <cs50.h>
+#include <string.h>
 #include <stdio.h>
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
-if (argv[1] != 2)
+if (argc != 2)
     {
         printf("Invalid input. Usage: ./caesar 'key'.\n");
         return 1;
