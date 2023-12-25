@@ -25,13 +25,15 @@ int main(int argc, string argv[])
                                 printf("Duplicates found in key. Try again.\n");
                                 return 1;
                          }
-
-        else if (!isalpha(key[i]))
+        for (int k = 0; i < len; i++)
+        {
+        if (!isalpha(key[i]))
         {
                 printf("Key contains invalid characters. Try again.");
                 return 1;
         }
         }
+                }
         return 0;
         }
 }
