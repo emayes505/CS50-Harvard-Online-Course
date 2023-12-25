@@ -11,7 +11,7 @@ if (argc != 2)
         return 1;
     }
     int key = char* argv[1];
-    key = key%26
+    key = key%26;
 if (!isdigit(key) || key < 0)
     {
     printf("Usage: ./caesar key.\n");
