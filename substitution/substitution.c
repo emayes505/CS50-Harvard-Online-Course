@@ -51,7 +51,7 @@ int length = strlen(argv[1]);
         {
                 printf("ciphertext: ");
         }
-        
+
         for (int i = 0; i < plength; i++)
         {
                 if (islower(plainText[i]))
@@ -65,10 +65,11 @@ int length = strlen(argv[1]);
                         int character = plainText[i] - 65;
                         printf("%c", key[character]);
                 }
-                else
+                else if 
                 {
                         printf("%c", plainText[i]);
                 }
+                else
 
         }
                 printf("\n");
