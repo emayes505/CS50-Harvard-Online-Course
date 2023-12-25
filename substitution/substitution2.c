@@ -41,6 +41,9 @@ if (length!= 26)
             }
      }
      string plainText = get_string("plaintext: ");
+     {
+        printf("ciphertext: ");
+     }
     int plength = strlen(plainText);
     for (int i = 0; i < plength; i++)
     {
@@ -56,11 +59,11 @@ if (length!= 26)
         }
         else
         {
-            printf("%c" plainText[i]);
+            printf("%c", plainText[i]);
         }
     }
-
-
-        prinf("\n");
+        {
+            printf("\n");
+        }
         return 0;
     }
