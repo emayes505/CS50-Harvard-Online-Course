@@ -48,11 +48,13 @@ int length = strlen(argv[1]);
                 }
         }
         int plength = strlen(plainText);
+        {
+                printf("ciphertext: ");
+        }
+
+
         for (int i = 0; i < plength; i++)
         {
-                        {
-                                printf("ciphertext: ");
-                        }
                 if (islower(plainText[i]))
                 {
                         int character = plainText[i] - 97;
