@@ -48,9 +48,9 @@ int main(int argc, string argv[])
         }
         string changeText(string plainText, string key);
         {
-                int len = strlen(plainText);
+                int len2 = strlen(plainText);
 
-                for (int i = 0; i < len, i++)
+                for (int i = 0; i < len2, i++)
                 {
                         if (isalpha(plainText[i]))
                         {
@@ -66,7 +66,7 @@ int main(int argc, string argv[])
                                 string plainText = key[plainText];
                                 return plainText;
                            }
-                        
+
                         }
                 else
                         printf("All characters entered must be alphabetical. Try again\n");
