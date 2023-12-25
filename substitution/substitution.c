@@ -51,8 +51,7 @@ int length = strlen(argv[1]);
         {
                 printf("ciphertext: ");
         }
-
-
+        
         for (int i = 0; i < plength; i++)
         {
                 if (islower(plainText[i]))
