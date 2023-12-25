@@ -46,7 +46,7 @@ int main(int argc, string argv[])
                 //printf("Cipher Text: %s", changeText);
 
         }
-        string changeText(string plainText);
+        string changeText(string plainText, string key);
 
         for (int i = 0; i < len2; i++)
         if isupper(plainText[i])
