@@ -10,8 +10,8 @@ if (argc != 2)
         printf("Invalid input. Usage: ./caesar 'key'.\n");
         return 1;
     }
-    int key = get_int("Key: ");
-    key = key %26;
+    int key = argv[1];
+    key = key%26
 if (!isdigit(key) || key < 0)
     {
     printf("Usage: ./caesar key.\n");
