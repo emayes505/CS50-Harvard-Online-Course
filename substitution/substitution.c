@@ -8,10 +8,14 @@ int main (int argc, string argv[])
 {
 int length = strlen(argv[1]);
 
-        if (argc != 2 || length != 26)
+        if (argc != 2)
         {
                 printf("Usage: ./substitution 'key' .\n");
                 return 1;
+        }
+        if (argv [1] != 26)
+        {
+                printf("Key must contain 26 characters.\n");
         }
         string key = argv[1];
         for (int i = 0; i < length; i++)
