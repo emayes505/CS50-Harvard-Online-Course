@@ -5,11 +5,13 @@
 
 int main(int argc, string argv[])
 
+
 {
         string key = argv[1];
         int len = strlen(key);
         // input parameters are only 2 inputs/and a single key value of 26 characters.
-        if (argc != 2 || argv[1] == NULL || len != 26)
+
+        if (argv[1] == NULL || argc != 2 || len != 26)
         {
                 printf("Input is invalid. Enter key after program command ./substitution KEYHERE(26 Characters).\n");
                 return 1;
@@ -28,9 +30,5 @@ int main(int argc, string argv[])
                 return 1;
         }
         }
-
-
-
-
 
 }
