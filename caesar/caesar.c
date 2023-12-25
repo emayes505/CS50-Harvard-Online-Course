@@ -2,6 +2,7 @@
 #include <cs50.h>
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(int argc, char *argv[])
 {
@@ -10,7 +11,7 @@ if (argc != 2)
         printf("Invalid input. Usage: ./caesar 'key'.\n");
         return 1;
     }
-    int key = char* argv[1];
+    int key = atoi(argv[1]);
     key = key%26;
 if (!isdigit(key) || key < 0)
     {
