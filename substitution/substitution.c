@@ -46,13 +46,14 @@ int main(int argc, string argv[])
         string changeText(string plainText, string key);
         {
                 int length = strlen(plainText);
-                string cipher;
+                char cipher;
 
                 for (int i = 0; i < length; i++)
                 {
                         if (isalpha(plainText[i]))
                         {
                            if (isupper(plainText[i]))
+                           for ( i = 0; i < length; i++)
                            {
                                 cipher =  plainText[i] - 65;
                            }
