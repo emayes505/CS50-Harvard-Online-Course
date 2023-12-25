@@ -11,7 +11,6 @@ int main(int argc, string argv[])
 
 {
         string key = argv[1];
-        int len2;
         int len = strlen(key);
         // input parameters are only 2 inputs/and a single key value of 26 characters.
 
@@ -40,14 +39,13 @@ int main(int argc, string argv[])
                 }
         return 0;
         }
+                string plainText = get_string("Plain Text: \n");
         {
-        string plainText = get_string("Plain Text: \n");
-        len2 = strlen(plainText);
-                //printf("Cipher Text: %s", changeText);
 
         }
         string changeText(string plainText, string key);
         {
+                string plainText = get_string("Plain Text: \n");
                 int len2 = strlen(plainText);
 
                 for (int i = 0; i < len2, i++)
