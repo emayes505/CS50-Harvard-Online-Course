@@ -48,7 +48,18 @@ if (length!= 26)
     {
         if (islower(plainText[i]))
         {
-            
+        int indexKey = plainText[i] - 97;
+            printf("%c" , key[indexKey]);
+        }
+        else if (isupper(plainText[i]))
+        {
+        int indexKey = plainText[i] - 65;
+             printf("%c", key[indexKey] + 32);
+        else
+        {
+            printf("%c" plainText[i]);
+        }
         }
     }
+    return 0;
 }
