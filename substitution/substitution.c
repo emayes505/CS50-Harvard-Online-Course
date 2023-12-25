@@ -20,7 +20,7 @@ int main(int argc, string argv[])
                 {
                         for (int j = i + 1; j < length; j++ )
 
-                {
+                        {
                         if (toupper(key[i]) == toupper(key[j]))
                        {
                         printf("Duplicates found. Try again.\n");
@@ -31,8 +31,8 @@ int main(int argc, string argv[])
                               printf("Invalid input, all charcters must be alphabetical.\n");
                               return 1;
                               }
-                  }
-                        pText = get_string("plaintext: ");
+                        }
+                  pText = get_string("plaintext: ");
                   }
 
                 for (int i = 0; i < length; i++)
