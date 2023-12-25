@@ -31,12 +31,12 @@ for (int i = 0, length = strlen(plainText); i < length; i++)
         if (isupper(plainText[i]))
         {
          int index = plainText[i] - 65;
-         printf("%c", toupper(index + key));
+         printf("%c", toupper(index + key + 65));
         }
         else if (islower(plainText[i]))
         {
             int index = plainText[i] - 97;
-            printf("%c", tolower(index + key));
+            printf("%c", tolower(index + key + 97));
         }
         else
             {
