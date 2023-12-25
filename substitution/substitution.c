@@ -64,8 +64,7 @@ int length = strlen(argv[1]);
                 {
                         printf("%c", plainText[i]);
                 }
-                printf("\n");
-                return 0;
+                
         }
 
 
