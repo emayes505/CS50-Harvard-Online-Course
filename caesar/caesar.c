@@ -12,5 +12,8 @@ if (argv[1] != 2)
     int key = get_int("Key: ");
 
 if (!isdigit(key))
+    printf("Usage: ./caesar key.\n");
+    return 1;
+    
 
 }
