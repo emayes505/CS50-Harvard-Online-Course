@@ -45,10 +45,9 @@ int main(int argc, string argv[])
         }
         string changeText(string plainText, string key);
         {
-                string plainText = get_string("Plain Text: \n");
-                int len2 = strlen(plainText);
+                int length = strlen(plainText);
 
-                for (int i = 0; i < len2, i++)
+                for (int i = 0; i < length, i++)
                 {
                         if (isalpha(plainText[i]))
                         {
