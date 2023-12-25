@@ -23,7 +23,7 @@ int length = strlen(argv[1]);
                 }
         for (int i = 0; i < 25; i++)
         {
-                for (int j = i + 1; i < 24; i++)
+                for (int j = i + 1; j < 24; j++)
                 {
                         if (toupper(key[i]) == toupper(key[j]))
                         {
