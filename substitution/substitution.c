@@ -38,7 +38,7 @@ int length = strlen(argv[1]);
                         }
                 }
         }
-        string plainText = get_string("Plain Text: ");
+        string plainText = get_string("plaintext: ");
 
         for (int i = 0; i < strlen(plainText); i++)
         {
@@ -50,6 +50,9 @@ int length = strlen(argv[1]);
         int plength = strlen(plainText);
         for (int i = 0; i < plength; i++)
         {
+                        {
+                                printf("ciphertext: ");
+                        }
                 if (islower(plainText[i]))
                 {
                         int character = plainText[i] - 97;
@@ -68,7 +71,7 @@ int length = strlen(argv[1]);
 
         }
                 printf("\n");
-                
+
 
 
 }
