@@ -26,6 +26,11 @@ if (length!= 26)
             {
                 key[i] = key[i] - 32;
             }
+            else if (!isalpha(key[i]))
+            {
+                printf("All characters must be alphabetic.\n");
+                return 1;
+            }
         }
      for (int i = 0; i < 26; i++)
      {
@@ -37,5 +42,13 @@ if (length!= 26)
             }
             }
      }
-
+     string plainText = get_string("plaintext: ");
+    int plength = strlen(plainText);
+    for (int i = 0; i < plength; i++)
+    {
+        if (islower(plainText[i]))
+        {
+            
+        }
+    }
 }
