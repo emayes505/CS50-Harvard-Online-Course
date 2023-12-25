@@ -18,7 +18,7 @@ int main(int argc, string argv[])
         }// iterate through key to determine is duplicates are present.
         for (int i = 0; i < len; i++)
         {
-                for(int j = i + 1; i < len ; j++)
+                for(int j = i + 1; j < len ; j++)
         if (toupper(key[i]) == toupper(key [j]))
         {
                 printf("Duplicates found in key. Try again.\n");
