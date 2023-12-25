@@ -2,7 +2,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main(int argc, string argv[])
+int main(int argc, char* argv[])
 {
 if (argv[1] != 2)
     {
@@ -17,12 +17,25 @@ if (!isdigit(key) || key < 0)
     return 1;
     }
 string plainText = get_string("plaintext: ");
-
+    {
+        printf("ciphertext: ");
+    }
 for (int i = 0, length = strlen(plainText); i < length; i++)
     {
         if (isupper(plainText[i]))
+        {
+         int index = plainText[i] - 65;
+            printf("%c%", toupper(key[index]));
+        }
+        else if (islower(plainText[i]))
+        {
+            int index = plainText[i] - 97;
+                printf("%c", tolower(key[index]));
+        }
+        else
+            printf("%c", plainText[i]);
     }
-
-
+    prinf("\n");
+    return 0;
 
 }
