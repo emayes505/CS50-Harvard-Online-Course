@@ -54,10 +54,17 @@ int main(int argc, string argv[])
                 {
                         if (isalpha(plainText[i]))
                         {
-                                char shift  = isupper(plainText[i]) ? 'A' : 'a';
-                                int index = plainText[i] - shift;
-                                plainText = isupper(plainText[i]) ? toupper(key[index])
+                           if (isupper(plainText[i]))
+                           {
+                                plainText[i] = 
+                           }
+
+
+
                         }
+                else
+                        printf("All characters entered must be alphabetical. Try again\n");
+
                 }
         }
 
