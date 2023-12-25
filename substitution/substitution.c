@@ -40,15 +40,18 @@ int main(int argc, string argv[])
         return 0;
         }
         {
-        plainText = get_text("Plain Text: "\n);
-                printf("Cipher Text: %s", changeText);
+        plainText = get_string("Plain Text: \n");
+                //printf("Cipher Text: %s", changeText);
 
         }
-        string changeText(string plainText)
-        {
+        string changeText(string plainText);
+
         for (int i = 0; i < len2; i++)
-        plainText[i]
-        }
+        if isupper(plainText[i])
+               {
+                key[i] = plainText[i] = 32;
+               }
+
 
 
 }
