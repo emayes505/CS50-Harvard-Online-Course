@@ -9,6 +9,8 @@ int main(int argc, string argv[])
   string key = argv[1];
   string pText;
   int length = strlen(key);
+  string changeText(string pText)
+
 
 
         if (argv[1] == NULL || length != 26 || argc != 2)
@@ -44,8 +46,12 @@ int main(int argc, string argv[])
                 }
 
 
-           }
-           string changeText(string pText)
+        string changeText(string pText)
+        {
+        for (int i = 0; i < length; i++)
 
+
+        }
+        }
 
 }
