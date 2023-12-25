@@ -49,10 +49,9 @@ int length = strlen(argv[1]);
                 key[i] = key[i] -32;
                 }
 
-
         }
                 {
-                        printf("ciphertext: ");
+                printf("ciphertext: ");
                 }
 
         for (int i = 0; i < plength; i++)
