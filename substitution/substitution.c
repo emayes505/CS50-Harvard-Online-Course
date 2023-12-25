@@ -57,7 +57,7 @@ int length = strlen(argv[1]);
                 if (islower(plainText[i]))
                 {
                         int character = plainText[i] - 97;
-                        printf("%c", key[character] + 32);
+                        printf("%c", tolower(key[character]));
 
                 }
                 else if (isupper(plainText[i]))
