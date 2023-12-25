@@ -19,16 +19,18 @@ int main(int argc, string argv[])
         for (int i = 0; i < len; i++)
         {
                 for(int j = i + 1; j < len ; j++)
-        if (toupper(key[i]) == toupper(key [j]))
-        {
-                printf("Duplicates found in key. Try again.\n");
-                return 1;
-        }
+                {
+                        if (toupper(key[i]) == toupper(key [j]))
+                        {
+                                printf("Duplicates found in key. Try again.\n");
+                                return 1;
+                         }
+
         else if (!isalpha(key[i]))
         {
                 printf("Key contains invalid characters. Try again.");
                 return 1;
         }
         }
-
+        }
 }
