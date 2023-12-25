@@ -22,9 +22,9 @@ int length = strlen(argv[1]);
                                 return 1;
                         }
                 }
-        for (int i = 0; i < 25; i++)
+        for (int i = 0; i < 26; i++)
         {
-                for (int j = i + 1; j < 24; j++)
+                for (int j = i + 1; j < 25; j++)
                 {
                         if (toupper(key[i]) == toupper(key[j]))
                         {
@@ -34,10 +34,10 @@ int length = strlen(argv[1]);
                 }
         }
         string plainText = get_string("Plain Text: ");
-        int plength = strlength(plainText);
+        int plength = strlen(plainText);
         for (int i = 0; i < plength; i++)
         {
-                key = toupper(key);
+                key = toupper(key[i]);
                 if (islower(plainText[i]))
                 {
                         int character = plainText[i] - 97;
@@ -53,6 +53,8 @@ int length = strlen(argv[1]);
                 {
                         printf("%c", plaintext[i]);
                 }
+                printf("\n");
+                return 0;
         }
 
 
