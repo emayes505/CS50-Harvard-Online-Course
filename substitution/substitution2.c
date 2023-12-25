@@ -17,10 +17,18 @@ if (key != 26)
         printf("Key must contain 26 characters.\n");
         return 1;
     }
+
+
     for (int i = 0; i < 26; i++)
         {
+            if (islower(key[i]))
+            {
+                key[i] = key[i] - 32;
+            }
             for (int j = i + 1; j < 26; j++)
-            if (toupper(key[i]) == toupper(key[i]))
+            if ((key[i]) == (key[i]))
+        
+
         }
 
 
