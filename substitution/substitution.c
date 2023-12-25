@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdio.h>
 
-int main(int argc, string argv[])
+int main(int argc, char *argv[])
 
 {
 string key = argv[1];
