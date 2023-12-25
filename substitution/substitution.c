@@ -6,6 +6,10 @@
 int main(int argc, string argv[])
 
 
+char changeText(string plainText);
+
+
+
 {
         string key = argv[1];
         int len = strlen(key);
