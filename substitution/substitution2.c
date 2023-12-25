@@ -31,10 +31,6 @@ if (length!= 26)
                 {
                     printf("Duplicate in key.\n");
                 }
-
-
         }
-
-
 
 }
