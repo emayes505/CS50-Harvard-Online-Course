@@ -46,10 +46,10 @@ int length = strlen(argv[1]);
         {
                 if (islower(key[i]))
                 {
-                        key[i] = key[i] -32;
+                key[i] = key[i] -32;
                 }
 
-               
+
         }
                 {
                         printf("ciphertext: ");
