@@ -40,7 +40,18 @@ int length = strlen(argv[1]);
                 key = toupper(key);
                 if (islower(plainText[i]))
                 {
-                        = plainText[i] - 97
+                        int character = plainText[i] - 97;
+                        printf("%c", key[character] + 32);
+
+                }
+                else if (isupper(plainText[i]))
+                {
+                        int character = plainText[i] - 65;
+                        printf("%c", key[character]);
+                }
+                else
+                {
+                        printf("Plain text input has invalid characters");
                 }
         }
 
