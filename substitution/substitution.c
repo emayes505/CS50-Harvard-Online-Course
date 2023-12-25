@@ -47,7 +47,7 @@ int main(int argc, string argv[])
         {
                 int length = strlen(plainText);
 
-                for (int i = 0; i < length, i++)
+                for (int i = 0; i < length; i++)
                 {
                         if (isalpha(plainText[i]))
                         {
