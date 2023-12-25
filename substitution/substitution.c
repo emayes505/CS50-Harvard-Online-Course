@@ -48,7 +48,7 @@ int length = strlen(argv[1]);
                 {
                         key[i] = key[i] -32;
                 }
-      
+
                 printf("ciphertext: ");
         }
 
