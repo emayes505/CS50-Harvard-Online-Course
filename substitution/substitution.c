@@ -51,7 +51,7 @@ int length = strlen(argv[1]);
                 }
                 else
                 {
-                        printf("Plain text input has invalid characters");
+                        printf("%c", plaintext[i]);
                 }
         }
 
