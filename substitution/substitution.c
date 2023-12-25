@@ -47,6 +47,7 @@ int main(int argc, string argv[])
         string changeText(string plainText)
         {
         for (int i = 0; i < len2; i++)
+        plainText[i]
         }
 
 
