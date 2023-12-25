@@ -9,10 +9,9 @@ int main(int argc, string argv[])
 
 
 {
-        string plainText;
         string key = argv[1];
+        int len2;
         int len = strlen(key);
-        int len2 = strlen(plainText);
         // input parameters are only 2 inputs/and a single key value of 26 characters.
 
         if (argc != 2 || len != 26)
@@ -42,6 +41,7 @@ int main(int argc, string argv[])
         }
         {
         string plainText = get_string("Plain Text: \n");
+        int len2 = strlen(plainText);
                 //printf("Cipher Text: %s", changeText);
 
         }
@@ -50,7 +50,7 @@ int main(int argc, string argv[])
         for (int i = 0; i < len2; i++)
         if isupper(plainText[i])
                {
-                key[i] = plainText[i] = 32;
+                key[i] = plainText[i] - 32;
                }
 
 
