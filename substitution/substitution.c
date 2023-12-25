@@ -46,6 +46,7 @@ int main(int argc, string argv[])
         string changeText(string plainText, string key);
         {
                 int length = strlen(plainText);
+                string cipher;
 
                 for (int i = 0; i < length; i++)
                 {
@@ -53,15 +54,15 @@ int main(int argc, string argv[])
                         {
                            if (isupper(plainText[i]))
                            {
-                                plainText[i] = plainText[i] - 65;
+                                cipher = plainText[i] - 65;
                            }
                            else
                            {
-                                plainText[i] = plainText[i] - 97;
+                                cipher = plainText[i] - 97;
                            }
                            {
-                                string plainText = key[plainText];
-                                return plainText;
+
+                                return cipher;
                            }
 
                         }
