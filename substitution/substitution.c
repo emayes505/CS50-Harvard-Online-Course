@@ -32,9 +32,8 @@ int main(int argc, string argv[])
                               return 1;
                               }
                   }
-                
                         pText = get_string("plaintext: ");
-                  } while (!isalpha(pText));
+                  }
 
                 for (int i = 0; i < length; i++)
            {
