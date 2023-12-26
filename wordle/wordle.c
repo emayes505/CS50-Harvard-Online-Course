@@ -33,11 +33,9 @@ int main(int argc, string argv[])
         return 1;
     }
     int wordsize = 0;
-    int length = strlen(argv[1]);
     int number = atoi(argv[1]);
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
-    for (int i = 0; i < length; i++)
      if (number < 5 || number > 8)
         {
             printf("Invalid input.\n");
@@ -84,7 +82,7 @@ int main(int argc, string argv[])
 
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
-        
+
 
         // Calculate score for the guess
         int score = check_word(guess, wordsize, status, choice);
