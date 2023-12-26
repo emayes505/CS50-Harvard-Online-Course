@@ -84,7 +84,7 @@ int main(int argc, string argv[])
         // TODO #4
         for (int i = 0; i < wordsize; i ++)
         {
-            if (guess[i] == )
+            if (guess[i] == choice[i])
         }
 
 
