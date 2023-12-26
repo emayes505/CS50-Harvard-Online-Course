@@ -146,6 +146,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
             }
             break;
         } while (guess[i] != choice[i]);
+
     }
     // compare guess to choice and score points as appropriate, storing points in status
     // TODO #5
