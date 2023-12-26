@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int convert(string input);
+int convert(string input, int length);
 
 int main(void)
 
@@ -28,20 +28,17 @@ int main(void)
     printf("%i\n", convert(input));
 }
 
-int convert(string input)
-    {
-    int length = strlen(input);
-
-        if (length == 1)
-        {
-            return input[0] - 48;
-        }
-        else
-        {
-            for (int i = length - 1; i >= 0; i--)
-            {
-                return input[i] - 48;
-            }
-        }
-        return 0;
+int convert(string input, int length)
+{
+    if (length == 1){
+        return input[0] - 48;
     }
+
+    char last_digit = input[length - 1];
+
+    int convert_ld = last_digit - 48;
+
+    input[length - 1] = '\0';
+
+    return convert_ld + 10 * convert(input);
+}
