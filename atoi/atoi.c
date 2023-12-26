@@ -30,9 +30,6 @@ int main(void)
 
 int convert(string input, int n)
 {
-    for (int i = 0; i < n; i++)
-    {
-        input[n - 1]
-    }
-    // TODO
+   if (input[i] == 65)
+    printf("A");
 }
