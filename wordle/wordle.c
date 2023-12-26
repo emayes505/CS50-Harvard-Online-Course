@@ -33,10 +33,10 @@ int main(int argc, string argv[])
         return 1;
     }
     int wordsize = 0;
-    int wordsize = atoi(argv[1]);
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
-     if (number < 5 || number > 8)
+    int wordsize = atoi(argv[1]);
+     if (wordsize < 5 || wordsize > 8)
         {
             printf("Invalid input.\n");
             return 1;
@@ -109,9 +109,13 @@ int main(int argc, string argv[])
 
 string get_guess(int wordsize)
 {
+    do
+    {
     string guess = get_string("Guess: ");
     int gLength = strlen(guess);
-    if (gLength != number)
+    } while (gLength != wordsize)
+
+
 
     // ensure users actually provide a guess that is the correct length
     // TODO #3
