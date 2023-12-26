@@ -38,7 +38,7 @@ int main(int argc, string argv[])
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
     for (int i = 0; i < length; i++)
-     if (number < 53 || number > 56)
+     if (number < 5 || number > 8)
         {
             printf("Invalid input.\n");
             return 1;
