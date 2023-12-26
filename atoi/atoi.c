@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int convert(string input, int length);
+int convert(string input);
 
 int main(void)
 
@@ -26,8 +26,10 @@ int main(void)
     printf("%i\n", convert(input));
 }
 
-int convert(string input, int length)
+int convert(string input)
 {
+int length = strlen(input);
+
     if (length == 1){
         return input[0] - 48;
     }
