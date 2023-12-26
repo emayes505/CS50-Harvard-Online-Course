@@ -8,15 +8,15 @@ int main(void)
     int height = get_int("Height: ");
     draw(height);
 }
-void draw(int n)
+void draw(int height)
 {
-    if (n <= 0)
+    if (height <= 0)
     {
         return;
     }
-    draw(n - 1);
+    draw(height - 1);
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < height; i++)
     {
         printf("#");
     }
