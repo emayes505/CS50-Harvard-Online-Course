@@ -29,6 +29,9 @@ int main(void)
 }
 
 int convert(string input)
-{
-   return 1;
-}
+
+    if (input == NULL)
+    {
+        return 1;
+    }
+    else
