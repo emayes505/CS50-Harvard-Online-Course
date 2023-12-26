@@ -110,7 +110,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        prinf("%You lost :(.\n");
+        prinf("%sYou lost :(.\n", choice);
     }
 
 
