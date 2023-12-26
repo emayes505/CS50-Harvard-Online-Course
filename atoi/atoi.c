@@ -34,13 +34,13 @@ int convert(string input)
 
         if (length == 1)
         {
-            return 1;
+            return input[0] - '0';
         }
         else
         {
             for (int i = length - 1; i >= 0; i--)
             {
-                
+
             }
         }
     }
