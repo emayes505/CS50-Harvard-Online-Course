@@ -25,6 +25,7 @@ void print_word(string guess, int wordsize, int status[]);
 
 int main(int argc, string argv[])
 {
+    int number = atoi(argv[1]);
     // ensure proper usage
     // TODO #1
     if (argc != 2)
@@ -33,7 +34,6 @@ int main(int argc, string argv[])
         return 1;
     }
     int wordsize = 0;
-    int number = atoi(argv[1]);
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
      if (number < 5 || number > 8)
@@ -109,7 +109,9 @@ int main(int argc, string argv[])
 
 string get_guess(int wordsize)
 {
-    string guess = "";
+    string guess = get_string("Guess: ");
+    int gLength = strlen(guess);
+    if (gLength != number)
 
     // ensure users actually provide a guess that is the correct length
     // TODO #3
