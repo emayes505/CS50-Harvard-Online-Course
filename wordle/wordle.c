@@ -40,7 +40,7 @@ int main(int argc, string argv[])
     for (int i = 0=; i < length; i++)
      if (!isdigit(argv[1][i]) || argv[1][i] < 5 || argv[1][i] > 8)
         {
-            printf("Key must only contain digits.\n");
+            printf("Invalid input.\n");
             return 1;
         }
     // open correct file, each file has exactly LISTSIZE words
