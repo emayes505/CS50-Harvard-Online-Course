@@ -29,9 +29,15 @@ int main(void)
 }
 
 int convert(string input)
-
-    if (input == NULL)
     {
-        return 1;
+    int length = strlen(input);
+
+        if (length == 1)
+        {
+            return 1;
+        }
+        else
+        {
+            
+        }
     }
-    else
