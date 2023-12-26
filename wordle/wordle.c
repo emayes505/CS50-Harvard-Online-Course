@@ -1,5 +1,4 @@
 #include <cs50.h>
-#include <ctype.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -39,7 +38,7 @@ int main(int argc, string argv[])
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
     for (int i = 0; i < length; i++)
-     if (!isdigit(number[i]) || number[i] < 5 || number[i] > 8)
+     if (number < 53 || number > 56)
         {
             printf("Invalid input.\n");
             return 1;
