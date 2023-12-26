@@ -38,6 +38,9 @@ int convert(string input)
         }
         else
         {
-            
+            for (int i = length - 1; i >= 0; i--)
+            {
+                
+            }
         }
     }
