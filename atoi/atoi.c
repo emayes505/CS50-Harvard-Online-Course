@@ -8,8 +8,6 @@ int convert(string input, int length);
 
 int main(void)
 
-
-
 {
     string input = get_string("Enter a positive integer: ");
 
