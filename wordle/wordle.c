@@ -33,7 +33,6 @@ int main(int argc, string argv[])
         printf("Invalid input. Try again.\n");
         return 1;
     }
-
     int wordsize = 0;
     int length = strlen(argv[1]);
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
