@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int convert(string input);
+int convert(string input, int n);
 
 int main(void)
 
@@ -29,7 +29,3 @@ int main(void)
 }
 
 int convert(string input, int n)
-{
-   if (input[i] == 65)
-    printf("A");
-}
