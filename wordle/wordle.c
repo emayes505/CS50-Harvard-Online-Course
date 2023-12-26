@@ -29,7 +29,7 @@ int main(int argc, string argv[])
     // TODO #1
     if (argc != 2)
     {
-        prinftf("Invalid input. Try again.\n");
+        printf("Invalid input. Try again.\n");
         return 1;
     }
 
@@ -37,7 +37,7 @@ int main(int argc, string argv[])
     int length = strlen(argv[1]);
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
-    for (int i = 0=; i < length; i++)
+    for (int i = 0; i < length; i++)
      if (!isdigit(argv[1][i]) || argv[1][i] < 5 || argv[1][i] > 8)
         {
             printf("Invalid input.\n");
