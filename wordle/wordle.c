@@ -34,6 +34,7 @@ int main(int argc, string argv[])
     }
 
     int wordsize = 0;
+    int length = strlen(argv[1]);
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
     for (int i = 0=; i < length; i++)
