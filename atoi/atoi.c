@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int convert(string input, int n);
+int convert(string input);
 
 int main(void)
 
@@ -28,7 +28,7 @@ int main(void)
     printf("%i\n", convert(input));
 }
 
-int convert(string input, int n)
+int convert(string input)
 {
-   
+   return 1;
 }
