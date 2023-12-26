@@ -35,11 +35,11 @@ int main(int argc, string argv[])
     }
     int wordsize = 0;
     int length = strlen(argv[1]);
-    char *number = atoi(argv[1]);
+    int number = atoi(argv[1]);
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
     for (int i = 0; i < length; i++)
-     if (!isdigit(number[1][i]) || number[1][i] < 5 || number[1][i] > 8)
+     if (!isdigit(number[i]) || number[i] < 5 || number[i] > 8)
         {
             printf("Invalid input.\n");
             return 1;
