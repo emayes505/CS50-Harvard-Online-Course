@@ -37,7 +37,12 @@ int main(int argc, string argv[])
 
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
-    
+    for (int i = 0, int length = strlen(argv[1]); i < length; i++)
+     if (!isdigit(argv[1][i]) || argv[1][i] < 5 || argv[1][i] > 8)
+        {
+            printf("Key must only contain digits.\n");
+            return 1;
+        }
     // open correct file, each file has exactly LISTSIZE words
     char wl_filename[6];
     sprintf(wl_filename, "%i.txt", wordsize);
