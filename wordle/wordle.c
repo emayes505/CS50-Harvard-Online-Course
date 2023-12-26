@@ -80,6 +80,11 @@ int main(int argc, string argv[])
         // array to hold guess status, initially set to zero
         int status[wordsize];
 
+        for (i = 0; i < wordsize; i++)
+        {
+            status[i] = 0;
+        }
+
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
 
