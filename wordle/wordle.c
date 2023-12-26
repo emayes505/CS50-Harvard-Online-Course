@@ -109,17 +109,16 @@ int main(int argc, string argv[])
 
 string get_guess(int wordsize)
 {
+    int gLength;
+    string guess;
     do
     {
-    string guess = get_string("Guess: ");
-    int gLength = strlen(guess);
-    } while (gLength != wordsize)
-
-
+    guess = get_string("Guess: ");
+    gLength = strlen(guess);
+    } while (gLength != wordsize);
 
     // ensure users actually provide a guess that is the correct length
     // TODO #3
-
     return guess;
 }
 
