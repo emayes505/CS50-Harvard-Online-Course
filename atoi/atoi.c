@@ -7,10 +7,15 @@
 int convert(string input);
 
 int main(void)
+
+
+
 {
     string input = get_string("Enter a positive integer: ");
 
-    for (int i = 0, n = strlen(input); i < n; i++)
+    int n = strlen(input);
+
+    for (int i = 0; i < n; i++)
     {
         if (!isdigit(input[i]))
         {
@@ -23,7 +28,9 @@ int main(void)
     printf("%i\n", convert(input));
 }
 
-int convert(string input)
+int convert(string input, int n)
 {
+    for (int i = 0; i < n; i++)
+    
     // TODO
 }
