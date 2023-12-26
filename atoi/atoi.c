@@ -30,9 +30,5 @@ int main(void)
 
 int convert(string input, int n)
 {
-    for (int i = n - 1; i >= 0; i--)
-    {
-        input = input[i];
-        return input;
-    }
+   
 }
