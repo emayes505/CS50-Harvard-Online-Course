@@ -101,7 +101,7 @@ void print_winner(void)
         }
 
     }
-    if printf("%s\n", winner);
+    printf("%s\n", winner);
 
     return;
 }
