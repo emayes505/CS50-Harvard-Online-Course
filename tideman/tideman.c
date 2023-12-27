@@ -139,10 +139,19 @@ void add_pairs(void)
     }
     return;
 }
+int pair_weight(i)
+{
+    int pair_winner = pairs[i].winner;
+    int pair_loser = pairs[i].loser;
+    return preferences[pair_winner][pair_loser];
+}
 
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
-{
+
+
+ {
+
     for (int i = pair_count - 1; i >= 0; i--)
     {
         int min_weight = pair_weight(i);
@@ -155,11 +164,13 @@ void sort_pairs(void)
                 min_idx = j;
             }
         }
-    }
+
     pair temp = pairs[min_idx];
     pairs[min_idx] = pairs[i];
     pairs[i] = temp;
+    }
     return;
+
  }
 
 bool has_cycle(int winner, int loser)
@@ -205,7 +216,7 @@ void print_winner(void)
             {
                 break;
             }
-            else if (col == candidate - 1)
+            else if (col == candidates - 1)
             {
                 printf("%s", candidate[row]);
             }
