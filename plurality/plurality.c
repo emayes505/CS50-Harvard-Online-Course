@@ -89,10 +89,10 @@ void print_winner(void)
         if (candidate[i] > highCount)
         {
             highCount = candidate[i].votes;
-            string winner = candidate[i].name;
+            string winner[candidate_count] += candidate[i].name;
         }
     }
-    printf("%s",candidate)
+
 
     return;
 }
