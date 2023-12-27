@@ -68,9 +68,9 @@ bool vote(string name)
 {
     for (int i = 0; i < candidate_count; i ++)
     {
-    if (strcasecmp(name, candidate[i].name))
+    if (strcasecmp(name, candidates[i].name))
     {
-        candidate[i].votes += 1;
+        candidates[i].votes += 1;
     }
     else
     {
@@ -89,8 +89,8 @@ void print_winner(void)
     {
         if (candidate[i] > highCount)
         {
-            highCount = candidate[i].votes;
-            winner[] += candidate[i].name;
+            highCount = candidates[i].votes;
+            winner[] += candidates[i].name;
         }
 
     }
