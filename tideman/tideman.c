@@ -216,9 +216,9 @@ void print_winner(void)
             {
                 break;
             }
-            else if (col == candidate[row]- 1)
+            else if (col == candidates[row]- 1)
             {
-                printf("%s", candidate[row]);
+                printf("%s", candidates[row]);
             }
         }
     }
