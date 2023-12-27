@@ -118,28 +118,16 @@ void record_preferences(int ranks[])
 {
     for ( int i = 0; i < candidate_count; i++)
     {
-        int pref[candidate_count];
-        {
-        for (int j = 0; j < candidate_count; j++)
-        if (ranks[i] == ranks[j])
-        {
-            continue;
-        }
-        else if (ranks[i] < ranks[j])
-        {
-            preferences[i][j] = preferences[i + 1][j];
-        }
-        else if
-        (ranks[i] > ranks[j])
-        {
-             preferences[i][j] = preferences[i][j + 1];
-        }
-        }
-    }
 
+        for (int j = i + 1; j < candidate_count; j++)
+        {
+            preferences[ranks[i]][i[j]] +1;
+        }
+        return;
 
 }
 
+}
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
