@@ -91,7 +91,8 @@ void print_winner(void)
     {
 
         if (candidates[i] == highScore)
-        char **tie = (char **)malloc (strlen(candidates[i.score]) + 1)
+        char **tie = (char **)malloc( (strlen(candidates[i.score]) + 1 * (sizeof char)))
+        
 
         }
     return;
