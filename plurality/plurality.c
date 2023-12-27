@@ -67,8 +67,16 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     for (int i = 0; i < candidate_count; i ++)
+    {
     if (strcasecmp(name, candidate[i]))
-
+    {
+        candidate[i].votes += 1;
+    }
+    else
+    {
+        continue;
+    }
+    }
     return false;
 }
 
