@@ -6,7 +6,7 @@ sort2 uses: Merge sort
 
 How do you know?: this is the most efficent program compared to the others in every condition. Proving to be O(nlog n) and also omega (nlog n)
 
-sort3 uses: Selction sort
+sort3 uses: Selection sort
 
 How do you know?: I determined this to be the selection program by comparing it to sort1 when executing an already sorted list. By process of elimination sort1 and sort2 both execute a sorted list faster than sort3. With omega bubblesort(n) and mergesort(nlogn)
 that must mean that sort3 being the slowest to execute a sorted list as the omega(n^2).
