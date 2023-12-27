@@ -96,7 +96,7 @@ void print_winner(void)
         }
 
     }
-    printf("The election winner is %s.\n", winner);
+    printf("%s\n", winner);
 
     return;
 }
