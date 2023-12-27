@@ -110,7 +110,6 @@ bool vote(int rank, string name, int ranks[])
     {
         continue;
     }
-
     return false;
 }
 
