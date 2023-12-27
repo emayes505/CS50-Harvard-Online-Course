@@ -90,7 +90,7 @@ void print_winner(void)
         if (candidates[i].votes > highCount)
         {
             highCount = candidates[i].votes;
-            string winner = candidates[i].name;
+            winner = candidates[i].name;
         }
 
     }
