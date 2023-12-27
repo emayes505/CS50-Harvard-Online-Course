@@ -106,14 +106,14 @@ bool vote(int rank, string name, int ranks[])
         continue;
     }
     else
-    ranks = ranks[rank] + 1;
+    ranks[rank] = ranks[rank] + 1;
     {
 
        return true;
     }
-    return false;
-    }
 
+    }
+    return false;
 }
 
 // Update preferences given one voter's ranks
