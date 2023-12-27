@@ -99,8 +99,16 @@ int main(int argc, string argv[])
 // Update ranks given a new vote
 bool vote(int rank, string name, int ranks[])
 {
-    if (name != strcasecmp())
-    return false;
+    for (int i = 0; i < candidate_count; i++)
+    if (name != strcasecmp(candidates[i]))
+    {
+     return false;
+    }
+    else
+    {
+        ranks[i]
+    }
+
 }
 
 // Update preferences given one voter's ranks
