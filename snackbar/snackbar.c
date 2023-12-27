@@ -22,8 +22,10 @@ typedef struct
 menu_item menu[NUM_ITEMS];
 
 // Add items to menu
-void add_items(void);
+void add_items(void)
+
 {
+
  menu[0].item  = "Burger";
  menu[0].price = 9.5;
 
