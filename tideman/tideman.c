@@ -106,6 +106,7 @@ bool vote(int rank, string name, int ranks[])
         continue;
     }
     else
+    ranks = ranks[rank] + 1;
     {
 
        return true;
