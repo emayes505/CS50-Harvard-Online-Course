@@ -99,11 +99,11 @@ int main(int argc, string argv[])
 // Update ranks given a new vote
 bool vote(int rank, string name, int ranks[])
 {
-    for (int i = 0; i < candidate_count; i++)
+    for (int k = 0; k < candidate_count; k++)
 
-    if (strcasecmp(candidates[i], name) == 0)
+    if (strcasecmp(candidates[k], name) == 0)
     {
-         ranks[i] = rank;
+         ranks[k] = rank;
          return true;
     }
     else
