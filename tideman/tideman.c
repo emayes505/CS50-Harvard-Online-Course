@@ -160,7 +160,7 @@ void sort_pairs(void)
     pairs[min_idx] = pairs[i];
     pairs[i] = temp;
     return;
-    }
+ }
 
 
 // Lock pairs into the candidate graph in order, without creating cycles
