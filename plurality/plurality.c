@@ -94,7 +94,7 @@ void print_winner(void)
         {
             char **tie = (char **)malloc( (strlen(candidates[i].score) + 1 * (sizeof char)))
         }
-        strcpy(candidates[i].score)
+        string tie = strcpy(candidates[i].score)
 
         }
     return;
