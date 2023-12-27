@@ -30,7 +30,8 @@ int convert(string input)
 {
 int length = strlen(input);
 
-    if (length == 1){
+    if (length == 1)
+    {
         return input[0] - 48;
     }
 
