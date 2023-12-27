@@ -99,7 +99,7 @@ int main(int argc, string argv[])
 bool vote(int rank, string name, int ranks[])
 {
    {
-    ranks[rank] = name;
+    ranks = ranks[rank];
     return true;
     }
     return false;
