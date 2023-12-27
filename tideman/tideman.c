@@ -98,8 +98,10 @@ int main(int argc, string argv[])
 // Update ranks given a new vote
 bool vote(int rank, string name, int ranks[])
 {
+   {
     ranks[rank] = name;
-    // TODO
+    return true;
+    }
     return false;
 }
 
