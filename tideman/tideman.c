@@ -98,10 +98,7 @@ int main(int argc, string argv[])
 // Update ranks given a new vote
 bool vote(int rank, string name, int ranks[])
 {
-   {
-    ranks = ranks[rank];
-    return true;
-    }
+    if (name != strcasecmp())
     return false;
 }
 
