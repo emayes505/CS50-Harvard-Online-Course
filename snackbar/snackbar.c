@@ -1,20 +1,6 @@
 // Practice using structs
 // Practice writing a linear search function
 
-
-
- * Burger: $9.5;
- * Vegan Burger: $11;
- * Hot Dog: $5;
- * Cheese Dog: $7;
- * Fries: $5;
- * Cheese Fries: $6;
- * Cold Pressed Juice: $7;
- * Cold Brew: $3;
- * Water: $2;
- * Soda: $2;
-
-
 #include <cs50.h>
 #include <ctype.h>
 #include <stdio.h>
@@ -37,20 +23,41 @@ menu_item menu[NUM_ITEMS];
 
 // Add items to menu
 void add_items(void);
-  Burger: $9.5;
-  Vegan Burger: $11;
-  Hot Dog: $5;
-  Cheese Dog: $7;
-  Fries: $5;
-  Cheese Fries: $6;
-  Cold Pressed Juice: $7;
-  Cold Brew: $3;
-  Water: $2;
-  Soda: $2;
+{
+ menu[0].item  = "Burger";
+ menu[0].price = 9.5;
 
+ menu[1].item  = "Vegan Burger";
+ menu[1].price = 11;
 
+ menu[2].item  = "Hot Dog";
+ menu[2].price = 5;
+
+ menu[3].item  = "Cheese Dog";
+ menu[3].price = 7;
+
+ menu[4].item  = "Fries";
+ menu[4].price = 5;
+
+ menu[5].item  = "Cheese Fries";
+ menu[5].price = 6;
+
+ menu[6].item  = "Cold Pressed Juice";
+ menu[6].price = 7;
+
+ menu[7].item  = "Cold Brew";
+ menu[7].price = 3;
+
+ menu[8].item  = "Water";
+ menu[8].price = 2;
+
+ menu[9].item  = "Soda";
+ menu[9].price = 2;
+
+}
 // Calculate total cost
 float get_cost(string item);
+
 
 int main(void)
 {
