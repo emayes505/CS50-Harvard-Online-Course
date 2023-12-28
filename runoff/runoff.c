@@ -180,12 +180,12 @@ bool print_winner(void)
 int find_min(void)
 {
 
-    for (int i = 1; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].eliminated == false || candidates[i].votes < lowest_Count)
         {
             lowest_Count = candidates[i].votes;
-            return lowest_Count;
+            
         }
 
     }
