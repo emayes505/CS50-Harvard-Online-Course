@@ -88,7 +88,7 @@ void print_winner(void)
 {
     int highScore = candidates[0].votes;
 
-    for (int i = 1; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
 
         if (candidates[i].votes > highScore)
