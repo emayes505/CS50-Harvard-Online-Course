@@ -88,18 +88,18 @@ void print_winner(void)
 {
     int highScore = candidates[0].votes;
 
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 1; i < candidate_count; i++)
     {
 
         if (candidates[i].votes > highScore)
         {
             highScore = candidates[i].votes;
-            char **winners[i] =(char*) malloc((strlen(candidates[i].name) + 1));
-            *winners[i] = candidates[i].name;
+            char *winners[i] =(char*) malloc(strlen(candidates[i].name) + 1);
+            winners[i] = candidates[i].name;
         }
         else if (candidates[i].votes == highScore)
         {
-            winners[i + 1] = malloc((strlen(candidates[i].name) + 1));
+            winners[i] = malloc(strlen(candidates[i].name) + 1);
             winners[i] += candidates[i].name;
         }
         }
