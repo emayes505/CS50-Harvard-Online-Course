@@ -117,17 +117,21 @@ void record_preferences(int ranks[])
     {
         for (int j = 1; j < candidate_count; j++)
         {
-            if ( rank[i] < ranks[j])
+            if (i == j)
             {
-                preferences[i][j]++
+                continue;
             }
-            else preferences[j][i]++;
+            else if ( ranks[i] < ranks[j])
+            {
+                preferences[i][j]++;
             }
 
         }
     }
+        return;
+ }
 
-    return;
+
 
 
 // Record pairs of candidates where one is preferred over the other
