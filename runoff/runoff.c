@@ -204,6 +204,7 @@ bool is_tie(int min)
         {
             continue;
         }
+        else
         {
             return false;
         }
