@@ -170,7 +170,7 @@ bool print_winner(void)
             maxName  = candidates[i].name;
             }
     }
-        if (maxVotes > candidate_count / 2)
+        if (maxVotes > voter_count/ 2.0)
         {
             printf("%s" , maxName);
             return true;
