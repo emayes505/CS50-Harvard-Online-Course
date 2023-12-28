@@ -97,7 +97,7 @@ void print_winner(void)
     {
         if (highScore == candidates[j].votes)
         {
-            printf("%s", candidates[j].name);
+            printf("%s\n", candidates[j].name);
         }
     }
 
