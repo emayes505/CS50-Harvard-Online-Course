@@ -135,10 +135,11 @@ bool vote(int voter, int rank, string name)
     if (strcasecmp(name, candidates[i].name) == 0)
     {
         preferences[voter][rank] = i;
-        return true;}
+        return true;
     }
 
     return false;
+}
 }
 
 // Tabulate votes for non-eliminated candidates
