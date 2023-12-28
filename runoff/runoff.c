@@ -146,17 +146,17 @@ void tabulate(void)
     int elimCount = candidate_count;
     for (int i = 0; i < voter_count; i++)
     {
-         if (eliminate == true)
+         if (candidates[i].eliminated = true);
          {
-            for (int = j; j < elimCount; j++)
+            for (int j =; j < elimCount; j++)
             {
-                
+
             }
          }
         }
-
+        return;
     }
-    return;
+
 
 // Print the winner of the election, if there is one
 bool print_winner(void)
