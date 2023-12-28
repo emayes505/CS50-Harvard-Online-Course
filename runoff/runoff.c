@@ -87,7 +87,7 @@ int main(int argc, string argv[])
     {
         // Calculate votes given remaining candidates
         tabulate();
-        
+
 
         // Check if election has been won
         bool won = print_winner();
@@ -143,7 +143,10 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-    // TODO
+    for (int i = 0; i  < candidate_count; i++)
+    {
+        for (int j = 0; j < candidate)
+    }
     return;
 }
 
