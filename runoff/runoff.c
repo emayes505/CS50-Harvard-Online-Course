@@ -171,7 +171,10 @@ bool print_winner(void)
         }
 
         if (maxVotes > ceil(candidate_count / 2.0))
-        printf("%s" , maxName);
+        {
+            printf("%s" , maxName);
+        return true;
+        }
     }
     return false;
 }
