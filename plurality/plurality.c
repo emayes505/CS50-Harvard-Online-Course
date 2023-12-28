@@ -87,26 +87,12 @@ bool vote(string name)
 void print_winner(void)
 {
     int highScore = candidates[0].votes;
+    int winner[candidate_count];
+    for (i = 1; i < candidate_count - 1; i++)
+         if (candidates[i])
 
-    for (int i = 1; i < candidate_count; i++)
-    {
-
-        if (candidates[i].votes > highScore)
-        {
-            highScore = candidates[i].votes;
-            char *winners[i] =(char*) malloc(strlen(candidates[i].name) + 1);
-            winners[i] += candidates[i].name;
-        }
-        else if (candidates[i].votes == highScore)
-        {
-            winners[i] = malloc(strlen(candidates[i].name) + 1);
-            winners[i] += candidates[i].name;
-        }
-        }
-          for (int k = 0; k < candidate_count; k++)
-        {
             printf("%d", winners[k]);
          }
     return;
-}
+
 
