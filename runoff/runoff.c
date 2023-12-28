@@ -165,11 +165,11 @@ bool print_winner(void)
     for (int i = 1; i < candidate_count - 1; i++)
     {
         if (candidates[i].votes > maxVotes)
-
+            {
             maxVotes = candidates[i].votes;
             maxName  = candidates[i].name;
-     }
-
+            }
+    }
         if (maxVotes > ceil(candidate_count / 2.0))
         {
             printf("%s" , maxName);
