@@ -94,7 +94,7 @@ void print_winner(void)
         if (candidates[i].votes > highScore)
         {
             highScore = candidates[i].votes;
-            string winners[i] = malloc((strlen(candidates[i].name) + 1));
+            char **winners[i] =(char**) malloc((strlen(candidates[i].name) + 1));
             *winners[i] = candidates[i].name;
         }
         else if (candidates[i].votes == highScore)
