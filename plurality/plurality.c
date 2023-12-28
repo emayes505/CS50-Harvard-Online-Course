@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <strings.h>
 
@@ -93,12 +94,12 @@ void print_winner(void)
         if (candidates[i].votes > highScore)
         {
             highScore = candidates[i].votes;
-            string winners[i] = (int *)malloc(sizeof(strlen(candidates[i].name)));
+            string winners[i] = malloc((strlen(candidates[i].name) + 1));
             *winners[i] = candidates[i].name;
         }
         else if (candidates[i].votes == highScore)
         {
-            winners[i + 1] = (int *)malloc(sizeof(strlen(candidates[i].name);
+            winners[i + 1] = malloc((strlen(candidates[i].name) + 1));
             winners[i] += candidates[i].name;
         }
         }
