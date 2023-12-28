@@ -68,17 +68,17 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
 
-    for (int i = 0; i < candidate_count; i ++)
+    for (int i = 0; i < candidate_count; i++)
     {
-    if (strcasecmp(name, candidates[i].name) == 0)
-    {
-        candidates[i].votes++;
-        return true;
-    }
-    else
-    {
-        continue;
-    }
+        if (strcasecmp(name, candidates[i].name) == 0)
+        {
+            candidates[i].votes++;
+            return true;
+        }
+        else
+        {
+            continue;
+        }
     }
     return false;
 }
@@ -89,10 +89,10 @@ void print_winner(void)
     int highScore = 0;
 
     for (int i = 0; i < candidate_count; i++)
-         if (candidates[i].votes > highScore)
-         {
+        if (candidates[i].votes > highScore)
+        {
             highScore = candidates[i].votes;
-         }
+        }
     for (int j = 0; j < candidate_count; j++)
     {
         if (highScore == candidates[j].votes)
@@ -103,7 +103,3 @@ void print_winner(void)
 
     return;
 }
-
-
-
-
