@@ -93,13 +93,14 @@ void print_winner(void)
 
         if (candidates[i].votes > highScore)
         {
-            winner = 0;
+            winner[] = 0;
             highScore = candidates[i].votes;
+            int clear = i;
             winner += candidates[i].name;
         }
         else if (candidates[i].votes == highScore)
         {
-            winner += candidates[i].name;
+            winner[i] += candidates[i].name;
         }
         }
           for (int k = 0; k < candidate_count; k++)
