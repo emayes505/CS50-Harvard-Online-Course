@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <strings.h>
+#include <math.h>
 
 // Max voters and candidates
 #define MAX_VOTERS 100
@@ -168,8 +169,9 @@ bool print_winner(void)
             maxVotes = candidates[i].votes;
             maxName  = candidates[i].name;
         }
-        if (maxVotes > ceil(candidate_count / 2))
-        printf("%s" , maxName)
+
+        if ( maxVotes > ceil(candidate_count / 2))
+        printf("%s" , maxName);
     }
     return false;
 }
