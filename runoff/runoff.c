@@ -87,6 +87,7 @@ int main(int argc, string argv[])
     {
         // Calculate votes given remaining candidates
         tabulate();
+        
 
         // Check if election has been won
         bool won = print_winner();
