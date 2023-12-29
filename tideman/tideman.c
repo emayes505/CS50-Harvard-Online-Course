@@ -130,13 +130,13 @@ void add_pairs(void)
     {
         for (int col = row + 1; col < candidate_count; col++)
         {
-            if (row == col)
-            {
-                continue;
-            }
             int candidate_A = preferences[row][col];
             int candidate_B = preferences[col][row];
-            else if (candidate_A > candidate_B)
+            if (candidate_A != candidate_B)
+            {
+                pair 
+            }
+            }
 
 
 
