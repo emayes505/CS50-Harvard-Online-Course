@@ -174,7 +174,7 @@ void sort_pairs(void)
                     margin = tempMargin;
                 }
             }
-            
+            pair temp = pairs[maxIdx];
         }
    }
 
