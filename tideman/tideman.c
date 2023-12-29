@@ -130,15 +130,14 @@ void add_pairs(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            if (preferences[i][j] > preferences[j][i])
+            if (i == j)
             {
-                pair[i].winner;
-                pair[j].loser;
+                continue;
             }
             else if (preferences[i][j] < preferences[j][i])
             {
-                pair[j].winner;
-                pair[i].loser;
+                pairs[j].winner;
+                pairs[i].loser;
             }
             else
             {
