@@ -170,6 +170,7 @@ void sort_pairs(void)
        if (difference[j] > bigestVictory)
        {
         bigestVictory = difference[j];
+        
        }
     }
     return;
