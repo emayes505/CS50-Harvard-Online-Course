@@ -175,6 +175,8 @@ void sort_pairs(void)
                 }
             }
             pair temp = pairs[maxIdx];
+            pairs[maxIdx] = pairs[i];
+            pairs[i] = temp;
         }
    }
 
