@@ -129,6 +129,15 @@ void add_pairs(void)
     for (int row = 0 ; row < candidate_count; row++)
     {
         for (int col = i + 1; col < candidate_count; col++)
+        {
+            int candidate_A = preferences[row][col];
+            int candidate_B = preferences[col][row];
+        if (candidate_A > candidate_B)
+        {
+            
+        }
+
+        }
     }
 
 
