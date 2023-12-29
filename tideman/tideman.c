@@ -134,15 +134,21 @@ void add_pairs(void)
             int candidate_B = preferences[col][row];
             if (candidate_A != candidate_B)
             {
-                pair 
+                pair p;
+                if (candidate_A > candidate_B)
+                {
+                    p.winner = row;
+                    p.loser = col;
+                }
+                else
+                {
+                    p.winner = col;
+                    p.loser = row;
+                }
             }
             }
-
-
-
-
         }
-    }
+
 
     return;
 }
