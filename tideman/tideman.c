@@ -147,8 +147,7 @@ void add_pairs(void)
                     p.loser = row;
 
                 }
-                pair_count++;
-                pairs[pair_count] = p;
+                pairs[pair_count++] = p;
             }
             }
         }
