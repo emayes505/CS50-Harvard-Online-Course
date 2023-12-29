@@ -130,6 +130,8 @@ void add_pairs(void)
     {
         for (int col = row + 1; col < candidate_count; col++)
         {
+            //pref [row][col] = x , x people pref row over col...compare that to x people pref col over row. which ever value is greater means the 
+
             int candidate_A = preferences[row][col];
             int candidate_B = preferences[col][row];
             if (candidate_A != candidate_B)
