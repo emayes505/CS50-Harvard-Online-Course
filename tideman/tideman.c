@@ -162,6 +162,7 @@ void sort_pairs(void)
     for (int i = 0; i < pair_count; i++)
     {
       int difference[candidate_count];
+      int 
       difference[i] = preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner];
     }
     for (int j = 0; j < pair_count; j++)
