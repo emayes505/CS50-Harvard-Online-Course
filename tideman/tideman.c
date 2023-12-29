@@ -174,6 +174,7 @@ void sort_pairs(void)
                     margin = tempMargin;
                 }
             }
+            
         }
    }
 
