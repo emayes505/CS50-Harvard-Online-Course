@@ -161,7 +161,7 @@ void sort_pairs(void)
 {
    for (int i = 0; i < pair_count; i++)
    {
-        int maxIdx = 0;
+        int maxIdx = i;
         int margin =  preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner];
    }
 
