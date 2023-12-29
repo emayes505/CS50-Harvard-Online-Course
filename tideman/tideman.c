@@ -127,24 +127,8 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     for (int i = 0 ; i < candidate_count; i++)
-    {
-        for (int j = 0; j < candidate_count; j++)
-        {
-            if (i == j)
-            {
-                continue;
-            }
-            else if (preferences[i][j] < preferences[j][i])
-            {
-                pair([j][i]);
 
-            }
-            else
-            {
-                continue;
-            }
-        }
-    }
+
 
     // TODO
     return;
