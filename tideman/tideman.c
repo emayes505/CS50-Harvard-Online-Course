@@ -179,15 +179,7 @@ void sort_pairs(void)
             pairs[i] = temp;
         }
    }
-
-
-
-
  return;
-
-
-
-
 }
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
