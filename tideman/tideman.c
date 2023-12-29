@@ -130,25 +130,25 @@ void add_pairs(void)
     {
         for (int col = row + 1; col < candidate_count; col++)
         {
-            int pair_let = 'a';
             int candidate_A = preferences[row][col];
             int candidate_B = preferences[col][row];
             if (candidate_A != candidate_B)
             {
-                pair pair_let;
+                pair p;
                 if (candidate_A > candidate_B)
                 {
                     p.winner = row;
                     p.loser = col;
-                    pair_let++;
+
                 }
                 else
                 {
                     p.winner = col;
                     p.loser = row;
-                    pair_let++;
+
                 }
                 pair_count++;
+                pairs[pair_count] = p;
             }
             }
         }
