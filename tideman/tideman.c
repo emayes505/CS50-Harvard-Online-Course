@@ -221,7 +221,7 @@ void print_winner(void)
         {
             break;
         }
-        else if (j ==  - 1)
+        else if (j == i - 1)
         {
             printf(%s, candidates[i]);
         }
