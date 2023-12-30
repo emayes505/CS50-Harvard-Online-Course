@@ -217,7 +217,7 @@ void print_winner(void)
     {
         if (locked[pairs[i].winner][pairs[i].loser] == true)
         {
-            printf("%d",locked[pairs[i].winner][pairs[i].loser]);
+            printf("%s",candidate[[pairs[i].winner]]);
         }
     }
 
