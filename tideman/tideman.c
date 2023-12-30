@@ -192,7 +192,7 @@ void lock_pairs(void)
             {
                 continue;
             }
-            else if ()
+            else
         }
     }
     return;
