@@ -190,18 +190,20 @@ void lock_pairs(void)
     {
     for (int j = 0; j < pair_count; j++)
         {
-            if (findcycle[j] != pairs[i].loser)
+            if (findcycle[j] = pairs[i].loser)
+            {
+                locked[pairs[i].winner][pairs[i].loser] = false;
+                
+            }
+            else
             {
                 locked[pairs[i].winner][pairs[i].loser] = true;
                 findcycle[i] = pairs[i].winner;
             }
-            else
-            {
-                locked[pairs[i].winner][pairs[i].loser] = false;
-                break;
-            }
+
         }
     }
+    return;
 }
 // Print the winner of the election
 void print_winner(void)
