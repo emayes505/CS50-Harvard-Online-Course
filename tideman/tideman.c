@@ -194,6 +194,10 @@ void lock_pairs(void)
         locked[pairs[j].winner][pairs[j].loser] = true;
         int findLoops[j] = pairs[j].winner;
         }
+        else
+        {
+            continue;
+        }
     }
 }
 // Print the winner of the election
