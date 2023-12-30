@@ -190,7 +190,7 @@ void lock_pairs(void)
         {
             if (i != j)
             {
-                pairs[i].winner pairs[i].loser
+                locked [pairs[i].winner][pairs[i].loser];
             }
         }
     }
