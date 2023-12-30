@@ -197,7 +197,8 @@ void lock_pairs(void)
             }
             else
             {
-                continue;
+                locked[pairs[i].winner][pairs[i].loser] = false;
+                break;
             }
         }
     }
