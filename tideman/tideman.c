@@ -190,10 +190,10 @@ void lock_pairs(void)
     {
     for (int j = 0; j < pair_count; j++)
         {
-            if (findcycle[j] = pairs[i].loser)
+            if (findcycle[j] == pairs[i].loser)
             {
                 locked[pairs[i].winner][pairs[i].loser] = false;
-                
+                break;
             }
             else
             {
