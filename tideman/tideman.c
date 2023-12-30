@@ -96,10 +96,7 @@ int main(int argc, string argv[])
     return 0;
 }
 
-bool hasCycle(int winner, int loser)
-{
-    if ()
-}
+
 // Update ranks given a new vote
 bool vote(int rank, string name, int ranks[])
 {
@@ -187,10 +184,9 @@ void sort_pairs(void)
 }
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
-{
+{   for (int i = pair)
     if (pairs[pair_count - 1].loser == pairs[0].winner)
     {
-     bool checkCycle
 
 
     }
