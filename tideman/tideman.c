@@ -188,9 +188,12 @@ void lock_pairs(void)
     int findLoops[pair_count];
     for (int j = 0; j < pair_count; j++)
     {
-        if (findloops[Loops] != pairs[j].winner)
+        for (int i = 0; i < findLoops; i++)
+        if (findloops[i] != pairs[j].loser)
+        {
         locked[pairs[j].winner][pairs[j].loser] = true;
-        int findLoops[j] = pairs[j].loser;
+        int findLoops[j] = pairs[j].winner;
+        }
     }
 }
 // Print the winner of the election
