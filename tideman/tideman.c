@@ -185,26 +185,12 @@ void sort_pairs(void)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    int findLoops[pair_count];
+    int findLoops[pair_count - 1];
     for (int j = 0; j < pair_count; j++)
-   {
-    {
-        locked[pairs[j].winner][pairs[j].loser] = true;
-        findLoops[j] = pairs[j].winner;
+   {        locked[pairs[j].winner][pairs[j].loser] = true;
+            findLoop[j] = pairs[j].loser;
     }
-        for (int i = 0; i < pair_count; i++)
-        if (findLoops[i] != pairs[j].loser)
-        {
-            locked[pairs[j].winner][pairs[j].loser] = false;
-
-        }
-        else
-        {
-            continue;
-        }
-        }
-    }
-
+}
 // Print the winner of the election
 void print_winner(void)
 {
