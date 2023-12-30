@@ -188,11 +188,10 @@ void lock_pairs(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            if (i == j)
+            if (i != j)
             {
-                continue;
+                
             }
-            prefere
         }
     }
     return;
