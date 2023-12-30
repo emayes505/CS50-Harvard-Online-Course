@@ -188,11 +188,11 @@ void lock_pairs(void)
     int findLoops[pair_count];
     for (int j = 0; j < pair_count; j++)
     {
-        for (int i = 0; i < findLoops; i++)
-        if (findloops[i] != pairs[j].loser)
+        for (int i = 0; i < pair_count; i++)
+        if (findLoops[i] != pairs[j].loser)
         {
         locked[pairs[j].winner][pairs[j].loser] = true;
-        int findLoops[j] = pairs[j].winner;
+        findLoops[j] = pairs[j].winner;
         }
         else
         {
