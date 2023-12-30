@@ -190,7 +190,7 @@ void lock_pairs(void)
     {
         for (int j = pair_count - 2; j > 0; j--)
         {
-            if (pairs[i].loser == pairs[j].loser)
+            if (pairs[i].loser == pairs[j].winner)
 
     return;
 }
