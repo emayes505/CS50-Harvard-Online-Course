@@ -198,4 +198,4 @@ void print_winner(void)
     return;
 }
 
-
+pairs[pair_count - 1].loser == pairs[0].winner
