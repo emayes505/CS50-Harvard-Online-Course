@@ -36,8 +36,9 @@ int main(int argc, char *argv[])
     //use uint8_t for header of 44. use int16_t to represent the sample.
     float factor = atof(argv[3]);
     uint8_t copyHeader[HEADER_SIZE];
-    fread(copyHeader, HEADER_SIZE, 1, input);
-    fwrite(output, HEADER_SIZE, 1, &copyHeader);
+    uint8_t buffer[HEADER_SIZE];
+    fread(buffer, HEADER_SIZE, 1, input);
+
 
 
 
