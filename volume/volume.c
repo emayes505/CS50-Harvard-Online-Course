@@ -33,8 +33,8 @@ int main(int argc, char *argv[])
 
     float factor = atof(argv[3]);
     uint8_t copyHeader[HEADER_SIZE];
+    copyBuffer = fread(copyHeader, HEADER_SIZE, 1, input);
 
-    copyHeader = fread(copyHeader, HEADER_SIZE, 1, input);
 
 
     // TODO: Copy header from input file to output file
