@@ -6,7 +6,7 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
     {
         for(int j = 0; j < width - 1; j++)
         {
-            if (image[i][j] == 0x00)
+            if (image[i][j] == 0xFF,0xFF,0xFF)
         }
     }
     // Change all black pixels to a color of your choosing
