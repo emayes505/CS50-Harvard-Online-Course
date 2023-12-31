@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
     float factor = atof(argv[3]);
     uint8_t copyHeader[HEADER_SIZE];
-    fread(copyHeader, HEADER_SIZE, 1, input);
+    &buffer = fread(copyHeader, HEADER_SIZE, 1, input);
     fwrite(output, HEADER_SIZE, 1, copyHeader);
 
 
