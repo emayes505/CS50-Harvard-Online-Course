@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     }
 
     float factor = atof(argv[3]);
-    bytesArray[HEADER_SIZE] = 
+    uint8_t bytesArray[HEADER_SIZE] =
 
     // TODO: Copy header from input file to output file
 
