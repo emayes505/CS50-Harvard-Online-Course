@@ -110,28 +110,28 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
        {
             for (int col = 0; col < width; col++)
             {
-             RGBTRIPLE center = copyGrid[row][col];
-             for (int gridC = 0; gridC < 3; gridC ++)
-             {
-               int allRed = copyGrid[row - 1][col - 1 - gridC].rgbtRed + copyGrid[row][col - 1 - gridC].rgbtRed + copyGrid[row + 1][col - 1 - gridC].rgbtRed;
-               image[row][col].rgbtRed = round(allRed / 3);
+               for (int rowA = 0; rowA < 3; rowA++)
+               {
+                int allRed = 0;
+                int allGreen = 0;
+                int allBlue = 0;
+                    for (int colA = 0; colA < 3; colA++)
+                    {
+                        if(copyGrid[row - 1 - rowA][col - 1 - colA] != NULL)
 
-               int allGreen = copyGrid[row - 1][col - 1 - gridC].rgbtGreen + copyGrid[row][col - 1 - gridC].rgbtGreen + copyGrid[row + 1][col - 1 - gridC].rgbtGreen;
-               image[row][col].rgbtGreen = round(allRed / 3);
+                            allRed += copyGrid[row - 1 - rowA][col - 1 - colA].rgbtRed;
+                            allGreen += copyGrid[row - 1 - rowA][col - 1 - colA].rgbtGreen;
+                            allBlue += copyGrid[row - 1 - rowA][col - 1 - colA].rgbtBlue;
 
-               int allBlue = copyGrid[row - 1][col - 1 - gridC].rgbtBlue + copyGrid[row][col - 1 - gridC].rgbtBlue + copyGrid[row + 1][col - 1 - gridC].rgbtBlue;
-               image[row][col].rgbtBlue = round(allBlue / 3);
-
-
-
+                    }
+               }
 
              }
 
-               }
+        }
+}
 
-            }
 
-       }
 
 
 
