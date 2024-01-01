@@ -81,11 +81,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             tempRed[width - j] = image[i][j].rgbtRed;
             tempBlue[width - j] = image[i][j].rgbtBlue;
             tempGreen[width - j] = image[i][j].rgbtGreen;
-
-        image[i].rgbtRed = tempRed;
+        }
+         image[i].rgbtRed = tempRed;
         image[i].rgbtBlue = tempBlue;
         image[i].rgbtGreen = tempGreen;
-        }
 
     }
 
