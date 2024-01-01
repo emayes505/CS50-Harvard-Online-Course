@@ -28,32 +28,32 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         int sepiaRed = 0;
         int sepiaGreen = 0;
         int sepiaBlue = 0;
-        float newRed = (image[i][j].rgbtRed * .393) + (image[i][j].rgbtGreen * .769) + (image[i][j].rgbtBlue * .189);
+        float newRed = round((image[i][j].rgbtRed * .393) + (image[i][j].rgbtGreen * .769) + (image[i][j].rgbtBlue * .189));
             if (newRed > 255)
             {
                  sepiaRed = 255;
             }
             else
             {
-                sepiaRed = round(newRed);
+                sepiaRed = newRed;
             }
-        float newGreen = (image[i][j].rgbtRed * .349) + (image[i][j].rgbtGreen * .686) + (image[i][j].rgbtBlue * .168);
+        float newGreen = round((image[i][j].rgbtRed * .349) + (image[i][j].rgbtGreen * .686) + (image[i][j].rgbtBlue * .168));
             if (newRed > 255)
             {
                 sepiaGreen = 255;
             }
             else
             {
-                sepiaGreen = round(newGreen);
+                sepiaGreen = newGreen;
             }
-        float newBlue = (image[i][j].rgbtRed * .272) + (image[i][j].rgbtGreen * .534) + (image[i][j].rgbtBlue * .131);
+        float newBlue = round((image[i][j].rgbtRed * .272) + (image[i][j].rgbtGreen * .534) + (image[i][j].rgbtBlue * .131));
             if (newBlue > 255)
             {
                sepiaBlue = 255;
             }
             else
             {
-                sepiaBlue  = round(newBlue);
+                sepiaBlue  = newBlue;
             }
         image[i][j].rgbtRed = sepiaRed;
         image[i][j].rgbtGreen = sepiaGreen;
