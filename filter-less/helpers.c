@@ -1,5 +1,6 @@
 #include "helpers.h"
 #include <math.h>
+#include <stdio.h>
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -105,27 +106,23 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
 
     }
-       for (int o = 0; o < height; o++)
+       for(int row = 0; row  < height; row++)
        {
-            for (int p = 0; p < width; p++)
+            for (int col = 0; col < width; col++)
             {
-            
-                for (int k = 0; k < 3; k++)
-                {
-                        for(int l = 0; l < 3; l++)
-                        {
-                        int redAverage copyGrid[o + k - 1][p + l - 1].rgbtRed;
-                        int greenAverage copyGrid[o + k - 1][p + l - 1].rgbtGreen;
-                        int blueAverage copyGrid[o + k - 1][p + l - 1].rgbtBlue;
-                        }
-                }
+             RGBTRIPLE center = copyGrid[row][col];
+             for (int gridC = 0; gridC < 3; gridC ++)
+             {
+               int allRed = copyGrid[row - 1][col - 1 - gridC].rgbtRed + copyGrid[row][col - 1 - gridC].rgbtRed + copyGrid[row + 1][col - 1 - gridC].rgbtRed;
+               printf("%i", allRed);
+
+             }
+
+               }
+
             }
 
-
-        }
-        printf("%i", redAverage);
-        printf("%i", greenAverage);
-        printf("%i", blueAverage);
+       }
 
 
 
@@ -134,4 +131,4 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
 
 
-}
+
