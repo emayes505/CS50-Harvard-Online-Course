@@ -117,7 +117,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 int squareCount = 0;
 
                 allRed = copyGrid[row - 1][col - 1].rgbtRed + copyGrid[row - 1][col].rgbtRed + copyGrid[row - 1][col + 1].rgbtRed + copyGrid[row][col - 1].rgbtRed + copyGrid[row][col].rgbtRed + copyGrid[row][col + 1].rgbtRed +
-                copyGrid[row + 1][col - 1].rgbtRed + copyGrid[row + 1][col].rbgtRed + copyGrid[row + 1][col + 1].rbgtRed;
+                copyGrid[row + 1][col - 1].rgbtRed + copyGrid[row + 1][col].rgbtRed + copyGrid[row + 1][col + 1].rgbtRed;
 
                 allGreen = copyGrid[row - 1][col - 1].rgbtGreen + copyGrid[row - 1][col].rgbtGreen + copyGrid[row - 1][col + 1].rgbtGreen + copyGrid[row][col - 1].rgbtGreen + copyGrid[row][col].rgbtGreen + copyGrid[row][col + 1].rgbtGreen +
                 copyGrid[row + 1][col - 1].rgbtGreen + copyGrid[row + 1][col].rgbtGreen + copyGrid[row + 1][col + 1].rgbtGreen;
