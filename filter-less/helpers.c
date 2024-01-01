@@ -12,25 +12,24 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
          image[i][j].rgbtRed   = averagePixel;
          image[i][j].rgbtGreen = averagePixel;
          image[i][j].rgbtBlue  = averagePixel;
-
-}
+        }
+    }
     return;
 }
-
 // Convert image to sepia
-void sepia(int height, int width, RGBTRIPLE image[height][width])
-{
-    return;
-}
+//void sepia(int height, int width, RGBTRIPLE image[height][width])
+//{
+   // return;
+//}
 
 // Reflect image horizontally
-void reflect(int height, int width, RGBTRIPLE image[height][width])
-{
-    return;
-}
+//void reflect(int height, int width, RGBTRIPLE image[height][width])
+//{
+    //return;
+//}
 
 // Blur image
-void blur(int height, int width, RGBTRIPLE image[height][width])
-{
-    return;
-}
+//void blur(int height, int width, RGBTRIPLE image[height][width])
+//{
+    //return;
+//}
