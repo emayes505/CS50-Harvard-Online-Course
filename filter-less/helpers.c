@@ -105,16 +105,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
 
     }
-    averageRed = *copyGrid[i - 1][j - 1].rgbtRed + *copyGrid[i - 1][j].rgbtRed + *copyGrid[]
+       for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
 
-           image[i - 1][j - 1][i - 1][j - 1] ;
-            image[i - 1][j][i - 1][j] = ;
-            image[i - 1][j + 1][i - 1][j + 1]  ;
-            image[i][j - 1][i][j - 1]  ;
-            image[i][j] [i][j] = ;
-            image[i][j + 1][i][j + 1]  ;
-           image[i + 1][j - 1][i + 1][j - 1]  ;
-            image[i + 1][j] [i + 1][j] ;
-        image[i + 1][j + 1]  [i + 1][j + 1];
+        }
+
+    }
     return;
 }
