@@ -110,15 +110,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
        {
             for (int col = 0; col < width; col++)
             {
-               for (int rowA = 0; rowA < 3; rowA++)
-               {
                 int allRed = 0;
                 int allGreen = 0;
                 int allBlue = 0;
-                int squareCount;
+                int squareCount = 0;
+               for (int rowA = 0; rowA < 3; rowA++)
+               {
+
                     for (int colA = 0; colA < 3; colA++)
                     {
-                        if(copyGrid[row - 1 - rowA][col - 1 - colA] != NULL)
+                        if(&copyGrid[row - 1 - rowA][col - 1 - colA] != NULL)
 
                             allRed += copyGrid[row - 1 - rowA][col - 1 - colA].rgbtRed;
                             allGreen += copyGrid[row - 1 - rowA][col - 1 - colA].rgbtGreen;
@@ -126,13 +127,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                             squareCount++;
 
                     }
-                    
-               }
-               image[i][j].rgbtRed = round(allRed / squareCount);
 
+               }
+               image[row][col].rgbtRed = round(allRed / squareCount);
+               image[row][col].rgbtGreen = round(allGreen / squareCount);
+               image[row][col].rgbtBlue = round(allBlue / squareCount);
              }
 
+
         }
+
 }
 
 
