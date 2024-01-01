@@ -100,16 +100,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            int redArray [height - 1][width - 1];
-            redArray[i - 1][j - 1] = image[i - 1][j - 1].rgbtRed
-            [i - 1][j]
-            [i - 1][j + 1]
-            [i][j - 1]
-            [i][j]
-            [i][j + 1]
-            [i + 1][j - 1]
-            [i + 1][j]
-            [i + 1][j + 1]
+            int redArray [height][width];
+            redArray[i - 1][j - 1] = image[i - 1][j - 1].rgbtRed;
+            redArray[i - 1][j] = image[i - 1][j].rgbtRed;
+            redArray[i - 1][j + 1] = image[i - 1][j + 1].rgbtRed;
+            redArray[i][j - 1] = image[i][j - 1].rgbtRed;
+            redArray[i][j] = image[i][j].rgbtRed;
+            redArray[i][j + 1] = image[i][j + 1].rgbtRed;
+            redArray[i + 1][j - 1] = image[i + 1][j - 1].rgbtRed;
+            redArray[i + 1][j] = image[i + 1][j].rgbtRed;
+            redArray[i + 1][j + 1] = image[i + 1][j + 1].rgbtRed;
         }
     }
     return;
