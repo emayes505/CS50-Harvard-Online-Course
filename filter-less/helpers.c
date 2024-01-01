@@ -116,9 +116,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         int redAverage copyGrid[i + k - 1][j + l - 1].rgbtRed;
                         int greenAverage copyGrid[i + k - 1][j + l - 1].rgbtGreen;
                         int blueAverage copyGrid[i + k - 1][j + l - 1].rgbtBlue;
+        printf("%i", redAverage);
+        printf("%i", greenAverage);
+        printf("%i", blueAverage);
                     }
 
             }
+
         }
+
     return;
 }
