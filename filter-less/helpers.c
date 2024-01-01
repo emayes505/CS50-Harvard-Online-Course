@@ -105,25 +105,33 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
 
     }
-       for (int i = 0; i < height; i++)
+       for (int o = 0; o < height; o++)
        {
-            for (int j = 0; j < width; j++)
+            for (int p = 0; p < width; p++)
             {
-                RGBTRIPLE center = copyGrid[i][j];
+            
                 for (int k = 0; k < 3; k++)
-                    {
+                {
                         for(int l = 0; l < 3; l++)
-                        int redAverage copyGrid[i + k - 1][j + l - 1].rgbtRed;
-                        int greenAverage copyGrid[i + k - 1][j + l - 1].rgbtGreen;
-                        int blueAverage copyGrid[i + k - 1][j + l - 1].rgbtBlue;
+                        {
+                        int redAverage copyGrid[o + k - 1][p + l - 1].rgbtRed;
+                        int greenAverage copyGrid[o + k - 1][p + l - 1].rgbtGreen;
+                        int blueAverage copyGrid[o + k - 1][p + l - 1].rgbtBlue;
+                        }
+                }
+            }
+
+
+        }
         printf("%i", redAverage);
         printf("%i", greenAverage);
         printf("%i", blueAverage);
-                    }
 
-            }
 
-        }
 
-    return;
+
+
+
+
+
 }
