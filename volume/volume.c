@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 // Number of bytes in .wav header
 const int HEADER_SIZE = 44;
@@ -37,7 +38,7 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
     uint8_t copyHeader[HEADER_SIZE];
     fread(copyHeader, HEADER_SIZE, 1, input);
-    fwrite(output, HEADER_SIZE, 1, &copyHeader);
+    fwrite(output, HEADER_SIZE, 1, copyHeader);
 
 
 
