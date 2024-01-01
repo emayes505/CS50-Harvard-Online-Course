@@ -32,6 +32,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             }
             else
             {
+            
                 newRed = 255;
             }
         float newGreen = image[i][j].rgbtRed * .349 + image[i][j].rgbtGreen * .686 + image[i][j].rgbtBlue * .168;
