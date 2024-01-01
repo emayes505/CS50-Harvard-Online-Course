@@ -35,10 +35,8 @@ int main(int argc, char *argv[])
     //for each sample we read the sample from the input then multiply by factor after which write new sample to output.
     //use uint8_t for header of 44. use int16_t to represent the sample.
     float factor = atof(argv[3]);
-    char *buffer[HEADER_SIZE];
     uint8_t copyHeader[HEADER_SIZE];
-    fread(buffer, HEADER_SIZE, 1, input);
-    fwrite(copyHeader,HEADER_SIZE, 1, buffer)
+    fread(copyHeader, HEADER_SIZE, 1, input);
 
 
 
