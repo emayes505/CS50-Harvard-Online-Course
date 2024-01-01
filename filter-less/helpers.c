@@ -116,14 +116,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 int allBlue = 0;
                 int squareCount = 0;
 
-                allRed = copyGrid[row - 1][col - 1].rbgt.Red + copyGrid[row - 1][col].rbgt.Red + copyGrid[row - 1][col + 1].rbgt.Red + copyGrid[row][col - 1].rbgt.Red + copyGrid[row][col].rbgt.Red + copyGrid[row][col + 1].rbgt.Red +
-                copyGrid[row + 1][col - 1].rbgt.Red + copyGrid[row + 1][col].rbgt.Red + copyGrid[row + 1][col + 1].rbgt.Red;
+                allRed = copyGrid[row - 1][col - 1].rgbtRed + copyGrid[row - 1][col].rgbtRed + copyGrid[row - 1][col + 1].rgbtRed + copyGrid[row][col - 1].rgbtRed + copyGrid[row][col].rgbtRed + copyGrid[row][col + 1].rgbtRed +
+                copyGrid[row + 1][col - 1].rgbtRed + copyGrid[row + 1][col].rbgtRed + copyGrid[row + 1][col + 1].rbgtRed;
 
-                allGreen = copyGrid[row - 1][col - 1].rbgt.Green + copyGrid[row - 1][col].rbgt.Green + copyGrid[row - 1][col + 1].rbgt.Green + copyGrid[row][col - 1].rbgt.Green + copyGrid[row][col].rbgt.Green + copyGrid[row][col + 1].rbgt.Green +
-                copyGrid[row + 1][col - 1].rbgt.Green + copyGrid[row + 1][col].rbgt.Green + copyGrid[row + 1][col + 1].rbgt.Green;
+                allGreen = copyGrid[row - 1][col - 1].rgbtGreen + copyGrid[row - 1][col].rgbtGreen + copyGrid[row - 1][col + 1].rgbtGreen + copyGrid[row][col - 1].rgbtGreen + copyGrid[row][col].rgbtGreen + copyGrid[row][col + 1].rgbtGreen +
+                copyGrid[row + 1][col - 1].rgbtGreen + copyGrid[row + 1][col].rgbtGreen + copyGrid[row + 1][col + 1].rgbtGreen;
 
-                allBlue = copyGrid[row - 1][col - 1].rbgt.Blue + copyGrid[row - 1][col].rbgt.Blue + copyGrid[row - 1][col + 1].rbgt.Blue + copyGrid[row][col - 1].rbgt.Blue + copyGrid[row][col].rbgt.Blue + copyGrid[row][col + 1].rbgt.Blue +
-                copyGrid[row + 1][col - 1].rbgt.Blue + copyGrid[row + 1][col].rbgt.Blue + copyGrid[row + 1][col + 1].rbgt.Blue;
+                allBlue = copyGrid[row - 1][col - 1].rgbtBlue + copyGrid[row - 1][col].rgbtBlue + copyGrid[row - 1][col + 1].rgbtBlue + copyGrid[row][col - 1].rgbtBlue + copyGrid[row][col].rgbtBlue + copyGrid[row][col + 1].rgbtBlue +
+                copyGrid[row + 1][col - 1].rgbtBlue + copyGrid[row + 1][col].rgbtBlue + copyGrid[row + 1][col + 1].rgbtBlue;
 
                 image[row][col].rgbtRed = round((float)allRed / 9);
                 image[row][col].rgbtGreen = round((float)allGreen / 9);
