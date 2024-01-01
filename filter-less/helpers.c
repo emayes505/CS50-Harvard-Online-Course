@@ -109,10 +109,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
        {
             for (int j = 0; j < width; j++)
             {
-                copy[i][j].rgbtRed
-                for (int k = 0; k = 2; k++)
+                RGBTRIPLE center = copyGrid[i][j];
+                for (int k = 0; k < 3; k++)
                     {
-                        for(int l = 0; l = 2; l++)
+                        for(int l = 0; l < 3; l++)
+                        int redAverage copyGrid[i + k - 1][j + l - 1].rgbtRed;
+                        int greenAverage copyGrid[i + k - 1][j + l - 1].rgbtGreen;
+                        int blueAverage copyGrid[i + k - 1][j + l - 1].rgbtBlue;
                     }
 
             }
