@@ -111,6 +111,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             redArray[i + 1][j] = image[i + 1][j].rgbtRed;
             redArray[i + 1][j + 1] = image[i + 1][j + 1].rgbtRed;
         }
+
     }
     return;
 }
