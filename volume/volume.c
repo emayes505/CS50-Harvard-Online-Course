@@ -41,10 +41,10 @@ int main(int argc, char *argv[])
     fwrite(header, HEADER_SIZE, 1, output);
 
     int16_t buffer;
-    fread(&buffer, sizeof(int16_t), 1, input);
-    fwrite(&buffer, sizeof(int16_t), 1, output);
+    while
+    {fread(&buffer, sizeof(int16_t), 1, input);
     buffer *= factor;
-
+    fwrite(&buffer,sizeof(int16_t), 1, output);
 
 
 
