@@ -121,11 +121,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     {
                         if(&copyGrid[row - 1 - rowA][col - 1 - colA] != NULL)
 
-                            allRed += copyGrid[row - 1 - rowA][col - 1 - colA].rgbtRed;
-                            allGreen += copyGrid[row - 1 - rowA][col - 1 - colA].rgbtGreen;
-                            allBlue += copyGrid[row - 1 - rowA][col - 1 - colA].rgbtBlue;
-                            squareCount++;
-
+                       {
+                        allRed += copyGrid[row - 1 - rowA][col - 1 - colA].rgbtRed;
+                        allGreen += copyGrid[row - 1 - rowA][col - 1 - colA].rgbtGreen;
+                        allBlue += copyGrid[row - 1 - rowA][col - 1 - colA].rgbtBlue;
+                        squareCount++;
+                        }
                     }
 
                }
