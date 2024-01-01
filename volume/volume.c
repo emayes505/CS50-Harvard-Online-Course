@@ -38,6 +38,10 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
     uint8_t header[HEADER_SIZE];
     fread(header, HEADER_SIZE, 1, input);
+    if (&fread == NULL)
+    {
+        printf("fread funtion didn't execute\n");
+    }
     fwrite(header, HEADER_SIZE, 1, output);
 
     int16_t buffer;
