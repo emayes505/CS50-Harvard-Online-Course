@@ -114,7 +114,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
              for (int gridC = 0; gridC < 3; gridC ++)
              {
                int allRed = copyGrid[row - 1][col - 1 - gridC].rgbtRed + copyGrid[row][col - 1 - gridC].rgbtRed + copyGrid[row + 1][col - 1 - gridC].rgbtRed;
-               printf("%i", allRed);
+               image[row][col].rgbtRed = round(allRed / 3);
+
+               int allGreen = copyGrid[row - 1][col - 1 - gridC].rgbtGreen + copyGrid[row][col - 1 - gridC].rgbtGreen + copyGrid[row + 1][col - 1 - gridC].rgbtGreen;
+               image[row][col].rgbtGreen = round(allRed / 3);
+
+               int allBlue = copyGrid[row - 1][col - 1 - gridC].rgbtBlue + copyGrid[row][col - 1 - gridC].rgbtBlue + copyGrid[row + 1][col - 1 - gridC].rgbtBlue;
+               image[row][col].rgbtBlue = round(allBlue / 3);
+
+
+
 
              }
 
