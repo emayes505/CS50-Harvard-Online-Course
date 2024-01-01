@@ -112,7 +112,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 for (int k = 0; k = 2; k++)
                 if (copyGrid[i + k - 1][j].rgbtRed != NULL)
                 {
-                = copyGrid[i + k - 1][j].rgbtRed
+                int row1 = copyGrid[i + k - 1][j].rgbtRed
                 }
                 = copyGrid[i][j + k - 1].rgbtRed
                 = copyGrid[i + k - 1][j + k - 1].rgbtRed
