@@ -121,7 +121,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
                     for (int colA = 0; colA < 3; colA++)
                     {
-                        if((row - 1 - rowA) > height || (col - 1 - colA) > col)
+                        if((row - 1 - rowA) >= height || (col - 1 - colA) >= col)
 
                        {
                         allRed += copyGrid[row - 1 - rowA][col - 1 - colA].rgbtRed;
