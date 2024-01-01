@@ -105,10 +105,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             copyGrid[i][j] = image[i][j];
         }
 
-    }
+     }
        for(int row = 0; row  < height; row++)
-        {
-
+       {
 
             for (int col = 0; col < width; col++)
             {
@@ -116,39 +115,23 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 int allGreen = 0;
                 int allBlue = 0;
                 int squareCount = 0;
-               for (int rowA = 0; rowA < 3; rowA++)
-               {
 
-                    for (int colA = 0; colA < 3; colA++)
-                    {
-                        if((row - 1 - rowA) <= height || (col - 1 - colA) <= col)
+                allRed = copyGrid[row - 1][col - 1].rbgt.Red + copyGrid[row - 1][col].rbgt.Red + copyGrid[row - 1][col + 1].rbgt.Red + copyGrid[row][col - 1].rbgt.Red + copyGrid[row][col].rbgt.Red + copyGrid[row][col + 1].rbgt.Red +
+                copyGrid[row + 1][col - 1].rbgt.Red + copyGrid[row + 1][col].rbgt.Red + copyGrid[row + 1][col + 1].rbgt.Red;
 
-                       {
-                        allRed += copyGrid[row - 1 - rowA][col - 1 - colA].rgbtRed;
-                        allGreen += copyGrid[row - 1 - rowA][col - 1 - colA].rgbtGreen;
-                        allBlue += copyGrid[row - 1 - rowA][col - 1 - colA].rgbtBlue;
-                        squareCount++;
-                        }
-                    }
+                allGreen = copyGrid[row - 1][col - 1].rbgt.Green + copyGrid[row - 1][col].rbgt.Green + copyGrid[row - 1][col + 1].rbgt.Green + copyGrid[row][col - 1].rbgt.Green + copyGrid[row][col].rbgt.Green + copyGrid[row][col + 1].rbgt.Green +
+                copyGrid[row + 1][col - 1].rbgt.Green + copyGrid[row + 1][col].rbgt.Green + copyGrid[row + 1][col + 1].rbgt.Green;
 
-               }
-               image[row][col].rgbtRed = round((float)allRed / squareCount);
-               image[row][col].rgbtGreen = round((float)allGreen / squareCount);
-               image[row][col].rgbtBlue = round((float)allBlue / squareCount);
-             }
+                allBlue = copyGrid[row - 1][col - 1].rbgt.Blue + copyGrid[row - 1][col].rbgt.Blue + copyGrid[row - 1][col + 1].rbgt.Blue + copyGrid[row][col - 1].rbgt.Blue + copyGrid[row][col].rbgt.Blue + copyGrid[row][col + 1].rbgt.Blue +
+                copyGrid[row + 1][col - 1].rbgt.Blue + copyGrid[row + 1][col].rbgt.Blue + copyGrid[row + 1][col + 1].rbgt.Blue;
 
+                image[row][col].rgbtRed = round((float)allRed / 9);
+                image[row][col].rgbtGreen = round((float)allGreen / 9);
+                image[row][col].rgbtBlue = round((float)allBlue / 9);
+
+
+            }
 
         }
 
 }
-
-
-
-
-
-
-
-
-
-
-
