@@ -106,32 +106,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
 
      }
-       for(int row = 0; row  < height; row++)
-       {
 
-            for (int col = 0; col < width; col++)
-            {
-                int allRed = 0;
-                int allGreen = 0;
-                int allBlue = 0;
-                int squareCount = 0;
+        
 
-                allRed = copyGrid[row - 1][col - 1].rgbtRed + copyGrid[row - 1][col].rgbtRed + copyGrid[row - 1][col + 1].rgbtRed + copyGrid[row][col - 1].rgbtRed + copyGrid[row][col].rgbtRed + copyGrid[row][col + 1].rgbtRed +
-                copyGrid[row + 1][col - 1].rgbtRed + copyGrid[row + 1][col].rgbtRed + copyGrid[row + 1][col + 1].rgbtRed;
-
-                allGreen = copyGrid[row - 1][col - 1].rgbtGreen + copyGrid[row - 1][col].rgbtGreen + copyGrid[row - 1][col + 1].rgbtGreen + copyGrid[row][col - 1].rgbtGreen + copyGrid[row][col].rgbtGreen + copyGrid[row][col + 1].rgbtGreen +
-                copyGrid[row + 1][col - 1].rgbtGreen + copyGrid[row + 1][col].rgbtGreen + copyGrid[row + 1][col + 1].rgbtGreen;
-
-                allBlue = copyGrid[row - 1][col - 1].rgbtBlue + copyGrid[row - 1][col].rgbtBlue + copyGrid[row - 1][col + 1].rgbtBlue + copyGrid[row][col - 1].rgbtBlue + copyGrid[row][col].rgbtBlue + copyGrid[row][col + 1].rgbtBlue +
-                copyGrid[row + 1][col - 1].rgbtBlue + copyGrid[row + 1][col].rgbtBlue + copyGrid[row + 1][col + 1].rgbtBlue;
-
-                image[row][col].rgbtRed = round((float)allRed / 9);
-                image[row][col].rgbtGreen = round((float)allGreen / 9);
-                image[row][col].rgbtBlue = round((float)allBlue / 9);
-
-
-            }
-
-        }
 
 }
+
+
+
+
