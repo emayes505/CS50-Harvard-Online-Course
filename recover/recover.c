@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
         }
         else
         {
-            fwrite(fileName, 512, 1, buffer);
+            fwrite(buffer, 512, 1, &fileName);
         }
         fileNum++;
     }
