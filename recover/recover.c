@@ -6,7 +6,8 @@ int main(int argc, char *argv[])
 {
     FILE *fmc = fopen(card.raw, "r")
 
-    fread()
+    while (fread(buffer, 512, 1, fmc);)
+
 
 
 }
