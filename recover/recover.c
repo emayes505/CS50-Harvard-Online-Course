@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 
  //open memory card > look for beginning of the JPEG > open a new JPEG file to write to, write data in 512byte chunks until new jpeg is found. then close and start new repeat. until end of file is reached.
@@ -13,12 +14,14 @@ int main(int argc, char *argv[])
         return 1;
     }
     FILE *mcFile = fopen(argv[1], "r");
-    uint8_t buffer[512];
+
+    uint8_t buffer[];
+
     if (mcFile == NULL)
     {
         printf("error opening file.\n");
     }
-    while (fread(buffer, 512, 1, mcFile) != 0)
+    //while (fread(buffer, 512, 1, mcFile) != 0)
 
 
 
