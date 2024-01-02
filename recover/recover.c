@@ -15,13 +15,20 @@ int main(int argc, char *argv[])
     }
     FILE *mcFile = fopen(argv[1], "r");
 
-    uint8_t buffer[malloc(sizeof(fread))];
+
 
     if (mcFile == NULL)
     {
         printf("error opening file.\n");
     }
-    //while (fread(buffer, 512, 1, mcFile) != 0)
+    while (fread(buffer, 512, 1, mcFile) != 0)
+    {
+        
+    }
+
+
+    uint8_t buffer[malloc(sizeof(fread))]
+
 
 
 
