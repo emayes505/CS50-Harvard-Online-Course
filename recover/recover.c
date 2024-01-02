@@ -23,11 +23,16 @@ int main(int argc, char *argv[])
     uint8_t buffer[512];
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
+        char fileName[9];
         if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
         {
-        char fileName[9];
         sprintf(fileName, "%03i.jpeg", fileNum);
         }
+        else
+        {
+            fwrite(fileName, 512, 1, buffer);
+        }
+        fileNum++;
     }
 
 }
