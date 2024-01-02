@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
         printf("error opening file.\n");
         return 1;
     }
-    int buffer[512];
+    char *buffer[512];
 
     while (fread(&buffer, 512, 1, fmc) != 0)
         {
