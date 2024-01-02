@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
             {
                 int fileCounter = 0;
                 char filename [12];
+                
                 sprintf(filename, "%03i.jpeg", fileCounter);
                 fileCounter++;
                 fopen(filename, "w");
