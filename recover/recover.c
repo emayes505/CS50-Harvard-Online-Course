@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     }
     FILE *mcFile = fopen(argv[1], "r");
 
-    uint8_t buffer[];
+    uint8_t buffer[malloc(sizeof(fread))];
 
     if (mcFile == NULL)
     {
