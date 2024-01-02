@@ -97,6 +97,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    // make copy of grid
     RGBTRIPLE copyGrid[height][width];
     for (int i = 0; i < height; i++)
     {
@@ -106,10 +107,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
 
      }
+     // iterate throught the image
      for (int row = 0; row < height; row++)
      {
         for (int col = 0; col < width; col++)
         {
+            // create variable that will be used to calculate all the pixels surrounding main pixel and this will also reset to 0 everytime the pixel changes positiion.
             int allRed = 0;
             int allGreen = 0;
             int allBlue = 0;
@@ -119,9 +122,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int y = -1; y < 2; y++)
                 {
+                    // we iterate though the 9 pixels surrounding the main pixel
                    int currentX = row + x;
                    int currentY = col + y;
-
+                    // all conditions here check to see if pixel would be out of bounds. we continue if it is else we increment the pixel count as well as increment the allRGB count.
                    if (currentX < 0 || currentY < 0 || currentX > height - 1 || currentY > width - 1)
                    {
                     continue;
@@ -134,7 +138,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
                     squareCount++;
                     }
-                }
+                } //lets copy the average value of all pixels surround the target one 
              copyGrid[row][col].rgbtRed = round(allRed / squareCount);
              copyGrid[row][col].rgbtGreen = round(allGreen / squareCount);
              copyGrid[row][col].rgbtBlue = round(allBlue / squareCount);
