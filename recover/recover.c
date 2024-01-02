@@ -14,8 +14,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     FILE *mcFile = fopen(argv[1], "r");
-
-
+    int fileNum = 0;
 
     if (mcFile == NULL)
     {
@@ -24,9 +23,10 @@ int main(int argc, char *argv[])
     uint8_t buffer[512];
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
-        sprintf(filename, "%03i", i)
-    }
+        sprintf(mcFile, "%03i", fileNum)
 
+    }
+fileNum++;
 
 
 
