@@ -7,31 +7,18 @@
 int main(int argc, char *argv[])
 {
 
-    const char *card = "card.raw";
-    FILE *fmc = fopen(card, "r");
-    if (fmc == NULL)
+    if (argc != 2)
     {
-        printf("error opening file.\n");
+        printf("Usage: ./recover Filename\n.");
         return 1;
     }
-    char *buffer[] = (char *)malloc(512);
-
-
-    while (fread(&buffer, 512, 1, fmc) != 0)
-        {
-            if (buffer[0] == 0xFF && buffer[1] == 0xd8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
-            {
-                int fileCounter = 0;
-                char filename [12];
-
-                sprintf(filename, "%03i.jpeg", fileCounter);
-                fileCounter++;
-                fopen(filename, "w");
-
-
-
-            }
-        }
+    FILE *mcFile = fopen(argv[1], "r");
+    uint8_t buffer[512];
+    if (mcFile == NULL)
+    {
+        printf("error opening file.\n");
+    }
+    while (fread(buffer, 512, 1, mcFile) != 0)
 
 
 
