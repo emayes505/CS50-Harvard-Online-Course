@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     FILE *mcFile = fopen(argv[1], "r");
-    int fileNum = 0;
+    int fileNum = -1;
 
     if (mcFile == NULL)
     {
@@ -26,12 +26,11 @@ int main(int argc, char *argv[])
         char fileName[9];
         if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
         {
+        fileNum++;
         sprintf(fileName, "%03i.jpeg", fileNum);
         printf("%s", fileName);
         }
-
     }
-    
 
 }
 //buffer to write data to.
