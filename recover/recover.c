@@ -28,7 +28,14 @@ int main(int argc, char *argv[])
         {
         fileNum++;
         sprintf(fileName, "%03i.jpeg", fileNum);
-        printf("%s", fileName);
+        }
+        {
+        File *jpegopen = fopen("%031.jpeg", fileNum, "w")
+        }
+
+        else
+        {
+
         }
     }
 
