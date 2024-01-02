@@ -4,7 +4,8 @@
 // image is a jpeg. first byte is 0xff, 0xd8, 0xff, 0xe(?)/when noticing this patten we know this is beginning of jpeg. last byte is oxe0/0xe1/oxe2...oxef
 int main(int argc, char *argv[])
 {
-    FILE *f = fopen(card.raw, "r")
+    FILE *fmc = fopen(card.raw, "r")
+    
 
 }
 //buffer to write data to.
@@ -23,4 +24,4 @@ int main(int argc, char *argv[])
 //look at the 512 bytes/if start of jpeg header
 //if first jpeg then start writing to filename 000.jpeg first file
 //if you've alrdy found jpeg then youll need to close current file and open new
-//if its not a new jpeg and you've alrdy found jpeg keep writing. 
+//if its not a new jpeg and you've alrdy found jpeg keep writing.
