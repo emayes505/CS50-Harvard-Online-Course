@@ -6,6 +6,11 @@
 // image is a jpeg. first byte is 0xff, 0xd8, 0xff, 0xe(?)/when noticing this patten we know this is beginning of jpeg. last byte is oxe0/0xe1/oxe2...oxef
 int main(int argc, char *argv[])
 {
+    if (argc != 3)
+    {
+        printf("Usage: ./recover inputfile outputfile.\n");
+        return 1;
+    }
     const char *card = "card.raw";
     FILE *fmc = fopen(card, "r");
     int buffer[512];
@@ -16,7 +21,7 @@ int main(int argc, char *argv[])
             {
                 int fileCounter = 0;
                 char filename [12];
-                
+
                 sprintf(filename, "%03i.jpeg", fileCounter);
                 fileCounter++;
                 fopen(filename, "w");
