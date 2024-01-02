@@ -138,7 +138,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
                     squareCount++;
                     }
-                } //lets copy the average value of all pixels surround the target one 
+                } // copy the average value of all pixels surround the target one into the copy of the image.
              copyGrid[row][col].rgbtRed = round(allRed / squareCount);
              copyGrid[row][col].rgbtGreen = round(allGreen / squareCount);
              copyGrid[row][col].rgbtBlue = round(allBlue / squareCount);
@@ -146,6 +146,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
         }
      }
+     // finally iterate throught the entire main image again to take the copied image and place the values back into the main image.
      for (int i = 0; i < height; i++)
      {
         for (int j = 0; j < width; j++)
