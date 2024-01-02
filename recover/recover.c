@@ -10,15 +10,15 @@ int main(int argc, char *argv[])
     FILE *fmc = fopen(card, "r");
     int buffer[513];
 
-    while (fread(buffer, 512, 1, fmc) != 0);
+    while (fread(buffer, 512, 1, fmc) != 0)
         {
             if (buffer[0] == 0xFF && buffer[1] == 0xd8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
             {
                 int fileCounter = 0;
-                char filenames [];
-                sprintf( *filenames, "%03i.jpeg", i);
+                char filenames [4];
+                sprintf(filenames, "%03i.jpeg", fileCounter);
                 fileCounter;
-                fwrite()
+
 
             }
         }
