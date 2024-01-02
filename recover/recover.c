@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
         if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
         {
         sprintf(buffer, "%03i.jpeg", fileNum);
-        fwrite(buffer, 512, 1, "%03i.jpeg" , fileNum)
+        fwrite(buffer, 512, 1, ("%03i.jpeg", fileNum))
         }
     }
 fileNum++;
