@@ -9,4 +9,4 @@ int main(int argc, char *argv[])
 }
 //buffer to write data to.
 //fread(data, size, number, inptr)
-//(buffer[3] & 0xf0) == 0xe0
+//(buffer[3] & 0xf0) == 0xe0 then compare to 0xe0
