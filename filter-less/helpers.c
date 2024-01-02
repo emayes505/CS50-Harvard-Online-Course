@@ -110,7 +110,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
      {
         for (int col = 0; col < width; col++)
         {
-            = copyGrid[row][col]
+            int allRed, allGreen, allBlue;
+            allRed = allGreen = allBlue = 0;
+            float squareCount = 0.00;
+
+            for (int )
         }
      }
 
