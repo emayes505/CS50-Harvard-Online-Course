@@ -14,10 +14,10 @@ int main(int argc, char *argv[])
         {
             if (buffer[0] == 0xFF && buffer[1] == 0xd8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
             {
-                int i = 0;
+                int fileCounter = 0;
                 char filenames [];
                 sprintf( *filenames, "%03i.jpeg", i);
-                i++
+                fileCounter;
                 fwrite()
 
             }
