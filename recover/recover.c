@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     FILE *fmc = fopen(card.raw, "r");
     int buffer[513];
 
-    while (fread(buffer, 512, 1, fmc);)
+    while (fread(buffer, 512, 1, fmc) != 0);
 
 
 
