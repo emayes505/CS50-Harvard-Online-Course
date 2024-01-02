@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 {
 
     const char *card = "card.raw";
-    FILE *fmc = fopen(card, "r");
+    FILE fmc = fopen(card, "r");
     int buffer[512];
 
     while (fread(buffer, 512, 1, fmc) != 0)
