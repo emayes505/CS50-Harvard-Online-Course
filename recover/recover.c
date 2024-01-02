@@ -7,4 +7,5 @@ int main(int argc, char *argv[])
     FILE *f = fopen(card.raw, "r")
 
 }
+//buffer to write data to. 
 //fread(data, size, number, inptr)
