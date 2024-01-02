@@ -119,11 +119,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int y = -1; y < 2; y++)
                 {
-                   if ()
+                   if (row + x >= 0 && col + y >= 0 && row + x < height && col + x < width)
                    allRed += copyGrid[row + x][col + y].rgbtRed;
                    allGreen += copyGrid[row + x][col + y].rgbtGreen;
                    allBlue += copyGrid[row + x][col + y].rgbtBlue;
-                   squareCount++
+                   squareCount++;
                 }
             }
         }
