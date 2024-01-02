@@ -5,7 +5,9 @@
 int main(int argc, char *argv[])
 {
     FILE *fmc = fopen(card.raw, "r")
-    
+
+    fread()
+
 
 }
 //buffer to write data to.
