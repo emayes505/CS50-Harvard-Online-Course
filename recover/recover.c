@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     }
     int buffer[512];
 
-    while (fread(buffer, 512, 1, &fmc) != 0)
+    while (fread(&buffer, 512, 1, fmc) != 0)
         {
             if (buffer[0] == 0xFF && buffer[1] == 0xd8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
             {
