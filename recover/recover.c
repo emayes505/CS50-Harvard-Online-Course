@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     uint8_t buffer[512];
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
-        sprintf(mcFile, "%03i", fileNum)
+        sprintf(buffer, "%03i", fileNum)
 
     }
 fileNum++;
