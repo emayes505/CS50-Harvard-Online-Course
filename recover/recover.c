@@ -14,7 +14,8 @@ int main(int argc, char *argv[])
         printf("error opening file.\n");
         return 1;
     }
-    
+    char *buffer = (char *)malloc(512);
+
 
     while (fread(&buffer, 512, 1, fmc) != 0)
         {
