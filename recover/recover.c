@@ -11,4 +11,6 @@ int main(int argc, char *argv[])
 //fread(data, size, number, inptr)
 //(buffer[3] & 0xf0) == 0xe0 then compare to 0xe0
 //when making a new jpeg file after finding the source of a new jpeg filename should be "###.jpg" starting at 000.jpeg
-//sprintf(filename, "%03i.jpeg", 2);
+//sprintf(filename, "%03i.jpeg", 2); (002) make sure "filename" has enough memory/characters to fully represent the entire file name.
+//open new file.  fopen(filename, "w");
+//fwrite (data(pointer to all of the bytes you want to write), size, number, outptr (file pointer to write data to))
