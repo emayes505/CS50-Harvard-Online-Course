@@ -23,9 +23,8 @@ int main(int argc, char *argv[])
     }
     uint8_t buffer[512];
     while (fread(buffer, 1, 512, mcFile) != 0)
-
     {
-
+        sprintf(filename, "%03i", i)
     }
 
 
