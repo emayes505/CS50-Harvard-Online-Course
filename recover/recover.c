@@ -10,3 +10,5 @@ int main(int argc, char *argv[])
 //buffer to write data to.
 //fread(data, size, number, inptr)
 //(buffer[3] & 0xf0) == 0xe0 then compare to 0xe0
+//when making a new jpeg file after finding the source of a new jpeg filename should be "###.jpg" starting at 000.jpeg
+//sprintf(filename, "%03i.jpeg", 2);
