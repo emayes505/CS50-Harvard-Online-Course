@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 {
     const char *card = "card.raw";
     FILE *fmc = fopen(card, "r");
-    int buffer[513];
+    int buffer[512];
 
     while (fread(buffer, 512, 1, fmc) != 0)
         {
@@ -18,6 +18,8 @@ int main(int argc, char *argv[])
                 char filename [12];
                 sprintf(filename, "%03i.jpeg", fileCounter);
                 fileCounter++;
+                fopen(filename, "w");
+                fwrite(buffer, 512, 1, *filename);
 
 
             }
