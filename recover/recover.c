@@ -14,4 +14,13 @@ int main(int argc, char *argv[])
 //sprintf(filename, "%03i.jpeg", 2); (002) make sure "filename" has enough memory/characters to fully represent the entire file name.
 //open new file.  fopen(filename, "w");
 //fwrite (data(pointer to all of the bytes you want to write), size, number, outptr (file pointer to write data to))
-//end of file? fread returns # of items of size size that were read.
+//end of file? fread returns # of items of size size that were read. number might be less than 512 so make condition to handle this.
+
+
+//open memory card
+//repeat until end of card(some process)
+//  read 512 bytes into a buffer
+//look at the 512 bytes/if start of jpeg header
+//if first jpeg then start writing to filename 000.jpeg first file
+//if you've alrdy found jpeg then youll need to close current file and open new
+//if its not a new jpeg and you've alrdy found jpeg keep writing. 
