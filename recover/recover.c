@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 {
 
     const char *card = "card.raw";
-    FILE fmc = fopen(card, "r");
+    FILE *fmc = fopen(card, "r");
     if (fmc == NULL)
     {
         printf("error opening file.\n");
