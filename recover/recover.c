@@ -14,3 +14,4 @@ int main(int argc, char *argv[])
 //sprintf(filename, "%03i.jpeg", 2); (002) make sure "filename" has enough memory/characters to fully represent the entire file name.
 //open new file.  fopen(filename, "w");
 //fwrite (data(pointer to all of the bytes you want to write), size, number, outptr (file pointer to write data to))
+//end of file? fread returns # of items of size size that were read.
