@@ -21,8 +21,7 @@ int main(int argc, char *argv[])
     {
         printf("error opening file.\n");
     }
-    int fileSize;
-    uint8_t buffer[malloc(sizeof(fread))]
+    uint8_t buffer[512];
     while (fread(buffer, 1, 512, mcFile) != 0)
 
     {
