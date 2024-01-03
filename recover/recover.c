@@ -39,17 +39,17 @@ int main(int argc, char *argv[])
         {
             fclose(img);
             isOpen = false;
-
+            fileNum++;
         }
-        else
+        else if (isOpen == true)
         {
             fwrite(buffer, 512, 1, img);
         }
+        else
+        {
+            continue;
+        }
 
-
-
-
-        fileNum++;
     }
 }
 
