@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
         }
         else if (isOpen == true)
         {
+            more* = malloc(512)
             fwrite(buffer, 512, 1, img);
         }
         else
