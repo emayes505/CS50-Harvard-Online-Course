@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     {
         printf("error opening file.\n");
     }
-    int buffer[512];
+    char buffer[512];
     FILE *img = NULL;
     bool isOpen = false;
     while (fread(buffer, 1, 512, mcFile) != 0)
