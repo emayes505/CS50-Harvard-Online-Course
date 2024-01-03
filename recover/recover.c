@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     FILE *mcFile = fopen(argv[1], "r");
-    int fileNum = -1;
+    int fileNum = 0;
 
     if (mcFile == NULL)
     {
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
         }
         else if (isOpen == true)
         {
-            more* = malloc(512)
+
             fwrite(buffer, 512, 1, img);
         }
         else
