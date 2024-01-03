@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
         char fileName[9];
         if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
         {
-            sprintf(fileName, "03i.jpg", fileNum);
+            sprintf(fileName, "%03i.jpg", fileNum);
             FILE *img = fopen(fileName, "w");
             fwrite(buffer, 512, 1, img);
 
