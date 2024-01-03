@@ -29,10 +29,8 @@ int main(int argc, char *argv[])
             sprintf(fileName, "%03i.jpg", fileNum);
             FILE *img = fopen(fileName, "w");
             fwrite(buffer, 512, 1, img);
-
-
-
         }
+        
         fileNum++;
     }
 }
