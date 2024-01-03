@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
     }
     int buffer[512];
     FILE *img = NULL;
+    bool isOpen;
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
 
@@ -31,8 +32,9 @@ int main(int argc, char *argv[])
         sprintf(fileName, "%03i.jpg", fileNum);
         img = fopen(fileName, "w");
         fwrite(buffer, 512, 1, img);
+        isOpen = true;
         }
-        else if (img != NULL)
+
         {
             fwrite(buffer, 512, 1, img);
         }
