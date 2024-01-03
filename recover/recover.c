@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     int *buffer;
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
-        buffer = calloc(sizeof(fread));
+        buffer = realloc(sizeof(fread), 1);
         char fileName[9];
         if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
         {
