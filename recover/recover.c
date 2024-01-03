@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     }
     int buffer[512];
     FILE *img = NULL;
-    bool isOpen;
+    bool isOpen = false;
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
 
@@ -37,6 +37,7 @@ int main(int argc, char *argv[])
         else if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0 && isOpen == true)
         {
             fclose(img);
+            isOpen = false;
 
         }
         else
