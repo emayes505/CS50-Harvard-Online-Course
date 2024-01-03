@@ -21,19 +21,30 @@ int main(int argc, char *argv[])
         printf("error opening file.\n");
     }
     int buffer[512];
+    FILE *img = NULL;
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
+
         char fileName[9];
-        if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
+        if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0 && img == NULL)
         {
-            sprintf(fileName, "%03i.jpg", fileNum);
-            FILE *img = fopen(fileName, "w");
+        sprintf(fileName, "%03i.jpg", fileNum);
+        img = fopen(fileName, "w");
+        fwrite(buffer, 512, 1, img);
+        }
+        else if (img != NULL)
+        {
             fwrite(buffer, 512, 1, img);
         }
-        
+
+
+
+
         fileNum++;
     }
 }
+
+
 //buffer to write data to.
 //fread(data, size, number, inptr)
 //(buffer[3] & 0xf0) == 0xe0 then compare to 0xe0
