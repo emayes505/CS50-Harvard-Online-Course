@@ -20,18 +20,14 @@ int main(int argc, char *argv[])
     {
         printf("error opening file.\n");
     }
-    uint8_t buffer[512];
-    while (fread(buffer, 1, 512, mcFile) != 0)
+    uint8_t buffer;
+    while (uint8_t *buffer = calloc(fread(buffer, 1, 512, mcFile) != 0))
     {
         char fileName[9];
         if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
         {
         fileNum++;
-        sprintf(fileName, "%03i.jpeg", fileNum);
-        }
-        {
-        File *jpegopen = fopen("%031.jpeg", fileNum, "w")
-        }
+
 
         else
         {
