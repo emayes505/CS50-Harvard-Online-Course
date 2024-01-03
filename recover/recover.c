@@ -20,10 +20,10 @@ int main(int argc, char *argv[])
     {
         printf("error opening file.\n");
     }
-    int *buffer = malloc(1);
+    int *buffer;
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
-        buffer = realloc(buffer, sizeof(fread));
+        buffer = malloc(sizeof(fread));
         char fileName[9];
         if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
         {
