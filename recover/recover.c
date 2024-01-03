@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     {
         printf("error opening file.\n");
     }
-    int *buffer = calloc (1, 1);
+    int *buffer = malloc(1);
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
         buffer = realloc(buffer, sizeof(fread));
