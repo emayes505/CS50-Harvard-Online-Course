@@ -41,7 +41,6 @@ int main(int argc, char *argv[])
         fwrite(buffer, 512, 1, img);
         isOpen = true;
         }
-        }
         else if (isOpen == true)
         {
             fwrite(buffer, 1, 512, img);
