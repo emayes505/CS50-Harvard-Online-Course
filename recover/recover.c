@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-char* newFile(int fileNum, bool isOpen, FILE img, char*fileName);
+char* newFile(int fileNum, FILE img, char*fileName);
 
 int isBufferJpeg(char* buffer);
 
@@ -32,11 +32,13 @@ int main(int argc, char *argv[])
 
         fclose(img);
         char fileName[9];
-        newFile (fileNum, isOpen, *img, fileName);
+        newFile (fileNum, *img, fileName);
+        isOpen = true;
         }
         else if (isBufferJpeg((char *)buffer) == true && isOpen == false){
            char fileName[9];
-           newFile(fileNum, isOpen, *img, fileName);
+           newFile(fileNum, *img, fileName);
+           isOpen = true;
         }
         else if (isOpen == true){
             fwrite(buffer, 512, 1, img);
@@ -50,9 +52,8 @@ int main(int argc, char *argv[])
     fclose(mcFile);
     fclose (img);
 }
-char* newFile(int fileNum, bool isOpen, FILE img, char*fileName)
+char* newFile(int fileNum, FILE img, char*fileName)
 {
-
 
     sprintf(fileName, "%03i.jpg", fileNum);
 
@@ -60,7 +61,6 @@ char* newFile(int fileNum, bool isOpen, FILE img, char*fileName)
 
     img = *fopen(fileName, "w");
 
-    isOpen = true;
 
     return fileName;
 }
