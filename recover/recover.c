@@ -27,10 +27,8 @@ int main(int argc, char *argv[])
     {
         char fileName[9];
 
-        if (isBufferJpeg == true){
-        if (isOpen == true){
+        if (isBufferJpeg == true && isOpen){
         fclose(img);
-        }
         sprintf(fileName, "%03i.jpg", fileNum);
         fileNum++;
         img = fopen(fileName, "w");
