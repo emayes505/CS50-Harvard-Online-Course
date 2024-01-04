@@ -62,7 +62,7 @@ char* newFile(int fileNum, FILE img, char*fileName)
     img = *fopen(fileName, "w");
 
 
-    return sprintf;
+    return fileName;
 }
 
 int isBufferJpeg(char* buffer)
