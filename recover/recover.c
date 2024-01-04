@@ -25,15 +25,15 @@ int main(int argc, char *argv[])
     bool isOpen = false;
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
-        char fileName[9];
-
         if (isBufferJpeg == true && isOpen == true){
+
         fclose(img);
+        newFile;
 
 
 
         fwrite(buffer, 512, 1, img);
-        isOpen = true;
+
         else if (isBufferJpeg == True && isOpen == false){
             fwrite(buffer, 1, 512, img);
         }
@@ -47,11 +47,15 @@ int main(int argc, char *argv[])
 }
 void newFile(img, fileNum, fileName)
 {
+    char fileName[9];
+
     sprintf(fileName, "%03i.jpg", fileNum);
 
     fileNum++;
-    
+
     img = fopen(fileName, "w");
+
+    isOpen = true;
 }
 
 bool isBufferJpeg(char* buffer)
