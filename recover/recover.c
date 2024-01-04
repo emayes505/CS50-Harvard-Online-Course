@@ -58,7 +58,7 @@ char* newFile(int fileNum, bool isOpen, FILE img, char*fileName)
 
     fileNum++;
 
-    img = fopen(fileName, "w");
+    img = *fopen(fileName, "w");
 
     isOpen = true;
 
