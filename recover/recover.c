@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     {
         char fileName[9];
 
-        if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0){
+        if (isBufferJpeg == true){
         if (isOpen == true){
         fclose(img);
         }
@@ -47,6 +47,15 @@ int main(int argc, char *argv[])
     }
     fclose(mcFile);
     fclose (img);
+}
+bool isBufferJpeg(char* buffer)
+{
+    if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
+    {
+        return true;
+    }
+    return false;
+
 }
 
 
