@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     uint8_t buffer[512];
     bool isOpen = false;
     FILE *img = NULL;
-    char * fileName = NULL;
+    char *fileName[9];
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
         if (isBufferJpeg((char *)buffer, isOpen, *img) == true && isOpen == true){
