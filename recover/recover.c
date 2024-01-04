@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     uint8_t buffer[512];
     FILE *img = NULL;
     bool isOpen = false;
-    while (fread(buffer, 1, 512, mcFile) != 0)
+    while (fread(buffer, 1, 512, mcFile) != 0 && fread > 255)
     {
         if (fread < 255)
         {
