@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
         newFile;
         }
         else if (isBufferJpeg((char *)buffer) == true && isOpen == false){
-            newFile(int fileNum, char* fileName, bool isOpen);
+            newFile(&fileNum, isOpen);
         }
         else if (isOpen == true){
             fwrite(buffer, 512, 1, img);
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
     fclose(mcFile);
     fclose (img);
 }
-void newFile(int fileNum, char *fileName, bool isOpen)
+char* newFile(int fileNum, bool isOpen, FILE img)
 {
     char fileName[9];
 
@@ -60,7 +60,7 @@ void newFile(int fileNum, char *fileName, bool isOpen)
 
     isOpen = true;
 
-    return;
+    return fileName;
 }
 
 int isBufferJpeg(char* buffer)
