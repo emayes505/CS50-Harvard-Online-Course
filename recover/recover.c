@@ -45,7 +45,6 @@ int main(int argc, char *argv[])
         }
         else if (isOpen == true)
         {
-
             fwrite(buffer, 1, 512, img);
         }
         else
