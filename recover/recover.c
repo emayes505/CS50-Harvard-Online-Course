@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     bool isOpen = false;
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
-        if (isBufferJpeg((char *)buffer, isOpen, FILE *img) == true && isOpen == true){
+        if (isBufferJpeg((char *)buffer, isOpen, *img) == true && isOpen == true){
 
         fclose(img);
         char fileName[9];
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
     fclose(mcFile);
     fclose (img);
 }
-char* newFile(int fileNum, char*fileName, FILE *img)
+char* newFile(int fileNum, char *fileName, FILE *img)
 {
 
     sprintf(fileName, "%03i.jpg", fileNum);
