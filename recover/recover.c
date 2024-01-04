@@ -29,9 +29,9 @@ int main(int argc, char *argv[])
 
         if (isBufferJpeg == true && isOpen == true){
         fclose(img);
-        sprintf(fileName, "%03i.jpg", fileNum);
-        fileNum++;
-        img = fopen(fileName, "w");
+
+
+
         fwrite(buffer, 512, 1, img);
         isOpen = true;
         else if (isBufferJpeg == True && isOpen == false){
@@ -44,6 +44,14 @@ int main(int argc, char *argv[])
     }
     fclose(mcFile);
     fclose (img);
+}
+void newFile(img, fileNum, fileName)
+{
+    sprintf(fileName, "%03i.jpg", fileNum);
+
+    fileNum++;
+    
+    img = fopen(fileName, "w");
 }
 
 bool isBufferJpeg(char* buffer)
