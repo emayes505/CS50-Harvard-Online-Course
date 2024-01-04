@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     {
         printf("error opening file.\n");
     }
-    uint8_t buffer[512];
+    uint8_t buffer[malloc(512)];
     FILE *img = NULL;
     bool isOpen = false;
     while (fread(buffer, 1, 512, mcFile) != 0)
@@ -53,6 +53,8 @@ int main(int argc, char *argv[])
         }
 
     }
+    free buffer;
+    fclose (img);
 }
 
 
