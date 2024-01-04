@@ -27,15 +27,14 @@ int main(int argc, char *argv[])
     {
         char fileName[9];
 
-        if (isBufferJpeg == true && isOpen){
+        if (isBufferJpeg == true && isOpen == true){
         fclose(img);
         sprintf(fileName, "%03i.jpg", fileNum);
         fileNum++;
         img = fopen(fileName, "w");
         fwrite(buffer, 512, 1, img);
         isOpen = true;
-        }
-        else if (isOpen == true){
+        else if (isBufferJpeg == True && isOpen == false){
             fwrite(buffer, 1, 512, img);
         }
         else{
@@ -46,6 +45,7 @@ int main(int argc, char *argv[])
     fclose(mcFile);
     fclose (img);
 }
+
 bool isBufferJpeg(char* buffer)
 {
     if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
