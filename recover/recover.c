@@ -29,15 +29,14 @@ int main(int argc, char *argv[])
     char *fileName[9];
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
-        if (isBufferJpeg((char *)buffer, isOpen, *img) == true && isOpen == true){
+        if (isBufferJpeg((char *)buffer, isOpen) == true && isOpen == true){
 
         fclose(img);
-        char fileName[9];
         newFile (fileNum, char *fileName);
         img = fopen(fileName, "w");
         isOpen = true;
         }
-        else if (isBufferJpeg((char *)buffer, isOpen, FILE *img) == true && isOpen == false){
+        else if (isBufferJpeg((char *)buffer, isOpen) == true && isOpen == false){
            char fileName[9];
            newFile(fileNum, *img, fileName);
            isOpen = true;
