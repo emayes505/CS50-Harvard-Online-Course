@@ -21,10 +21,10 @@ int main(int argc, char *argv[])
     {
         printf("error opening file.\n");
     }
-    uint8_t *buffer;
+    uint8_t buffer[512];
     FILE *img = NULL;
     bool isOpen = false;
-    while (&buffer == malloc ((int *)fread(buffer, 1, 512, mcFile) != 0))
+    while (fread(buffer, 1, 512, mcFile) != 0))
     {
         char fileName[9];
         if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
