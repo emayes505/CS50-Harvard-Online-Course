@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-void newFile(fileNum, fileName, isOpen);
+void newFile(int fileNum, char *fileName, bool isOpen);
 bool isBufferJpeg(char* buffer);
 
  //open memory card > look for beginning of the JPEG > open a new JPEG file to write to, write data in 512byte chunks until new jpeg is found. then close and start new repeat. until end of file is reached.
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
     fclose(mcFile);
     fclose (img);
 }
-void newFile(fileNum, fileName, isOpen)
+void newFile(int fileNum, char *fileName, bool isOpen)
 {
     char fileName[9];
 
