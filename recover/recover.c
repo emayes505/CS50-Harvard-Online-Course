@@ -30,16 +30,13 @@ int main(int argc, char *argv[])
         char fileName[9];
         if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0 && isOpen == false)
         {
+        close(img);
+        isOpen = false;
+        fileNum++;
         sprintf(fileName, "%03i.jpg", fileNum);
         img = fopen(fileName, "w");
         fwrite(buffer, 512, 1, img);
         isOpen = true;
-        }
-        else if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0 && isOpen == true)
-        {
-            fclose(img);
-            isOpen = false;
-            fileNum++;
         }
         else if (isOpen == true)
         {
