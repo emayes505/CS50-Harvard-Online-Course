@@ -8,25 +8,24 @@
 // image is a jpeg. first byte is 0xff, 0xd8, 0xff, 0xe(?)/when noticing this patten we know this is beginning of jpeg. last byte is oxe0/0xe1/oxe2...oxef
 int main(int argc, char *argv[])
 {
-
     if (argc != 2)
     {
         printf("Usage: ./recover Filename\n.");
         return 1;
     }
     FILE *mcFile = fopen(argv[1], "r");
+
     int fileNum = 0;
 
     if (mcFile == NULL)
     {
         printf("error opening file.\n");
     }
-    uint8_t buffer[malloc(512)];
+    uint8_t buffer [512];
     FILE *img = NULL;
     bool isOpen = false;
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
-
         char fileName[9];
         if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
         {
@@ -53,7 +52,6 @@ int main(int argc, char *argv[])
         }
 
     }
-    free buffer;
     fclose (img);
 }
 
