@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     uint8_t *buffer;
     FILE *img = NULL;
     bool isOpen = false;
-    while (fread(buffer, 1, 512, mcFile) != 0)
+    while (buffer == malloc ((int *)fread(buffer, 1, 512, mcFile) != 0))
     {
         char fileName[9];
         if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
