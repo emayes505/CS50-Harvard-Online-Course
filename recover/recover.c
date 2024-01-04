@@ -21,9 +21,9 @@ int main(int argc, char *argv[])
     {
         printf("error opening file.\n");
     }
-   fseek(mcFile, 512, SEEK_SET)
+   fseek(mcFile, 512, SEEK_CUR);
    long size = ftell(mcFile);
-    uint8_t buffer [size];
+    uint8_t *buffer = (uint8_t *)malloc(size);
     FILE *img = NULL;
     bool isOpen = false;
     while (fread(buffer, 1, 512, mcFile) != 0)
