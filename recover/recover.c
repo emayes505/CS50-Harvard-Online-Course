@@ -3,9 +3,9 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-char* newFile(int fileNum, char *fileName)
+char* newFile(int fileNum, char *fileName);
 
-int isBufferJpeg(char* buffer, bool isOpen)
+int isBufferJpeg(char* buffer, bool isOpen);
 
  //open memory card > look for beginning of the JPEG > open a new JPEG file to write to, write data in 512byte chunks until new jpeg is found. then close and start new repeat. until end of file is reached.
 // image is a jpeg. first byte is 0xff, 0xd8, 0xff, 0xe(?)/when noticing this patten we know this is beginning of jpeg. last byte is oxe0/0xe1/oxe2...oxef
@@ -25,13 +25,16 @@ int main(int argc, char *argv[])
     }
     uint8_t buffer[512];
     bool isOpen = false;
+    FILE *img = NULL;
+    char * fileName = NULL;
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
         if (isBufferJpeg((char *)buffer, isOpen, *img) == true && isOpen == true){
 
         fclose(img);
         char fileName[9];
-        newFile (fileNum, *img, fileName);
+        newFile (fileNum, char *fileName);
+        img = fopen(fileName, "w");
         isOpen = true;
         }
         else if (isBufferJpeg((char *)buffer, isOpen, FILE *img) == true && isOpen == false){
@@ -57,9 +60,6 @@ char* newFile(int fileNum, char *fileName)
     sprintf(fileName, "%03i.jpg", fileNum);
 
     fileNum++;
-
-    img = fopen(fileName, "w");
-
 
     return fileName;
 }
