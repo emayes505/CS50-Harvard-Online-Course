@@ -35,8 +35,8 @@ int main(int argc, char *argv[])
         newFile (fileNum, isOpen, *img, fileName);
         }
         else if (isBufferJpeg((char *)buffer) == true && isOpen == false){
-
-           newFile(fileNum, fileName, isOpen);
+           char fileName[9];
+           newFile(fileNum, isOpen, *img, fileName);
         }
         else if (isOpen == true){
             fwrite(buffer, 512, 1, img);
