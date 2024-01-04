@@ -3,6 +3,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+void newFile(fileNum, fileName, isOpen);
+bool isBufferJpeg(char* buffer);
 
  //open memory card > look for beginning of the JPEG > open a new JPEG file to write to, write data in 512byte chunks until new jpeg is found. then close and start new repeat. until end of file is reached.
 // image is a jpeg. first byte is 0xff, 0xd8, 0xff, 0xe(?)/when noticing this patten we know this is beginning of jpeg. last byte is oxe0/0xe1/oxe2...oxef
@@ -25,12 +27,12 @@ int main(int argc, char *argv[])
     bool isOpen = false;
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
-        if (isBufferJpeg == true && isOpen == true){
+        if (isBufferJpeg && isOpen == true){
 
         fclose(img);
         newFile;
         }
-        else if (isBufferJpeg == true && isOpen == false){
+        else if (isBufferJpeg && isOpen == false){
             newFile;
         }
         else if (isOpen == true){
