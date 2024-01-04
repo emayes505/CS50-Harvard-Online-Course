@@ -64,7 +64,7 @@ char* newFile(int fileNum, char *fileName, FILE *img)
     return fileName;
 }
 
-int isBufferJpeg(char* buffer, bool isOpen, FILE *img)
+int isBufferJpeg(char* buffer, bool isOpen, *img)
 {
     if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0 && isOpen == false)
     {
