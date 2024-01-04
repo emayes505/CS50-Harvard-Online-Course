@@ -21,15 +21,18 @@ int main(int argc, char *argv[])
     {
         printf("error opening file.\n");
     }
-   fseek(mcFile, 512, SEEK_CUR);
-   long size = ftell(mcFile);
-    uint8_t *buffer = (uint8_t *)malloc(size);
+    uint8_t buffer[512];
     FILE *img = NULL;
     bool isOpen = false;
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
+        if (fread < 255)
+        {
+            fwrite(buffer, 1, 512, img);
+
+        }
         char fileName[9];
-        if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
+        else if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
         {
         if (isOpen == true)
         {
