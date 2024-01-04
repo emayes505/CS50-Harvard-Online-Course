@@ -29,14 +29,14 @@ int main(int argc, char *argv[])
 
         fclose(img);
         newFile;
-
-
-
-        fwrite(buffer, 512, 1, img);
-
-        else if (isBufferJpeg == True && isOpen == false){
-            fwrite(buffer, 1, 512, img);
         }
+        else if (isBufferJpeg == true && isOpen == false){
+            newFile;
+        }
+        else if (isOpen == true){
+            fwrite(buffer, 512, 1, img);
+        }
+
         else{
             continue;
         }
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
     fclose(mcFile);
     fclose (img);
 }
-void newFile(fileNum, fileName)
+void newFile(fileNum, fileName, isOpen)
 {
     char fileName[9];
 
