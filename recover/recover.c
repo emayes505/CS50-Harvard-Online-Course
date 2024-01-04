@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
     fclose(mcFile);
     fclose (img);
 }
-void newFile(img, fileNum, fileName)
+void newFile(fileNum, fileName)
 {
     char fileName[9];
 
@@ -56,6 +56,8 @@ void newFile(img, fileNum, fileName)
     img = fopen(fileName, "w");
 
     isOpen = true;
+
+    return;
 }
 
 bool isBufferJpeg(char* buffer)
