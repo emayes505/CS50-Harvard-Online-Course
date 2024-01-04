@@ -26,21 +26,15 @@ int main(int argc, char *argv[])
     bool isOpen = false;
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
-        int fileSize = sizeof(fread);
-        if (fileSize < 255)
-        {
-            fwrite(buffer, 1, 512, img);
 
-        }
         char fileName[9];
-        else if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
+
+        if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
         {
         if (isOpen == true)
         {
         fclose(img);
         }
-        else
-        {
         sprintf(fileName, "%03i.jpg", fileNum);
         fileNum++;
         img = fopen(fileName, "w");
