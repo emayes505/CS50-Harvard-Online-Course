@@ -17,8 +17,7 @@ int main(int argc, char *argv[])
 
     int fileNum = 0;
 
-    if (mcFile == NULL)
-    {
+    if (mcFile == NULL){
         printf("error opening file.\n");
     }
     uint8_t buffer[512];
@@ -28,10 +27,8 @@ int main(int argc, char *argv[])
     {
         char fileName[9];
 
-        if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
-        {
-        if (isOpen == true)
-        {
+        if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0){
+        if (isOpen == true){
         fclose(img);
         }
         sprintf(fileName, "%03i.jpg", fileNum);
@@ -40,12 +37,10 @@ int main(int argc, char *argv[])
         fwrite(buffer, 512, 1, img);
         isOpen = true;
         }
-        else if (isOpen == true)
-        {
+        else if (isOpen == true){
             fwrite(buffer, 1, 512, img);
         }
-        else
-        {
+        else{
             continue;
         }
 
