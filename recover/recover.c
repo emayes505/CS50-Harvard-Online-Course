@@ -21,20 +21,17 @@ int main(int argc, char *argv[])
     {
         printf("error opening file.\n");
     }
-    uint8_t *buffer = NULL;
+    uint8_t buffer[512];
     FILE *img = NULL;
     bool isOpen = false;
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
-        int fileSize = sizeof(fread);
-        buffer = malloc(fileSize);
         char fileName[9];
 
         if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
         {
         if (isOpen == true)
         {
-        free (buffer);
         fclose(img);
         }
         sprintf(fileName, "%03i.jpg", fileNum);
@@ -46,7 +43,6 @@ int main(int argc, char *argv[])
         else if (isOpen == true)
         {
             fwrite(buffer, 1, 512, img);
-            free (buffer);
         }
         else
         {
@@ -54,7 +50,6 @@ int main(int argc, char *argv[])
         }
 
     }
-    free (buffer);
     fclose(mcFile);
     fclose (img);
 }
