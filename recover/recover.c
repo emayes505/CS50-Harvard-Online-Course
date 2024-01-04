@@ -31,10 +31,11 @@ int main(int argc, char *argv[])
         if (isBufferJpeg((char *)buffer) == true && isOpen == true){
 
         fclose(img);
+        char fileName[9];
         newFile (&fileNum, isOpen, img, fileName);
         }
         else if (isBufferJpeg((char *)buffer) == true && isOpen == false){
-           char fileName[9];
+
            newFile(fileNum, fileName, isOpen);
         }
         else if (isOpen == true){
