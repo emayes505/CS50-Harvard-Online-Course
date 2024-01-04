@@ -27,15 +27,15 @@ int main(int argc, char *argv[])
     bool isOpen = false;
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
-        if (isBufferJpeg && isOpen == true){
+        if (isBufferJpeg == true && isOpen == true){
 
         fclose(img);
         newFile;
         }
-        else if (isBufferJpeg && isOpen == false){
+        else if (isBufferJpeg == true && isOpen == false){
             newFile;
         }
-        else if (isOpen == true){
+        else if (isOpen = true){
             fwrite(buffer, 512, 1, img);
         }
 
