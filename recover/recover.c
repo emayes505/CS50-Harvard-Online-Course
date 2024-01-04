@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     {
         printf("error opening file.\n");
     }
-    int size = fseek(mcFile, 512, SEEK_SET);
+   fseek(mcFile, 512, SEEK_SET)
     uint8_t buffer [size];
     FILE *img = NULL;
     bool isOpen = false;
