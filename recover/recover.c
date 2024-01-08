@@ -32,12 +32,14 @@ int main(int argc, char *argv[])
     char fileName[9];
 
     if (isBufferJpeg(buffer) == true && isOpen == true){
+        fclose(img);
         img = fopen(newFile(fileNum, fileName), "w");
         isOpen = true;
     }
     else if (isBufferJpeg(buffer) == true && isOpen == false){
 
            img = fopen(newFile(fileNum, fileName), "w");
+           fwrite(buffer, 512, 1, img);
            isOpen = true;
     }
     else if (isOpen == false){
@@ -45,6 +47,7 @@ int main(int argc, char *argv[])
     }
     else{
             fwrite(buffer, 512, 1, img);
+
     }
 
     }
