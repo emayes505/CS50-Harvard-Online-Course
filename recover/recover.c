@@ -30,13 +30,13 @@ int main(int argc, char *argv[])
     while (freadSize == fread(buffer, 1, 512, mcFile) != 0)
     {
 
-        if (isBufferJpeg(buffer, isOpen) == true && isOpen == true){
+        if (isBufferJpeg(buffer, isOpen) == 1){
         fclose(img);
         newFile(fileNum, fileName, freadSize);
         img = fopen(fileName, "w");
         isOpen = true;
         }
-        else if (isBufferJpeg(buffer, isOpen) == true && isOpen == false){
+        else if (isBufferJpeg(buffer, isOpen) == 0){
            newFile(fileNum, fileName, freadSize);
            isOpen = true;
         }
