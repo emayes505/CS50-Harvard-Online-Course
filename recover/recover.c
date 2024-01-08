@@ -62,7 +62,9 @@ int main(int argc, char *argv[])
 }
 char* newFile(int fileNum, char *fileName)
 {
-
+    sprintf(fileName, "%03i.jpg", fileNum);
+    fileNum++;
+    return newFile;
 
 }
 
