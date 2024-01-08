@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     char * fileName = NULL;
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
-        freadSize = sizeof(fread);
+        freadSize = sizeof(int)fread);
 
         if (isBufferJpeg(buffer, isOpen) == 1){
         fclose(img);
