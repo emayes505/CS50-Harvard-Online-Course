@@ -22,18 +22,12 @@ int main(int argc, char *argv[])
         printf("error opening file.\n");
     }
     int fileNum = 0;
-    int freadSize = 0;
-
-    uint8_t *buffer ;
-    if (buffer == NULL){
-        perror("Error allocating memory");
-        fclose(mcFile);
-        return 1;
+    uint8_t buffer[512];
     }
     bool isOpen = false;
     FILE *img = NULL;
     char * fileName = NULL;
-    while (fread(buffer[sizeof(fread)], 1, 512, mcFile) != 0)
+    while (fread(buffer, 1, 512, mcFile) != 0)
     {
 
         if (isBufferJpeg(buffer && isOpen == true){
