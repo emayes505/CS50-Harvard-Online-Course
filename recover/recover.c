@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
     FILE *mcFile = fopen(argv[1], "r");
 
     int fileNum = 0;
+    char * fileName = NULL;
 
     if (mcFile == NULL){
         printf("error opening file.\n");
@@ -54,6 +55,7 @@ int main(int argc, char *argv[])
 }
 char* newFile(int fileNum, char *fileName)
 {
+    fileName[9];
 
     sprintf(fileName, "%03i.jpg", fileNum);
 
