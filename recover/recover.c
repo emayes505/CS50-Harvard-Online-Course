@@ -18,20 +18,18 @@ int main(int argc, char *argv[])
     }
     FILE *mcFile = fopen(argv[1], "r");
 
-    int fileNum = 0;
-
-
     if (mcFile == NULL){
         printf("error opening file.\n");
     }
-    int freadSize;
+    int fileNum = 0;
+    int freadSize = 0;
     uint8_t buffer[512];
     bool isOpen = false;
     FILE *img = NULL;
     char * fileName = NULL;
-    while (fread(buffer, 1, 512, mcFile) != 0)
+    while (freadSize == fread(buffer, 1, 512, mcFile) != 0)
     {
-        freadSize = fread;
+
         if (isBufferJpeg((char *)buffer, isOpen) == true && isOpen == true){
         fclose(img);
         newFile(fileNum, fileName);
