@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     }
     int fileNum = 0;
     int freadSize = 0;
-    uint8_t buffer[512];
+    uint8_t *buffer[512];
     bool isOpen = false;
     FILE *img = NULL;
     char * fileName = NULL;
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
         img = fopen(fileName, "w");
         isOpen = true;
         }
-        else if (isBufferJpeg(*buffer, isOpen) == true && isOpen == false){
+        else if (isBufferJpeg(buffer, isOpen) == true && isOpen == false){
            newFile(fileNum, fileName, freadSize);
            isOpen = true;
         }
