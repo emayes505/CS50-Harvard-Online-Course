@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
         img = fopen(fileName, "w");
         isOpen = true;
         }
-        else if (isBufferJpeg(buffer, isOpen) == true && isOpen == false){
+        else if (isBufferJpeg(&buffer, isOpen) == true && isOpen == false){
            newFile(fileNum, fileName, freadSize);
            isOpen = true;
         }
