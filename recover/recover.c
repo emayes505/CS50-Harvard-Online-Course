@@ -21,32 +21,33 @@ int main(int argc, char *argv[])
     if (mcFile == NULL){
         printf("error opening file.\n");
     }
-    int fileNum = 0;
+
     uint8_t buffer[512];
-    }
+    int fileNum = 0;
     bool isOpen = false;
     FILE *img = NULL;
     char * fileName = NULL;
-    while (fread(buffer, 1, 512, mcFile) != 0)
-    {
 
-        if (isBufferJpeg(buffer && isOpen == true){
+    while (fread(buffer, 1, 512, mcFile) != 0)
+
+    {
+    if (isBufferJpeg(buffer && isOpen == true){
         fclose(img);
         newFile(fileNum, fileName);
         img = fopen(fileName, "w");
         isOpen = true;
-        }
-        else if (isBufferJpeg(buffer) && isOpen == false){
+    }
+    else if (isBufferJpeg(buffer) && isOpen == false){
            newFile(fileNum, fileName);
            isOpen = true;
-        }
-        else if (isOpen == false){
+    }
+    else if (isOpen == false){
             continue;
-        }
+    }
 
-        else{
+    else{
             fwrite(buffer, 512, 1, img);
-        }
+    }
 
     }
     fclose(mcFile);
