@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
 }
 char* newFile(int fileNum, char *fileName)
 {
-    fileName = malloc(sizeof(fread));
+    fileName = malloc(sizeof(uint8_t) * fread);
 
     sprintf(fileName, "%03i.jpg", fileNum);
 
