@@ -3,9 +3,9 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-char* newFile(int fileNum, char *fileName, int freadSize);
+char* newFile(int fileNum, char *fileName);
 
-int isBufferJpeg(uint8_t *buffer, bool isOpen);
+bool isBufferJpeg(uint8_t *buffer);
 
  //open memory card > look for beginning of the JPEG > open a new JPEG file to write to, write data in 512byte chunks until new jpeg is found. then close and start new repeat. until end of file is reached.
 // image is a jpeg. first byte is 0xff, 0xd8, 0xff, 0xe(?)/when noticing this patten we know this is beginning of jpeg. last byte is oxe0/0xe1/oxe2...oxef
@@ -31,13 +31,13 @@ int main(int argc, char *argv[])
     while (fread(buffer, 1, 512, mcFile) != 0)
 
     {
-    if (isBufferJpeg(buffer && isOpen == true){
+    if (isBufferJpeg(buffer) == true && isOpen == true){
         fclose(img);
         newFile(fileNum, fileName);
         img = fopen(fileName, "w");
         isOpen = true;
     }
-    else if (isBufferJpeg(buffer) && isOpen == false){
+    else if (isBufferJpeg(buffer) == true && isOpen == false){
            newFile(fileNum, fileName);
            isOpen = true;
     }
@@ -57,17 +57,17 @@ char* newFile(int fileNum, char *fileName)
 {
     sprintf(fileName, "%03i.jpg", fileNum);
     fileNum++;
-    return newFile;
+    return *newFile;
 
 }
 
-int isBufferJpeg(uint8_t *buffer)
+bool isBufferJpeg(uint8_t *buffer)
 {
     if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
     {
-        return 0;
+        return true;
     }
-    return 1;
+    return false;
 
 }
 
