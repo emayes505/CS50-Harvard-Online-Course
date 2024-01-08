@@ -33,8 +33,7 @@ int main(int argc, char *argv[])
     {
     if (isBufferJpeg(buffer) == true && isOpen == true){
         fclose(img);
-        newFile(fileNum, fileName);
-        img = fopen(fileName, "w");
+        img = fopen(newFile(fileNum, fileName), "w");
         isOpen = true;
     }
     else if (isBufferJpeg(buffer) == true && isOpen == false){
@@ -57,7 +56,7 @@ char* newFile(int fileNum, char *fileName)
 {
     sprintf(fileName, "%03i.jpg", fileNum);
     fileNum++;
-    return *newFile;
+    return fileName;
 
 }
 
