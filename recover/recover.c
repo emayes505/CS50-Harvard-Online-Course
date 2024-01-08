@@ -62,14 +62,7 @@ int main(int argc, char *argv[])
 }
 char* newFile(int fileNum, char *fileName, int freadSize)
 {
-    fileName = malloc(sizeof(uint8_t) * freadSize);
-
-    sprintf(fileName, "%03i.jpg", fileNum);
-
-    fileNum++;
-
-    return fileName;
-}
+   
 
 int isBufferJpeg(uint8_t *buffer)
 {
