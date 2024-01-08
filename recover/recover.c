@@ -23,6 +23,9 @@ int main(int argc, char *argv[])
     }
     int fileNum = 0;
     int freadSize = 0;
+
+
+    freadSize = fread(buffer, 1, 512, mcFile
     uint8_t buffer[512];
     bool isOpen = false;
     FILE *img = NULL;
