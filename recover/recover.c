@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
            newFile(fileNum, fileName, freadSize);
            isOpen = true;
         }
-        else if (isOpen == true){
+        else if (isBufferJpeg == 2 && isOpen == true){
             fwrite(buffer, 512, 1, img);
         }
 
