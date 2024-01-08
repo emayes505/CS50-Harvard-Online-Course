@@ -38,14 +38,14 @@ int main(int argc, char *argv[])
     {
         freadSize = sizeof(int)fread);
 
-        if (isBufferJpeg(buffer, isOpen) == 1){
+        if (isBufferJpeg(buffer){
         fclose(img);
         newFile(fileNum, fileName, freadSize);
         img = fopen(fileName, "w");
         isOpen = true;
         }
         else if (isBufferJpeg(buffer, isOpen) == 0){
-           newFile(fileNum, fileName, freadSize);
+           newFile(fileNum, fileName);
            isOpen = true;
         }
         else if (isBufferJpeg(buffer, isOpen) == 2 && isOpen == false){
@@ -60,9 +60,11 @@ int main(int argc, char *argv[])
     fclose(mcFile);
     fclose (img);
 }
-char* newFile(int fileNum, char *fileName, int freadSize)
+char* newFile(int fileNum, char *fileName)
 {
-   
+
+
+}
 
 int isBufferJpeg(uint8_t *buffer)
 {
