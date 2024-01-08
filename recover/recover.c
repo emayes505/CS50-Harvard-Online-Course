@@ -26,11 +26,11 @@ int main(int argc, char *argv[])
     int fileNum = 0;
     bool isOpen = false;
     FILE *img = NULL;
-    char * fileName = NULL;
 
     while (fread(buffer, 1, 512, mcFile) != 0)
-
     {
+    char fileName[9];
+
     if (isBufferJpeg(buffer) == true && isOpen == true){
         fclose(img);
         img = fopen(newFile(fileNum, fileName), "w");
@@ -54,6 +54,7 @@ int main(int argc, char *argv[])
 }
 char* newFile(int fileNum, char *fileName)
 {
+
     sprintf(fileName, "%03i.jpg", fileNum);
     fileNum++;
     return fileName;
