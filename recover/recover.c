@@ -24,12 +24,14 @@ int main(int argc, char *argv[])
     if (mcFile == NULL){
         printf("error opening file.\n");
     }
+    size_t freadSize;
     uint8_t buffer[512];
     bool isOpen = false;
     FILE *img = NULL;
     char * fileName = NULL;
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
+        size_t freadSize = fread;
         if (isBufferJpeg((char *)buffer, isOpen) == true && isOpen == true){
         fclose(img);
         newFile(fileNum, fileName);
