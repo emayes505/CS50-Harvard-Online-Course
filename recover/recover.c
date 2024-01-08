@@ -27,9 +27,7 @@ int main(int argc, char *argv[])
     FILE *img = NULL;
     char * fileName = NULL;
 
-
-    freadSize = fread(buffer, 1, 512, mcFile);
-    uint8_t buffer[freadSize];
+    uint8_t buffer["%i"], freadSize = fread(buffer, 1, 512, mcFile;
 
     while (freadSize != 0)
     {
