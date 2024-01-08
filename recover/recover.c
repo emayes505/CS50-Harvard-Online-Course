@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     FILE *mcFile = fopen(argv[1], "r");
 
     int fileNum = 0;
-    char * fileName = NULL;
+
 
     if (mcFile == NULL){
         printf("error opening file.\n");
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     uint8_t buffer[512];
     bool isOpen = false;
     FILE *img = NULL;
-    char *fileName[9];
+    char * fileName = NULL;
     while (fread(buffer, 1, 512, mcFile) != 0)
     {
         if (isBufferJpeg((char *)buffer, isOpen) == true && isOpen == true){
@@ -37,8 +37,7 @@ int main(int argc, char *argv[])
         isOpen = true;
         }
         else if (isBufferJpeg((char *)buffer, isOpen) == true && isOpen == false){
-           char fileName[9];
-           newFile(int fileNum, char *fileName);
+           newFile(fileNum, fileName);
            isOpen = true;
         }
         else if (isOpen == true){
@@ -55,7 +54,7 @@ int main(int argc, char *argv[])
 }
 char* newFile(int fileNum, char *fileName)
 {
-    fileName[9];
+    fileName = malloc(sizeof(fread));
 
     sprintf(fileName, "%03i.jpg", fileNum);
 
