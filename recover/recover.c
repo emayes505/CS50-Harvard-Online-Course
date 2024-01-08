@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     if (isBufferJpeg(buffer) == true && isOpen == true){
         fclose(img);
         img = fopen(newFile(fileNum, fileName), "w");
-        isOpen = true;
+
     }
     else if (isBufferJpeg(buffer) == true && isOpen == false){
 
@@ -53,6 +53,8 @@ int main(int argc, char *argv[])
     }
     fclose(mcFile);
     fclose (img);
+    isOpen = false;
+    return 0;
 }
 char* newFile(int fileNum, char *fileName)
 {
