@@ -5,7 +5,7 @@
 
 char* newFile(int fileNum, char *fileName, int freadSize);
 
-int isBufferJpeg(char* buffer, bool isOpen);
+int isBufferJpeg(uint8_t *buffer, bool isOpen);
 
  //open memory card > look for beginning of the JPEG > open a new JPEG file to write to, write data in 512byte chunks until new jpeg is found. then close and start new repeat. until end of file is reached.
 // image is a jpeg. first byte is 0xff, 0xd8, 0xff, 0xe(?)/when noticing this patten we know this is beginning of jpeg. last byte is oxe0/0xe1/oxe2...oxef
@@ -23,14 +23,14 @@ int main(int argc, char *argv[])
     }
     int fileNum = 0;
     int freadSize = 0;
-    uint8_t *buffer[512];
+    uint8_t buffer[512];
     bool isOpen = false;
     FILE *img = NULL;
     char * fileName = NULL;
     while (freadSize == fread(buffer, 1, 512, mcFile) != 0)
     {
 
-        if (isBufferJpeg((char *)buffer, isOpen) == true && isOpen == true){
+        if (isBufferJpeg(buffer, isOpen) == true && isOpen == true){
         fclose(img);
         newFile(fileNum, fileName, freadSize);
         img = fopen(fileName, "w");
@@ -63,7 +63,7 @@ char* newFile(int fileNum, char *fileName, int freadSize)
     return fileName;
 }
 
-int isBufferJpeg(char* buffer, bool isOpen)
+int isBufferJpeg(uint8_t *buffer, bool isOpen)
 {
     if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0 && isOpen == false)
     {
@@ -71,9 +71,9 @@ int isBufferJpeg(char* buffer, bool isOpen)
     }
     else if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0 && isOpen == true)
     {
-        return 0;
+        return 1;
     }
-    return 1;
+    return 2;
 
 }
 
