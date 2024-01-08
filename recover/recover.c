@@ -23,13 +23,18 @@ int main(int argc, char *argv[])
     }
     int fileNum = 0;
     int freadSize = 0;
+
+    uint8_t *buffer = (int *)malloc(file_size);
+    if (buffer == NULL){
+        perror("Error allocating memory");
+        fclose(mcFile);
+        return 1;
+    }
+    
     bool isOpen = false;
     FILE *img = NULL;
     char * fileName = NULL;
-
-    uint8_t buffer["%i"], freadSize = fread(buffer, 1, 512, mcFile;
-
-    while (freadSize != 0)
+    while (fread(buffer, 1, 512, mcFile) != 0)
     {
         freadSize = sizeof(int)fread);
 
