@@ -71,17 +71,13 @@ char* newFile(int fileNum, char *fileName, int freadSize)
     return fileName;
 }
 
-int isBufferJpeg(uint8_t *buffer, bool isOpen)
+int isBufferJpeg(uint8_t *buffer)
 {
-    if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0 && isOpen == false)
+    if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0)
     {
         return 0;
     }
-    else if (buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF && (buffer[3] & 0xF0) == 0xE0 && isOpen == true)
-    {
-        return 1;
-    }
-    return 2;
+    return 1;
 
 }
 
