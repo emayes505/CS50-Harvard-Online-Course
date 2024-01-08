@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
         fclose(mcFile);
         return 1;
     }
-    
+    +
     bool isOpen = false;
     FILE *img = NULL;
     char * fileName = NULL;
