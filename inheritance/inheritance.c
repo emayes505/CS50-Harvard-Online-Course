@@ -47,7 +47,8 @@ person *create_family(int generations)
         free(n);
         return 1;
     }
-    n->parents = [parent0,parent1];
+    n->parents = [parent0, parent1];
+    n->
 
 
     // If there are still generations left to create
