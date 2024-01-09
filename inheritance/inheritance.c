@@ -48,6 +48,7 @@ person *create_family(int generations)
         // Create two new parents for current person by recursively calling create_family
         person *parent0 = create_family(generations - 1);
         person *parent1 = create_family(generations - 1);
+        
 
         // TODO: Set parent pointers for current person
         n->parents[0] = parent0;
