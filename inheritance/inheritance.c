@@ -39,7 +39,6 @@ int main(void)
 person *create_family(int generations)
 {
     // TODO: Allocate memory for new person
-    person *list = NULL;
     person *n = malloc(sizeof(person));
 
     // If there are still generations left to create
