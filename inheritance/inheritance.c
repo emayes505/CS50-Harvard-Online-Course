@@ -83,7 +83,8 @@ void free_family(person *p)
     {
         return 1;
     }
-    
+    free(p->parents);
+    free(p->alleles);
 
 
 
