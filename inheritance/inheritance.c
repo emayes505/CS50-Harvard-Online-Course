@@ -83,7 +83,7 @@ void free_family(person *p)
 
 
     // TODO: Free parents recursively
-    freefamily(free(p->parents + 1 && p->alleles + 1));
+
 
 
     // TODO: Free child
