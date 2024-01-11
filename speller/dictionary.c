@@ -38,6 +38,11 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     FILE *fopen(*dictionary, "r");
+    {
+        if(fopen == NULL)
+        printf("file didn't load properly");
+        return 1;
+    }
 
     // TODO
     return false;
