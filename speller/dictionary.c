@@ -2,6 +2,7 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 #include "dictionary.h"
 
@@ -37,9 +38,9 @@ unsigned int hash(const char *word)
 //hash word to obtain hash value, insert node into hash table at location
 bool load(const char *dictionary)
 {
-    fopen(*dictionary, "r");
+    fopen(dictionary, "r");
     {
-    if ( == NULL)
+    if (fopen == NULL)
         {
         printf("Opening dictionary was unsuccessful.");
         return 1;
