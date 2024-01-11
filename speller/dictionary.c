@@ -33,6 +33,8 @@ unsigned int hash(const char *word)
 }
 
 // Loads dictionary into memory, returning true if successful, else false
+// Open dictionary, read strings from file 1 at a time, create a new node for each word,
+//hash word to obtain hash value, insert node into hash table at location
 bool load(const char *dictionary)
 {
     // TODO
