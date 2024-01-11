@@ -43,7 +43,7 @@ bool load(const char *dictionary)
         printf("file didn't load properly");
         return 1;
     }
-    fscanf(fopen, "%s", );
+    while (fscanf(fopen, "%s", ) != "EOF");
 
     // TODO
     return false;
