@@ -47,6 +47,7 @@ bool load(const char *dictionary)
         return 1;
         }
     }
+    fscanf(dict, )
 
 
 
