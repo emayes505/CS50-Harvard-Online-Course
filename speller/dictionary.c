@@ -37,12 +37,16 @@ unsigned int hash(const char *word)
 //hash word to obtain hash value, insert node into hash table at location
 bool load(const char *dictionary)
 {
-    fopen(*dictionary, "r")
+    fopen(*dictionary, "r");
     {
-        if*
+    if ( == NULL)
+        {
+        printf("Opening dictionary was unsuccessful.");
+        return 1;
+        }
     }
-    }
-    while (fscanf(fopen, "%s", buffer) != "EOF");
+
+
 
     // TODO
     return false;
