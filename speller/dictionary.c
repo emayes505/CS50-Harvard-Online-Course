@@ -32,7 +32,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
       int index;
-      index = atoi(toupper(word[0])) - 65 % N;
+      index = toupper(word[0]) - 65 % N;
 
     return index;
 }
