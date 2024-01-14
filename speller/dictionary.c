@@ -100,9 +100,12 @@ bool unload(void)
     {
        node *cursor = table[i];
        node *tmp = table [i];
+
+       while (cursor != NULL){
        cursor = cursor->next;
        free(tmp);
        tmp = cursor;
+       }
     }
     return false;
 }
