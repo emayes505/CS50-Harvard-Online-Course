@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "dictionary.h"
 
@@ -64,11 +65,10 @@ bool load(const char *dictionary)
     head = newNode;
     hash(buffer);
     }
-
-
-
-
+    return hash;
 }
+
+
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
