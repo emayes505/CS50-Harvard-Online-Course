@@ -35,8 +35,9 @@ unsigned int hash(const char *word)
     for (int i = 0; i < 3; i ++)
     {
       index = toupper(word[0]) - 'A' - 65;
+      index = index % N;
     }
-    return toupper(word[0]) - 'A';
+    return index;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
