@@ -57,9 +57,10 @@ bool load(const char *dictionary)
     if(malloc == NULL)
     {
     printf("Memory error.\n");
+    return false;
     }
-    strcpy(head->word, )
-    hash(newNode->word);
+    head->word = strcpy(buffer);
+    hash(buffer);
     }
 
 
