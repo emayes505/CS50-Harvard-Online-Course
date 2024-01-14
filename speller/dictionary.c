@@ -61,9 +61,9 @@ bool load(const char *dictionary)
         printf("Memory error.\n");
         return false;
     }
-    strcpy(newNode->word, buffer);
-    table[hash(buffer)] = newNode;
-    newNode->next = head;
+    int idx = hash(buffer);
+    table[idx]->next = strcpy(newNode->word, buffer);
+    table[idx]->word =
     head = newNode;
 
     }
