@@ -26,7 +26,17 @@ int callCount = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-     table[hash(word)]
+    node *cursor;
+    cursor = table[hash(word)];
+    while (cursor->next != NULL)
+    {
+        if (strcasecmp(cursor->word == word)) {
+            return true;
+        }
+        else {
+        cursor = cursor->next;
+        }
+    }
     return false;
 }
 
