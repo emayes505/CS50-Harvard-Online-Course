@@ -42,6 +42,7 @@ bool load(const char *dictionary)
     FILE *dict;
     node *head = NULL;
     node *tail = NULL;
+    char *buffer[LENGTH + 1];
     dict = fopen(dictionary, "r");
     {
     if (dict == NULL)
@@ -50,7 +51,7 @@ bool load(const char *dictionary)
         return false;
         }
     }
-    while (fscanf(dict, "%s", ) != EOF)
+    while (fscanf(dict, "%s", buffer) != EOF)
     {
     head = malloc(sizeof(node));
     if(malloc == NULL)
