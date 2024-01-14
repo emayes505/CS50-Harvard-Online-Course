@@ -57,7 +57,6 @@ bool load(const char *dictionary)
     {
     printf("Memory error.\n");
     }
-
     strcpy(head->word, )
     hash(newNode->word);
     }
