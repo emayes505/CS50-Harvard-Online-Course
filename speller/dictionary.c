@@ -40,7 +40,8 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     FILE *dict;
-    node *newNode = NULL;
+    node *head = NULL;
+    node *tail = NULL;
     dict = fopen(dictionary, "r");
     {
     if (dict == NULL)
@@ -51,9 +52,10 @@ bool load(const char *dictionary)
     }
     while (fscanf(dict, "%s", newNode->word) != EOF)
     {
-    newNode = malloc(sizeof(node));
+    head = malloc(sizeof(node));
     if(malloc == NULL)
     printf("Memory error.\n");
+    strcpy(head->word, )
     hash(newNode->word);
     }
 
