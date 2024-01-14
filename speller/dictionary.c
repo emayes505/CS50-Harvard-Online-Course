@@ -39,7 +39,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     FILE *dict;
-    node *newNode;
+    node *newNode = NULL;
     dict = fopen(dictionary, "r");
     {
     if (dict == NULL)
