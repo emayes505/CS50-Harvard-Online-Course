@@ -42,7 +42,7 @@ bool load(const char *dictionary)
     FILE *dict;
     node *head = NULL;
     node *newNode = NULL;
-    char *buffer[LENGTH + 1];
+    char buffer[LENGTH + 1];
     dict = fopen(dictionary, "r");
     {
     if (dict == NULL)
@@ -60,6 +60,8 @@ bool load(const char *dictionary)
     return false;
     }
     newNode->word = strcpy(buffer);
+    newNode->next = head;
+    head = newNode;
     hash(buffer);
     }
 
