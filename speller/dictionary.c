@@ -21,6 +21,8 @@ const unsigned int N = 25;
 // Hash table
 node *table[N];
 
+int callCount = 0;
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -31,8 +33,10 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
+
       int index;
       index = toupper(word[0]) - 65 % N;
+      callCount ++;
 
     return index;
 }
@@ -73,8 +77,8 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    
-    return 0;
+
+    return callCount;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
