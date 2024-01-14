@@ -65,7 +65,7 @@ bool load(const char *dictionary)
     head = newNode;
     hash(buffer);
     }
-    return hash;
+    return true;
 }
 
 
