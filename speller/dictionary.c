@@ -95,6 +95,9 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO
+    for (int i = 0; i < 25; i++)
+    {
+        
+    }
     return false;
 }
