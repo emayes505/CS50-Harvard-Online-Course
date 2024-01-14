@@ -26,7 +26,7 @@ int callCount = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    table[hash(word)]
+     table[hash(word)]
     return false;
 }
 
