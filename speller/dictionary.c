@@ -46,19 +46,16 @@ bool load(const char *dictionary)
     char buffer[LENGTH + 1];
     dict = fopen(dictionary, "r");
     {
-    if (dict == NULL)
-        {
+    if (dict == NULL) {
         printf("Opening dictionary was unsuccessful.");
         return false;
         }
     }
-    while (fscanf(dict, "%s", (char *)buffer) != EOF)
-    {
+    while (fscanf(dict, "%s", (char *)buffer) != EOF) {
     newNode = malloc(sizeof(node));
-    if(newNode == NULL)
-    {
-    printf("Memory error.\n");
-    return false;
+    if(newNode == NULL) {
+        printf("Memory error.\n");
+        return false;
     }
     strcpy(newNode->word, buffer);
     newNode->next = head;
