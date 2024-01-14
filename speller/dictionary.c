@@ -40,7 +40,6 @@ bool load(const char *dictionary)
 {
     FILE *dict;
     node *newNode;
-    newNode = malloc(sizeof(node));
     dict = fopen(dictionary, "r");
     {
     if (dict == NULL)
@@ -50,7 +49,9 @@ bool load(const char *dictionary)
         }
     }
     while (fscanf(dict, "%s", newNode) != "EOF")
-
+    {
+    newNode = malloc(sizeof(node));
+    }
 
     return false;
 }
