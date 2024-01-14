@@ -52,7 +52,8 @@ bool load(const char *dictionary)
     while (fscanf(dict, "%s", newNode->word) != EOF)
     {
     newNode = malloc(sizeof(node));
-    
+    if(malloc == NULL)
+    printf("Memory error.\n");
     }
 
 
