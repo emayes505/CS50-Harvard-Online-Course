@@ -31,7 +31,7 @@ bool check(const char *word)
     cursor = table[hash(word)];
     while (cursor->next != NULL)
     {
-        if (strcasecmp(cursor->word = word)) {
+        if (strcasecmp(cursor->word == word)) {
             return true;
         }
         else {
