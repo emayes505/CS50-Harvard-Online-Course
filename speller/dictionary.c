@@ -45,7 +45,6 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     FILE *dict;
-    node *head = NULL;
     node *newNode = NULL;
     char buffer[LENGTH + 1];
     dict = fopen(dictionary, "r");
@@ -62,8 +61,10 @@ bool load(const char *dictionary)
         return false;
     }
     int idx = hash(buffer);
+    node *head = NULL;
     table[idx]->next = strcpy(newNode->word, buffer);
-    table[idx]->word =
+    table[idx]->word = head;
+    head = table[idx]->next;
     head = newNode;
 
     }
