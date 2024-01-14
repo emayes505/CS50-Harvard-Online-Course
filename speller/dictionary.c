@@ -54,12 +54,12 @@ bool load(const char *dictionary)
     while (fscanf(dict, "%s", buffer) != EOF)
     {
     newNode = malloc(sizeof(node));
-    if(malloc == NULL)
+    if(newNode == NULL)
     {
     printf("Memory error.\n");
     return false;
     }
-    newNode->word = strcpy(buffer);
+    strcpy(newNode->word, buffer);
     newNode->next = head;
     head = newNode;
     hash(buffer);
