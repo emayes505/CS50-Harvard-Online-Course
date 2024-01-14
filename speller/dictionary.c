@@ -58,9 +58,8 @@ bool load(const char *dictionary)
         return false;
     }
     strcpy(newNode->word, buffer);
-    newNode->next = head;
-    head = newNode;
-    hash(buffer);
+    table[hash] = newNode->next
+
     }
     return true;
 }
