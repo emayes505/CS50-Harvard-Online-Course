@@ -17,6 +17,8 @@ int main() {
     struct Node *head = linkedList(arr, size);
     printList(head);
 }
+
+
 Node *linkedList(int arr[], int size) {
     struct Node *head = NULL;
     struct Node *tail;
@@ -34,6 +36,7 @@ Node *linkedList(int arr[], int size) {
         tail = newNode;
     }
     }
+}
 void printList(struct Node *head) {
     while (head->next != NULL) {
 
@@ -42,7 +45,6 @@ void printList(struct Node *head) {
         printf("->");
     }
     head = head->next;
-}
 }
 }
 
