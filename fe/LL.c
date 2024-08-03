@@ -8,20 +8,20 @@ typedef struct Node {
 }Node;
 
 
-void pringList(struct Node *head);
+void printList(struct Node *head);
 Node *linkedList(int arr[], int size);
 
 int main() {
     int arr[] = {1, 7, 5, 2};
     int size = sizeof(arr)/sizeof(arr[0]);
-    struct Node *head = makeLL(arr, size);
+    struct Node *head = linkedList(arr, size);
     printList(head);
 }
 Node *linkedList(int arr[], int size) {
     struct Node *head = NULL;
     struct Node *tail;
     for (int i = 0; i < size; i++) {
-        struct Node newNode = malloc(sizeof(struct Node));
+        struct Node *newNode = malloc(sizeof(struct Node));
         newNode->data = arr[i];
         newNode->next = NULL;
 
@@ -34,13 +34,14 @@ Node *linkedList(int arr[], int size) {
         tail = newNode;
     }
     }
-void pringList(struct Node *head) {
+void printList(struct Node *head) {
     while (head->next != NULL) {
 
         printf("%d", head->data);
     if (head->next->next != NULL) {
         printf("->");
     }
+    head = head->next;
 }
 }
 }
