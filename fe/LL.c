@@ -16,6 +16,9 @@ int main() {
     int size = sizeof(arr)/sizeof(arr[0]);
     struct Node *head = linkedList(arr, size);
     printList(head);
+    head = moveHeadNearTail(head);
+    printf("\n");
+    printList(head);
 }
 
 
@@ -50,10 +53,13 @@ void printList(struct Node *head) {
 }
 Node *moveHeadNearTail(Node* head) {
      struct Node* cur = head;
+     struct Node* swap = head;
      while (cur->next->next != NULL) {
-        head = head->next;
-        cur->next = head->next;
-        head->next = cur;
+        cur = cur->next;
      }
+     head = head->next;
+     swap->next = cur->next;
+     cur->next = swap;
+     return head;
 }
 
