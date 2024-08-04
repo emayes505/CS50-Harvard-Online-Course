@@ -53,7 +53,7 @@ Node *moveHeadNearTail(Node* head) {
      while (cur->next->next != NULL) {
         head = head->next;
         cur->next = head->next;
-        
+        head->next = cur;
      }
 }
 
