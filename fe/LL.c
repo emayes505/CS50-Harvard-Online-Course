@@ -7,7 +7,7 @@ typedef struct Node {
     struct Node *next;
 }Node;
 
-
+Node *moveHeadNearTail(Node* head);
 void printList(struct Node *head);
 Node *linkedList(int arr[], int size);
 
@@ -39,13 +39,21 @@ Node *linkedList(int arr[], int size) {
     return head;
 }
 void printList(struct Node *head) {
-    while (head->next != NULL) {
+    while (head != NULL) {
 
         printf("%d", head->data);
-    if (head->next->next != NULL) {
+    if (head->next!= NULL) {
         printf("->");
     }
     head = head->next;
 }
+}
+Node *moveHeadNearTail(Node* head) {
+     struct Node* cur = head;
+     while (cur->next->next != NULL) {
+        head = head->next;
+        cur->next = head->next;
+        
+     }
 }
 
