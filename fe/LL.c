@@ -36,6 +36,7 @@ Node *linkedList(int arr[], int size) {
         tail = newNode;
     }
     }
+    return head;
 }
 void printList(struct Node *head) {
     while (head->next != NULL) {
