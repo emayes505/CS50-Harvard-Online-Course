@@ -12,6 +12,18 @@ typedef struct {
 void init(stack* s){
     stack->top = 0;
 }
-int main() {
-
+void push (stack *s, int data) {
+    struct Node newNode = malloc(sizeof(struct Node));
+    newNode->data = data;
+    newNode->next = stack->top;
+    stack->top = newNode;
 }
+Node *pop (stack* s) {
+    struct Node *temp = stack->top;
+    stack->top = stack->next;
+    return temp;
+}
+int main() {
+    struct stack = malloc(sizeof(struct stack));
+}
+
