@@ -13,7 +13,7 @@ void init(stack* s){
     s->top = 0;
 }
 void push (stack *s, int data) {
-    Node newNode = (Node*)malloc(sizeof(struct Node*));
+    Node *newNode = (Node*)malloc(sizeof(struct Node));
     newNode->data = data;
     newNode->next = s->top;
     s->top = newNode;
