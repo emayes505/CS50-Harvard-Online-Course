@@ -10,10 +10,10 @@ typedef struct {
 }stack;
 
 void init(stack* s){
-    stack->top = 0;
+    stack->top->data = 0;
 }
 void push (stack *s, int data) {
-    struct Node newNode = (Node *)malloc(sizeof(struct Node));
+    struct Node newNode = (Node*)malloc(sizeof(struct Node));
     newNode->data = data;
     newNode->next = stack->top;
     stack->top = newNode;
