@@ -6,11 +6,11 @@ typedef struct Node {
 } Node;
 
 typedef struct {
-    struct Node *top;;
+    struct Node *top;
 }stack;
 
 void init(stack* s){
-    s->top = 0;
+    s->data = 0;
 }
 void push (stack *s, int data) {
     Node *newNode = (Node*)malloc(sizeof(struct Node));
