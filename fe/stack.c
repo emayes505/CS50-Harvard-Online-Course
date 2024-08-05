@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 typedef struct Node {
     int data;
     struct Node *next;
@@ -13,7 +13,7 @@ void init(stack* s){
     stack->top = 0;
 }
 void push (stack *s, int data) {
-    struct Node newNode = malloc(sizeof(struct Node));
+    struct Node newNode = (Node *)malloc(sizeof(struct Node));
     newNode->data = data;
     newNode->next = stack->top;
     stack->top = newNode;
