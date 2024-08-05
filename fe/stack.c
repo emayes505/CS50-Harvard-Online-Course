@@ -13,13 +13,13 @@ void init(stack* s){
     stack->top->data = 0;
 }
 void push (stack *s, int data) {
-    struct Node newNode = (Node*)malloc(sizeof(struct Node));
+    Node newNode = (Node*)malloc(sizeof(struct Node));
     newNode->data = data;
     newNode->next = stack->top;
     stack->top = newNode;
 }
 Node *pop (stack* s) {
-    struct Node *temp = stack->top;
+    Node *temp = stack->top;
     stack->top = stack->next;
     return temp;
 }
