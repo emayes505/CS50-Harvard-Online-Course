@@ -12,6 +12,9 @@ typedef struct {
 void init(stack* s){
     s->top = NULL;
 }
+int charToInt(char c){
+    return c - '0';
+}
 void push (stack *s, int data) {
     Node *newNode = (Node*)malloc(sizeof(struct Node));
     if (newNode == NULL) {
@@ -54,8 +57,9 @@ int i = 0;
 int score = 0;
 while (moves[i] != '\0') {
     if (isdigit(moves[i])){
-        push(s, moves[i] + 0)
+        push(s, charToInt(moves[i]));
     }
+    else if()
 }
 }
 int main() {
