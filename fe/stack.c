@@ -25,7 +25,7 @@ void push (stack *s, int data) {
 Node *pop (stack* s) {
     if (s->top == NULL) {
         printf("Empty list.\n");
-        return;
+        return NULL;
     }
     Node *temp = s->top;
     s->top = s->top->next;
@@ -34,5 +34,8 @@ Node *pop (stack* s) {
 int main() {
     stack s;
     init(&s);
+    push(&s, 10);
+    push(&s, 20);
+    push(&s, 30);
 }
 
