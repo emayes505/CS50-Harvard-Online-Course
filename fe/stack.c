@@ -22,6 +22,12 @@ void push (stack *s, int data) {
     newNode->next = s->top;
     s->top = newNode;
 }
+int isEmpty(stack *s){
+    if (s->top == NULL){
+        return 1;
+    }
+    return 0;
+}
 Node *pop (stack* s) {
     if (s->top == NULL) {
         printf("Empty list.\n");
@@ -44,9 +50,6 @@ void printStack(stack *s) {
 int main() {
     stack s;
     init(&s);
-    push(&s, 10);
-    push(&s, 20);
-    push(&s, 30);
-    printStack(&s);
+    char[] score = {2,5,+,3,+,+.1};
 }
 
