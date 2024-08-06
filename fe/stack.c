@@ -10,7 +10,7 @@ typedef struct {
 }stack;
 
 void init(stack* s){
-    s->data = 0;
+    s->top->data = 0;
     s->top = NULL;
 }
 void push (stack *s, int data) {
@@ -25,6 +25,6 @@ Node *pop (stack* s) {
     return temp;
 }
 int main() {
-    struct stack s = malloc(sizeof(struct stack));
+    stack s = malloc(sizeof(struct stack));
 }
 
