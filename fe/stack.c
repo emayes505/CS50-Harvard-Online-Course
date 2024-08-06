@@ -21,7 +21,7 @@ void push (stack *s, int data) {
 }
 Node *pop (stack* s) {
     Node *temp = s->top;
-    s->top = s->next;
+    s->top->next = s->top->next;
     return temp;
 }
 int main() {
