@@ -6,7 +6,7 @@ typedef struct Node {
 } Node;
 
 typedef struct {
-    struct Node *top;
+    Node *top;
 }stack;
 
 void init(stack* s){
@@ -14,11 +14,18 @@ void init(stack* s){
 }
 void push (stack *s, int data) {
     Node *newNode = (Node*)malloc(sizeof(struct Node));
+    if (newNode == NULL) {
+        printf("Memory allocation failure.\n");
+        return;
+    }
     newNode->data = data;
     newNode->next = s->top;
     s->top = newNode;
 }
 Node *pop (stack* s) {
+    if (s->top == NULL) {
+        p
+    }
     Node *temp = s->top;
     s->top->next = s->top->next;
     return temp;
