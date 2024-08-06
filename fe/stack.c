@@ -24,13 +24,15 @@ void push (stack *s, int data) {
 }
 Node *pop (stack* s) {
     if (s->top == NULL) {
-        p
+        printf("Empty list.\n");
+        return;
     }
     Node *temp = s->top;
-    s->top->next = s->top->next;
+    s->top = s->top->next;
     return temp;
 }
 int main() {
-    stack s = malloc(sizeof(struct stack));
+    stack s;
+    init(&s);
 }
 
