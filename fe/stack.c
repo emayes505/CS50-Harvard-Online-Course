@@ -31,11 +31,21 @@ Node *pop (stack* s) {
     s->top = s->top->next;
     return temp;
 }
+void printStack(Node *s) {
+    while(s != NULL) {
+        printf("%d", s->data);
+    if (s->next != NULL){
+        printf(" -> ");
+    }
+    s = s->next;
+    }
+}
 int main() {
     stack s;
     init(&s);
     push(&s, 10);
     push(&s, 20);
     push(&s, 30);
+    printStack(s);
 }
 
