@@ -47,9 +47,18 @@ void printStack(stack *s) {
     }
     printf("\n");
 }
+int computeScore(char *moves){
+int i = 0;
+int score = 0;
+while (moves[i] != '\0') {
+    if (isdigit(moves[i])){
+        
+    }
+}
+}
 int main() {
     stack s;
     init(&s);
-    char[] score = {2,5,+,3,+,+.1};
+    char score = {2,5,+,3,+,+.1};
 }
 
