@@ -10,7 +10,6 @@ typedef struct {
 }stack;
 
 void init(stack* s){
-    s->top->data = 0;
     s->top = NULL;
 }
 void push (stack *s, int data) {
