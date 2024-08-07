@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 typedef struct Node {
     int data;
     struct Node *next;
@@ -39,7 +40,7 @@ Node *pop (stack* s) {
     }
     Node *temp = s->top;
     s->top = s->top->next;
-    printf("pop: %d\n", temp);
+    printf("pop: %d\n", temp->data);
     return temp;
 }
 void printStack(stack *s) {
@@ -59,13 +60,13 @@ int i = 0;
 int score = 0;
 while (moves[i] != '\0') {
     if (isdigit(moves[i])){
-        push(s, charToInt(moves[i]));
+        push(&s, charToInt(moves[i]));
     }
     else if()
 }
 }
 int main() {
 
-    char *score = "25+3++1"
+    char *score = "25+3++1";
 }
 
