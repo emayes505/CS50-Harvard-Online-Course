@@ -22,22 +22,18 @@ void init(stack* s){
 int charToInt(char c){
     return c - '0';
 }
-void push (stack *s, int data) {
-    Node *newNode = (Node*)malloc(sizeof(struct Node));
+void push (stack **s, int data) {
+    Node *newNode = newNode(data);
     if (newNode == NULL) {
         printf("Memory allocation failure.\n");
         return;
     }
-    newNode->data = data;
     newNode->next = s->top;
     s->top = newNode;
     printf("push: %d\n", newNode->data);
 }
 int isEmpty(stack *s){
-    if (s->top == NULL){
-        return 1;
-    }
-    return 0;
+    return s->top == NULL;
 }
 Node *pop (stack* s) {
     if (isEmpty(s)) {
