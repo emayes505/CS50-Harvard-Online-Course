@@ -22,7 +22,7 @@ void init(stack* s){
 int charToInt(char c){
     return c - '0';
 }
-void push (stack **s, int data) {
+void push (stack *s, int data) {
     Node *newNode = newNode(data);
     if (newNode == NULL) {
         printf("Memory allocation failure.\n");
