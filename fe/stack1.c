@@ -17,6 +17,11 @@ Node *createNode(int data) {
     newNode->next = NULL;
     return newNode;
 }
+
+void init(stack *s) {
+    s->top = NULL;
+}
+
 int isEmpty(stack *s) {
     return s->top == NULL;
 }
@@ -43,15 +48,20 @@ int pop(stack *s) {
 }
 
 void print(stack *s) {
-    while (s->top != NULL) {
-        printf("%d\n", s->top->data);
-        s->top = s->top->next;
+    Node *temp = s->top;
+    while (temp != NULL) {
+        printf("%d", temp->data);
+        temp = temp->next;;
     }
+    printf("\n");
 }
 int main() {
     stack s;
+    init(&s);
     push(&s, 1);
+    print(&s);
     push(&s, 2);
+    print(&s);
     push(&s, 3);
     print(&s);
 }
