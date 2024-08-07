@@ -17,8 +17,8 @@ Node *createNode(int data) {
     newNode->next = NULL;
     return newNode;
 }
-int isEmpty(stack s) {
-    return s.top == NULL;
+int isEmpty(stack *s) {
+    return s->top == NULL;
 }
 
 void push(stack *s, int data) {
