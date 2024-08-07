@@ -62,11 +62,10 @@ while (moves[i] != '\0') {
     if (isdigit(moves[i])){
         push(&s, charToInt(moves[i]));
     }
-    else if()
 }
 }
 int main() {
-
+    
     char *score = "25+3++1";
 }
 
