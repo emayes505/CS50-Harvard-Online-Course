@@ -10,6 +10,9 @@ typedef struct {
     Node *top;
 }stack;
 
+struct Node* newNode(int data){
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+}
 void init(stack* s){
     s->top = NULL;
 }
@@ -65,7 +68,7 @@ while (moves[i] != '\0') {
 }
 }
 int main() {
-    
+
     char *score = "25+3++1";
 }
 
