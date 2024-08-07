@@ -70,7 +70,8 @@ int computerScore(char *moves) {
     int score = 0;
     while(moves[i] != '\0') {
         if(isdigit(moves[i])) {
-            push(&s, moves[i] - '0');
+            push(&s, (moves[i] - '0'));
+            printf("%d\t", moves[i] - '0');
         }
         else {
             int a = pop(&s);
@@ -80,6 +81,7 @@ int computerScore(char *moves) {
             push(&s, a);
             push(&s, sum);
         }
+        i++;
     }
         printStack(&s);
     while (!isEmpty(&s)) {
