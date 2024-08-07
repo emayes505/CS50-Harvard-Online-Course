@@ -8,6 +8,7 @@ typedef struct Node {
 
 typedef struct {
     Node *top;
+    int count;
 }stack;
 
 struct Node* newNode(int data){
@@ -18,6 +19,7 @@ struct Node* newNode(int data){
 }
 void init(stack* s){
     s->top = NULL;
+    s->top->count = 0;
 }
 int charToInt(char c){
     return c - '0';
@@ -31,6 +33,7 @@ void push (stack *s, int data) {
     newNode->next = s->top;
     s->top = newNode;
     printf("push: %d\n", newNode->data);
+    s->count++;
 }
 int isEmpty(stack *s){
     return s->top == NULL;
@@ -43,6 +46,7 @@ Node *pop (stack* s) {
     Node *temp = s->top;
     s->top = s->top->next;
     printf("pop: %d\n", temp->data);
+    s->count--;
     return temp;
 }
 void printStack(stack *s) {
