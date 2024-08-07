@@ -69,7 +69,7 @@ init(&s);
 int i = 0;
 while(moves[i] != '\0') {
     if(isdigit(moves[i])) {
-        push(&s, moves[i]);
+        push(&s, moves[i] - '0');
     }
     else {
         int a = s->top->data;
