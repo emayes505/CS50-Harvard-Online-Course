@@ -66,6 +66,6 @@ while (moves[i] != '\0') {
 }
 int main() {
 
-    char score = {2,5,+,3,+,+.1};
+    char *score = "25+3++1"
 }
 
