@@ -66,10 +66,6 @@ void print(stack *s) {
 int main() {
     stack s;
     init(&s);
-    push(&s, 1);
-    print(&s);
-    push(&s, 2);
-    print(&s);
-    push(&s, 3);
-    print(&s);
+    char *input = "25+3++1";
+
 }
