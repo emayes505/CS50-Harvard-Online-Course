@@ -38,6 +38,7 @@ void push(stack *s, int data) {
     newNode->data = data;
     newNode->next = s->top;
     s->top = newNode;
+    printf("push: %d\n", data);
 }
 
 
@@ -49,7 +50,7 @@ int pop(stack *s) {
     int temp = s->top->data;
     s->top = s->top->next;
     printf("pop: %d\n", temp);
-    return 0;
+    return temp;
 }
 
 
@@ -71,7 +72,6 @@ int computerScore(char *moves) {
     while(moves[i] != '\0') {
         if(isdigit(moves[i])) {
             push(&s, (moves[i] - '0'));
-            printf("%d\t", moves[i] - '0');
         }
         else {
             int a = pop(&s);
