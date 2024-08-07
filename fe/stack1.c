@@ -31,12 +31,27 @@ void push(stack *s, int data) {
     newNode->next = s->top;
     s->top = newNode;
 }
+int pop(stack *s) {
+    if (isEmpty(s)) {
+        printf("Empty stack\n");
+        return -1;
+    }
+    int temp = s->top->data;
+    s->top = s->top->next;
+    printf("pop: %d\n", temp);
+    return temp;
+}
 
+void print(stack *s) {
+    while (s->top != NULL) {
+        printf("%d\n", s->top->data);
+        s->top = s->top->next;
+    }
+}
 int main() {
     stack s;
-    printf("The num for isEmpty is %d.\n", isEmpty(s));
-    push(&s, 10);
-    push(&s, 20);
-    printf("The num for isEmpty is %d.\n", isEmpty(s));
-    printf("%d\n", s.top->data);
+    push(&s, 1);
+    push(&s, 2);
+    push(&s, 3);
+    print(&s);
 }
