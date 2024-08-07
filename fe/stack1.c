@@ -53,7 +53,7 @@ int pop(stack *s) {
 }
 
 
-void print(stack *s) {
+void printStack(stack *s) {
     Node *temp = s->top;
     while (temp != NULL) {
         printf("%d", temp->data);
@@ -64,28 +64,28 @@ void print(stack *s) {
 
 
 int computerScore(char *moves) {
-stack s;
-init(&s);
-int i = 0;
-int score = 0;
-while(moves[i] != '\0') {
-    if(isdigit(moves[i])) {
-        push(&s, moves[i] - '0');
+    stack s;
+    init(&s);
+    int i = 0;
+    int score = 0;
+    while(moves[i] != '\0') {
+        if(isdigit(moves[i])) {
+            push(&s, moves[i] - '0');
+        }
+        else {
+            int a = pop(&s);
+            int b = pop(&s);
+            int sum = a + b;
+            push(&s, b);
+            push(&s, a);
+            push(&s, sum);
+        }
     }
-    else {
-        int a = pop(&s);
-        int b = pop(&s);
-        int sum = a + b;
-        push(&s, b);
-        push(&s, a);
-        push(&s, sum);
+        printStack(&s);
+    while (!isEmpty(&s)) {
+        score += pop(&s);
     }
-}
-print(&s);
-while (!isEmpty(&s)) {
-    score += pop(&s);
-}
-return score;
+    return score;
 }
 
 
