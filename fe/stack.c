@@ -62,7 +62,7 @@ int i = 0;
 int score = 0;
 while (moves[i] != '\0') {
     if (!isdigit(moves[i])){
-        
+        int add = s->top->data + s->next->data;
     }
     else {
         push(&s, charToInt(moves[i]));
