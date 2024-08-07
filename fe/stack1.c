@@ -67,20 +67,31 @@ int computerScore(char *moves) {
 stack s;
 init(&s);
 int i = 0;
+int score = 0;
 while(moves[i] != '\0') {
     if(isdigit(moves[i])) {
         push(&s, moves[i] - '0');
     }
     else {
-        int a = s->top->data;
-        int b = s->top->next->data;
-        push(&s, (a + b));
+        int a = pop(&s);
+        int b = pop(&s);
+        int sum = a + b;
+        push(&s, b);
+        push(&s, a);
+        push(&s, sum);
     }
 }
+print(&s);
+while (s->top != NULL) {
+    score += s->top->data;
+    s->top = s->top->next;
+}
+return score;
 }
 
 
 int main() {
     char *input = "25+3++1";
+    int score = computerScore(input);
 
 }
