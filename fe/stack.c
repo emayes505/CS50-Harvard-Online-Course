@@ -61,7 +61,10 @@ stack s;
 int i = 0;
 int score = 0;
 while (moves[i] != '\0') {
-    if (isdigit(moves[i])){
+    if (!isdigit(moves[i])){
+        
+    }
+    else {
         push(&s, charToInt(moves[i]));
     }
 }
