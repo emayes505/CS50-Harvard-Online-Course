@@ -17,8 +17,8 @@ Node *createNode(int data) {
     newNode->next = NULL;
     return newNode;
 }
-int isEmpty(stack *s) {
-    return s->top == NULL;
+int isEmpty(stack s) {
+    return s.top == NULL;
 }
 
 void push(stack *s, int data) {
@@ -33,9 +33,10 @@ void push(stack *s, int data) {
 }
 
 int main() {
-    stack *s;
+    stack s;
     printf("The num for isEmpty is %d.\n", isEmpty(s));
     push(&s, 10);
     push(&s, 20);
     printf("The num for isEmpty is %d.\n", isEmpty(s));
+    printf("%d\n", s.top->data);
 }
