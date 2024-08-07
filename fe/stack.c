@@ -12,6 +12,9 @@ typedef struct {
 
 struct Node* newNode(int data){
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = data;
+    newNode->next = NULL;
+    return newNode;
 }
 void init(stack* s){
     s->top = NULL;
