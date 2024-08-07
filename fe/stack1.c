@@ -23,6 +23,13 @@ int isEmpty(stack *s) {
 
 void push(stack *s, int data) {
     Node *newNode = createNode(data);
+    if (newNode == NULL) {
+        printf("Memory allocation error.\n");
+        return;
+    }
+    newNode->data = data;
+    newNode->next = s->top;
+    s->top = newNode;
 }
 
 int main() {
