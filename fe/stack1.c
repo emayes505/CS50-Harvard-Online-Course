@@ -82,9 +82,8 @@ while(moves[i] != '\0') {
     }
 }
 print(&s);
-while (s->top != NULL) {
-    score += s->top->data;
-    s->top = s->top->next;
+while (!isEmpty(&s)) {
+    score += pop(&s);
 }
 return score;
 }
