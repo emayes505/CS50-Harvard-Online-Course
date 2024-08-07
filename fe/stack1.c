@@ -44,12 +44,12 @@ void push(stack *s, int data) {
 int pop(stack *s) {
     if (isEmpty(s)) {
         printf("Empty stack\n");
-        return -1;
+        return 1;
     }
     int temp = s->top->data;
     s->top = s->top->next;
     printf("pop: %d\n", temp);
-    return temp;
+    return 0;
 }
 
 
@@ -63,9 +63,24 @@ void print(stack *s) {
 }
 
 
+int computerScore(char *moves) {
+stack s;
+init(&s);
+int i = 0;
+while(moves[i] != '\0') {
+    if(isdigit(moves[i])) {
+        push(&s, moves[i]);
+    }
+    else {
+        int a = s->top->data;
+        int b = s->top->next->data;
+        push(&s, (a + b));
+    }
+}
+}
+
+
 int main() {
-    stack s;
-    init(&s);
     char *input = "25+3++1";
 
 }
