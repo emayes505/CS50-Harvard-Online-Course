@@ -56,6 +56,9 @@ bool isValid(char* s) {
         if(head == NULL || isOpen(s[i], match)) {
             push(head, s[i]);
         }
+        else if (s[i]) {
+
+        }
    }
 }
 int main() {
