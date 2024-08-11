@@ -7,10 +7,17 @@ typedef struct node {
     struct Node* next;
 }node;
 
+
 typedef struct map {
     char key;
     char value;
 }map;
+
+
+bool isEmpty(struct node* head) {
+    return head == NULL;
+}
+
 
 node *push(struct Node* head, char s) {
     struct node *nn = (node*)malloc(sizeof(struct node*));
@@ -20,8 +27,13 @@ node *push(struct Node* head, char s) {
     return head;
 }
 
+
 char pop(struct node* head) {
-    head->c = 
+    if(!isEmpty) {
+        node* temp - head;
+        head = head->next;
+        return temp->c;
+    }
 }
 
 
