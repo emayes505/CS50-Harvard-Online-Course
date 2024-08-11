@@ -12,6 +12,13 @@ typedef struct {
     char value;
 }map;
 
+int isOpen(struct Node* head){
+    char open[] = { '{', '(', '[' };
+    char closed[] = { '}', ')', ']'};
+    for (int i = 0; i < 3; i++) {
+        
+    }
+}
 int main() {
     char *s = "(){}[]";
 
