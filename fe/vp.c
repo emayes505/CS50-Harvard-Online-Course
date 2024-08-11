@@ -12,54 +12,6 @@ typedef struct {
     char value;
 }map;
 
-int isEmpty(struct Node* head) {
-    if(head == NULL) {
-        return 1;
-    } else {
-        return 0;
-    }
-}
-
-Node* push (struct Node* head, char s) {
-        struct Node* newNode = (Node*)malloc(sizeof(struct Node*));
-        newNode->c = s;
-        newNode->next = head;
-        head = newNode;
-    return head;
-}
-char pop(struct Node* head) {
-    if(!isEmpty) {
-    Node* temp = head;
-    head = head->next;
-    return temp->c;
-    }
-    else {
-        return -1;
-    }
-
-}
-bool isOpen(char s, map m) {
-    for (int i = 0; i < 3; i ++) {
-        if(s == m[i].value) {
-            return true;
-        }
-    }
-    return false;
-}
-bool isValid(char* s) {
-    Node *head = NULL;
-    map match[] = {
-        {')','('}, {']','[' }, {'}','{'}};
-    int i = 0;
-   while (s[i] != '\0') {
-        if(isOpen(s[i], match)) {
-            push(head, s[i]);
-        }
-        else if (s[i]) {
-
-        }
-   }
-}
 int main() {
     char *s = "(){}[]";
 
