@@ -15,8 +15,7 @@ typedef struct {
 int isEmpty(struct Node* head) {
     if(head == NULL) {
         return 1;
-    }
-    else {
+    } else {
         return 0;
     }
 }
