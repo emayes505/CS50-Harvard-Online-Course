@@ -33,15 +33,32 @@ Node* push (struct Node* head, char s) {
         return NULL;
     }
 }
+char pop(struct Node* head) {
+    Node* temp = head;
+    head = head->next;
+    return temp->c;
+
+}
+bool isOpen(char s, map m) {
+    for (int i = 0; i < 3; i ++) {
+        if(s == m->value) {
+            return true;
+        }
+    }
+    return false;
+}
 bool isValid(char* s) {
+    Node *head = NULL;
     map match[] = {
         {')','('}, {']','[' }, {'}','{'}};
     int i = 0;
    while (s[i] != '\0') {
-        if()
+        if(head == NULL || isOpen(s[i], match)) {
+            push(head, s[i]);
+        }
    }
 }
 int main() {
     char *s = "(){}[]";
-    
+
 }
