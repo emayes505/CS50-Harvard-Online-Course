@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-typedef struct Node {
+typedef struct node {
     char c;
     struct Node* next;
-}Node;
+}node;
 
 typedef struct map {
     char key;
@@ -14,6 +14,11 @@ typedef struct map {
 
 
 int main() {
+    map key[] = {
+        {'}', '{'},
+        {')', '('},
+        {']', '['}};
+
     char *s = "(){}[]";
 
 }
