@@ -44,6 +44,15 @@ bool isValid(char *s) {
         {'}', '{'},
         {')', '('},
         {']', '['}};
+    int size = 0;
+    while (s[size] != '\0') {
+        size++;
+    }
+    for(int i = 0; i < size; i++) {
+        for(int j = 0; j < 3; j++) {
+        if(s[size] == key[j].value)
+        }
+    }
 
 }
 
