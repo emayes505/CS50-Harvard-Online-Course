@@ -40,7 +40,7 @@ char pop(struct Node* head) {
 }
 bool isOpen(char s, map m) {
     for (int i = 0; i < 3; i ++) {
-        if(s == m[i]->value) {
+        if(s == m[i].value) {
             return true;
         }
     }
