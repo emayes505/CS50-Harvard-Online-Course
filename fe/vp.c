@@ -30,7 +30,7 @@ node *push(struct Node* head, char s) {
 
 char pop(struct node* head) {
     if(!isEmpty) {
-        node* temp - head;
+        node* temp = head;
         head = head->next;
         return temp->c;
     }
