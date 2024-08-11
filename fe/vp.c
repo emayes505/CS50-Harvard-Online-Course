@@ -21,21 +21,21 @@ int isEmpty(struct Node* head) {
 }
 
 Node* push (struct Node* head, char s) {
-    if(isEmpty(head) == 0) {
         struct Node* newNode = (Node*)malloc(sizeof(struct Node*));
         newNode->c = s;
         newNode->next = head;
         head = newNode;
     return head;
-    }
-    else {
-        return NULL;
-    }
 }
 char pop(struct Node* head) {
+    if(!isEmpty) {
     Node* temp = head;
     head = head->next;
     return temp->c;
+    }
+    else {
+        return -1;
+    }
 
 }
 bool isOpen(char s, map m) {
