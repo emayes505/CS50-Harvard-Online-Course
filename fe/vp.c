@@ -34,6 +34,9 @@ char pop(struct node* head) {
         head = head->next;
         return temp->c;
     }
+    else {
+        return 'n';
+    }
 }
 
 
