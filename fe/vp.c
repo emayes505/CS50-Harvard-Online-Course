@@ -4,7 +4,7 @@
 
 typedef struct node {
     char c;
-    struct Node* next;
+    struct node* next;
 }node;
 
 
@@ -19,7 +19,7 @@ bool isEmpty(struct node* head) {
 }
 
 
-node *push(struct Node* head, char s) {
+node *push(struct node* head, char s) {
     struct node *nn = (node*)malloc(sizeof(struct node*));
     nn->c = s;
     nn->next = head;
@@ -38,6 +38,7 @@ char pop(struct node* head) {
         return 'n';
     }
 }
+
 
 
 int main() {
