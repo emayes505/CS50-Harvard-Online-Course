@@ -27,7 +27,7 @@ Node* push (struct Node* head, char s) {
         newNode->c = s;
         newNode->next = head;
         head = newNode;
-    return Node;
+    return head;
     }
     else {
         return NULL;
@@ -37,7 +37,11 @@ bool isValid(char* s) {
     map match[] = {
         {')','('}, {']','[' }, {'}','{'}};
     int i = 0;
-    while (s[i] != '\0') {
-        if(s[i] )
-    }
+   while (s[i] != '\0') {
+        if()
+   }
+}
+int main() {
+    char *s = "(){}[]";
+    
 }
