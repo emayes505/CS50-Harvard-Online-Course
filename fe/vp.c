@@ -39,14 +39,17 @@ char pop(struct node* head) {
     }
 }
 
-
-
-int main() {
-    map key[] = {
+bool isValid(char *s) {
+        map key[] = {
         {'}', '{'},
         {')', '('},
         {']', '['}};
 
+}
+
+
+
+int main() {
     char *s = "(){}[]";
 
 }
