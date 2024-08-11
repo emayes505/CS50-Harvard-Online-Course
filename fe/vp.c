@@ -53,7 +53,7 @@ bool isValid(char* s) {
         {')','('}, {']','[' }, {'}','{'}};
     int i = 0;
    while (s[i] != '\0') {
-        if(head == NULL || isOpen(s[i], match)) {
+        if(isOpen(s[i], match)) {
             push(head, s[i]);
         }
         else if (s[i]) {
