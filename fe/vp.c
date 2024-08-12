@@ -39,6 +39,11 @@ char pop(struct node* head) {
     }
 }
 
+int openOrClosed(char s) {
+    for (int i = 0; i < 3; i++) {
+        if(s == '{' || s == '(' || s == '[')
+    }
+}
 bool isValid(char *s) {
         map key[] = {
         {'}', '{'},
