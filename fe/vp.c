@@ -18,7 +18,7 @@ typedef struct map {
 }map;
 
 void initStack(struct stack s) {
-    s->top == NULL;
+    s == NULL;
 }
 bool isEmpty(struct node* head) {
     return head == NULL;
