@@ -60,7 +60,7 @@ bool isValid(char *s) {
             }
         }
         else {
-            push(&v);
+           v->top = push(&v, s[i]);
         }
     }
 }
