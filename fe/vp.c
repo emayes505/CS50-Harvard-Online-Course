@@ -2,18 +2,24 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+
 typedef struct node {
     char c;
     struct node* next;
 }node;
 
+typedef struct stack {
+    node *top;
+}stack;
 
 typedef struct map {
     char key;
     char value;
 }map;
 
-
+void initStack(struct stack s) {
+    s->top == NULL;
+}
 bool isEmpty(struct node* head) {
     return head == NULL;
 }
@@ -29,43 +35,34 @@ node *push(struct node* head, char s) {
 
 
 char pop(struct node* head) {
-    if(!isEmpty) {
+
         node* temp = head;
         head = head->next;
+        printf("%c has been popped.\n");
         return temp->c;
-    }
-    else {
-        return 'n';
-    }
 }
 
-int openOrClosed(char s) {
-    char open[] = "({[";
-    char closed[] = ")}]";
-    for (int i = 0; i < 3; i++) {
-        if(s == open[i]) {
-            return 1;
-        }
-        else if(s == closed[i]) {
-            return 0;
-        }
-    }
-}
 bool isValid(char *s) {
-        map key[] = {
+        stack v;
+        init(&v);
+        map map[] = {
         {'}', '{'},
         {')', '('},
         {']', '['}};
     int size = 0;
-    while (s[size] != '\0') {
-        size++;
-    }
-    for(int i = 0; i < size; i++) {
-        for(int j = 0; j < 3; j++) {
-        if(s[size] == key[j].value)
+    for (int i = 0; i < 3; i++) {
+        if(s[i] == map[i].key) {
+            if(isEmpty(&v) || v->top->c != key[i].value) {
+                return false;
+            }
+            else {
+                pop(&v);
+            }
+        }
+        else {
+            push(&v);
         }
     }
-
 }
 
 
