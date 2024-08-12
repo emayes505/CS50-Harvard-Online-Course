@@ -40,8 +40,15 @@ char pop(struct node* head) {
 }
 
 int openOrClosed(char s) {
+    char open[] = "({[";
+    char closed[] = ")}]";
     for (int i = 0; i < 3; i++) {
-        if(s == '{' || s == '(' || s == '[')
+        if(s == open[i]) {
+            return 1;
+        }
+        else if(s == closed[i]) {
+            return 0;
+        }
     }
 }
 bool isValid(char *s) {
