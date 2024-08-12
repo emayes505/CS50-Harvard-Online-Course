@@ -51,9 +51,9 @@ bool isValid(char *s) {
         {']', '['}};
     int size = 0;
     for (int i = 0; i < 3; i++) {
-        if(s[i] == map[i].key) {
-            (isEmpty(v.top) || v.top->c != map[i].value) ? return false : pop(v.top);
-        } else {
+        (s[i] == map[i].key && (isEmpty(v.top) || v.top->c != map[i].value)) ? return false : pop(v.top);
+
+     else {
            v.top = push(v.top, s[i]);
         }
     }
