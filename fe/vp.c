@@ -38,13 +38,13 @@ char pop(struct node* head) {
 
         node* temp = head;
         head = head->next;
-        printf("%c has been popped.\n");
+        printf("%c has been popped.\n", temp->c);
         return temp->c;
 }
 
 bool isValid(char *s) {
         stack v;
-        init(&v);
+        initStack(v);
         map map[] = {
         {'}', '{'},
         {')', '('},
@@ -52,7 +52,7 @@ bool isValid(char *s) {
     int size = 0;
     for (int i = 0; i < 3; i++) {
         if(s[i] == map[i].key) {
-            if(isEmpty(&v) || v->top->c !=[i].value) {
+            if(isEmpty(v.top) || v.top->c != map[i].value) {
                 return false;
             }
             else {
@@ -63,11 +63,14 @@ bool isValid(char *s) {
            v.top = push(v.top, s[i]);
         }
     }
+    if(v.top == NULL) {
+        return true;
+    }
+    return false;
 }
 
 
-
 int main() {
-    char *s = "(){}[]";
-
+    char *s = "(){}";
+    (isValid(s)) ? printf("Valid\n") : printf("Not valid.\n");
 }
