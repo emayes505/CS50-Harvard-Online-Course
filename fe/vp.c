@@ -52,15 +52,15 @@ bool isValid(char *s) {
     int size = 0;
     for (int i = 0; i < 3; i++) {
         if(s[i] == map[i].key) {
-            if(isEmpty(&v) || v->top->c != key[i].value) {
+            if(isEmpty(&v) || v->top->c !=[i].value) {
                 return false;
             }
             else {
-                pop(&v);
+                pop(v.top);
             }
         }
         else {
-           v->top = push(&v, s[i]);
+           v.top = push(v.top, s[i]);
         }
     }
 }
