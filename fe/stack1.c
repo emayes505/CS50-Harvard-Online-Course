@@ -93,6 +93,6 @@ int computerScore(char *moves) {
 
 int main() {
     char *input = "25+3++1";
-    int score = computerScore(input);
+    printf("The score is %d\n", computerScore(input));
 
 }
