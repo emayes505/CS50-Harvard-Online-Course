@@ -13,7 +13,7 @@ int **triangularSum(int *base, int n) {
         }
         else {
             for(int k = 0; k < n - i; k++) {
-                printf("%d %d\n", trisum[i-1][k], trisum[i-1][k - 1]);
+                printf("%d %d\n", trisum[i-1][k], trisum[i-1][k + 1]);
             trisum[i][k] = (trisum[i-1][k] + trisum[i-1][k + 1]);
             }
         }
