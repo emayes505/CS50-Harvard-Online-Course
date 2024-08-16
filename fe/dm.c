@@ -4,9 +4,9 @@
 int **triangularSum(int *base, int n) {
     int **trisum = (int**)malloc(sizeof(int*) * n);
     for(int i = 0; i < n; i++) {
-        trisum[i] = malloc(sizeof(int) * n - i);
+        trisum[i] = malloc(sizeof(int) * (n - i));
 
-        if(i = 0) {
+        if(i == 0) {
             for(int j = 0; j < n; j++) {
                 trisum[0][j] = base[j];
             }
@@ -27,8 +27,9 @@ int main() {
 
     for (int i = 0; i < size; i ++) {
         for(int j = 0; j < size - i; j++) {
-            printf("%d", total[i][j]);
+            printf("%d ", total[i][j]);
         }
+        printf("\n");
     }
 
 }
