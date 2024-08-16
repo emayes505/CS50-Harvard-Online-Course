@@ -2,25 +2,27 @@
 #include <stdlib.h>
 
 int **triangularSum(int *base, int n) {
-    int **trisum = (int**)malloc(sizeof(int*) * n);
-    for(int i = 0; i < n; i++) {
-        trisum[i] = malloc(sizeof(int) * (n - i));
+	int **res = (int**)malloc(sizeof(int) * n);
+	for (int i = 0; i < n; i++) {
 
-        if(i == 0) {
-            for(int j = 0; j < n; j++) {
-                trisum[0][j] = base[j];
-            }
-        }
-        else {
-            for(int k = 0; k < n - i; k++) {
-                printf("%d %d\n", trisum[i-1][k], trisum[i-1][k + 1]);
-            trisum[i][k] = (trisum[i-1][k] + trisum[i-1][k + 1]);
-            }
-        }
-    }
-    return trisum;
+		for(int l = 0; l < n; l++) {
+			res[i] = (int*)malloc(sizeof(int*) * (n - 1));
+			if(i == 0) {
+				for(int k = 0; k < n; k++) {
+					res[i][k] = base[k];
+				}
+			}
+		     else {
+                for(int j = 0; j < n - i; j++) {
+                    res[i][j] = res[i-1][j] + res[i-1][j + 1];
+			}
+		}
+
+	}
+
 }
-
+return res;
+}
 int main() {
     int base[] = {1, 2, 3, 4, 5};
     int size = sizeof(base)/sizeof(base[0]);
