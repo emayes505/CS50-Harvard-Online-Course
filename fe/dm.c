@@ -23,7 +23,7 @@ int **triangularSum(int *base, int n) {
 
 int main() {
     int base[] = {1, 2, 3, 4, 5};
-    int size = 5;
+    int size = sizeof(base)/sizeof(base[0]);
     int **total = triangularSum(base, size);
 
     for (int i = 0; i < size; i ++) {
